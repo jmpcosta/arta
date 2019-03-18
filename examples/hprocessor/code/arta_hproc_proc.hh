@@ -1,0 +1,45 @@
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Defines API for own Node Processor
+//
+// *****************************************************************************************
+
+#ifndef ARTA_HPROC_PROC_HH_
+#define ARTA_HPROC_PROC_HH_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Include standard C++ headers
+#include <string>
+
+// Include own project headers
+#include "arta_hproc_defs.hh"
+
+
+// *****************************************************************************************
+//
+// Section: proc API declaration/definition
+//
+// *****************************************************************************************
+
+class proc : public PROCESSOR
+{
+public:
+	using 			PROCESSOR::PROCESSOR;
+
+	void 			specificElement		( const std::string & name, const std::string & value	);
+	void 			specificInstruction	( const std::string & type, const std::string & data	);
+	void 			specificAttribute	( const std::string & name, const std::string & value	);
+
+};
+
+
+
+#endif /* ARTA_HPROC_PROC_HH_ */

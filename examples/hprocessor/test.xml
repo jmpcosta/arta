@@ -1,0 +1,13 @@
+<application>
+	<cmlLine>
+		<param>sleeper</param>
+		<param>60</param>
+	</cmlLine>
+	<environment>
+		<variable>HOME=/home/joao</variable>
+		<variable>TMP=/tmp</variable>
+	</environment>
+	<properties>
+	<property>CIDADE=ALMADA</property>
+	</properties>
+</application>
