@@ -49,29 +49,43 @@ public:
 		/// @brief Class destructor
 							~hProcessor();
 
+		/// @brief Trigger method to process a XML tree
     	void 				process		(  void );
 
 protected:
     	// Instance methods
+
+    	/// @brief Process a XMl tree node
+    	/// @param [in] node - A pointer to the XML node
     	void 				processDescendants	( const NODE * node								);
     	NODE	*			getCurrentNode		( void ) const { return iCurrentNode; }
+
+    	/// @brief Process a XMl node element
+    	/// @param [in] node - A pointer to the XML node
     	void 				processElement		( const NODE * node								);
 
-    	// Instance variables
-    	NODE	*			iCurrentNode;
 
-    	// Check if the element has descendants
+    	/// @brief Check if the node element has descendants
+    	/// @param [in] node - A pointer to the XML node
+    	/// @return True if node has children. False, otherwise.
     	bool 				hasDescendants		( const NODE    * node							);
 
+    	/// @brief Get the Document node
+    	/// @return A pointer to the XML document root node
     	const NODE *		getDocument			( void );
 
-		// Get path to the node
-		void				getNodePath			( const NODE * p_node, std::string & path		);
+    	/// @brief Get path to the node
+    	/// @param [in] node - A pointer to the current XML node
+    	/// @param [out] path - The full path to the current node
+		void				getNodePath			( const NODE * node, std::string & path			);
 
     	// Instance variables
-    	// Instance variables
+		/// @brief The XML parser instance
     	parser			&	iParser;
+    	/// @brief The handler to the node handler function
     	dataHandler			iHandler;
+    	/// @brief The current node
+    	NODE	*			iCurrentNode;		// May be not necessary?
 
 private:
 

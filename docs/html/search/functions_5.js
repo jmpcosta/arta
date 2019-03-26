@@ -9,6 +9,6 @@ var searchData=
   ['getelementvalue',['getElementValue',['../classosapi_1_1xml_1_1processor.html#ad67f9fd508492a629d3efbdcc7332a4b',1,'osapi::xml::processor']]],
   ['getmemorymanager',['getMemoryManager',['../classosapi_1_1xml_1_1processor.html#a37a08a4cb9bafee5273e79e25eb81878',1,'osapi::xml::processor']]],
   ['getnodenote',['getNodeNote',['../classosapi_1_1xml_1_1processor.html#ad75ceb8ece73c71c2323759756ae947a',1,'osapi::xml::processor']]],
-  ['getnodepath',['getNodePath',['../classosapi_1_1xml_1_1h_processor.html#a727e663e23b1387649c864b4852035fc',1,'osapi::xml::hProcessor']]],
+  ['getnodepath',['getNodePath',['../classosapi_1_1xml_1_1h_processor.html#abc912cd1e4ef1700d5d0aa1946531101',1,'osapi::xml::hProcessor']]],
   ['getparser',['getParser',['../classosapi_1_1xml_1_1parser.html#ad81ad800ac64774ce1e7251f7135aa7b',1,'osapi::xml::parser']]]
 ];
