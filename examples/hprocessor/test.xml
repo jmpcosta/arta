@@ -1,13 +1,24 @@
-<application>
-	<cmlLine>
-		<param>sleeper</param>
-		<param>60</param>
-	</cmlLine>
-	<environment>
-		<variable>HOME=/home/joao</variable>
-		<variable>TMP=/tmp</variable>
-	</environment>
-	<properties>
-	<property>CIDADE=ALMADA</property>
-	</properties>
-</application>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<?hprocessor A test PI ?>
+
+<countries>The Iberia countries
+ <!-- Examples of Portuguese cities -->
+ <country name="Portugal">Three cities only
+ 	<cities>
+ 		<city name="Lisbon">The capital of Portugal</city>
+ 		<city name="Sintra">The romantic city</city>
+ 		<city name="Cascais">The fashion city</city>
+ 	</cities>
+ </country>
+ 
+ <!-- Examples of Spanish cities -->
+  <country name="Spain">Three more cities
+ 	<cities>
+ 		<city name="Madrid">The capital of Spain</city>
+ 		<city name="Barcelona">The capital of Catalunha</city>
+ 		<city name="Salamanca">The capital of the Salamanca Province</city>
+ 	</cities>
+ </country>
+ 
+</countries>

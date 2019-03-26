@@ -31,6 +31,7 @@ int main()
  }
  catch( std::exception & e )
  {
+	 std::cerr << "Test finished with exception:" << std::endl << std::endl;
 	 std::cerr << e.what() << std::endl;
  }
 }

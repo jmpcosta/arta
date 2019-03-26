@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include "xercesc/sax/SAXParseException.hpp"
 #include "xercesc/dom/DOM.hpp"
 #include "xercesc/util/PlatformUtils.hpp"
 #include "xercesc/parsers/XercesDOMParser.hpp"
@@ -31,19 +32,22 @@ namespace osapi
 {
 namespace xml
 {
-using XML_PARSER		= xercesc::XercesDOMParser;
-using XML_ERROR_HANDLER = xercesc::ErrorHandler;
-using XML_DOC			= xercesc::DOMDocument;
+using XML_PARSER				= xercesc::XercesDOMParser;
+using XML_ERROR_HANDLER 		= xercesc::ErrorHandler;
+using XML_SAX_PARSE_EXCEPTION	= xercesc::SAXParseException;
+using XML_DOC					= xercesc::DOMDocument;
 
-using NODE				= xercesc::DOMNode;
-using NODE_TYPE			= xercesc::DOMNode::NodeType;
-using NODE_PI			= xercesc::DOMProcessingInstruction;
-using NODE_LIST			= xercesc::DOMNodeList;
-using NODE_ATTR			= xercesc::DOMAttr;
-using NODE_ELEM			= xercesc::DOMElement;
-using NODE_MAP			= xercesc::DOMNamedNodeMap;
+using NODE						= xercesc::DOMNode;
+using NODE_TYPE					= xercesc::DOMNode::NodeType;
+using NODE_PI					= xercesc::DOMProcessingInstruction;
+using NODE_LIST					= xercesc::DOMNodeList;
+using NODE_ATTR					= xercesc::DOMAttr;
+using NODE_ELEM					= xercesc::DOMElement;
+using NODE_TEXT					= xercesc::DOMText;
+using NODE_COMMENT				= xercesc::DOMComment;
+using NODE_MAP					= xercesc::DOMNamedNodeMap;
 
-using MEMORY_MGR		= xercesc::MemoryManager;
+using MEMORY_MGR				= xercesc::MemoryManager;
 
 }	// End of namespace "xml"
 }	// End of namespace "osapi"

@@ -44,18 +44,20 @@ namespace osapi
 namespace xml
 {
 
-class string
+class string : public std::string
 {
 public:
 		// Inline constructors
 
 		/// @brief class constructor
 		explicit			string( const XMLCh * message		);
-		explicit			string( const std::string message	);
+		explicit			string( const std::string & message	);
 		explicit			string( const char * message		);
 		explicit			string( void						);
 
 		void operator+=	( const XMLCh * first 					);
+		void operator+=	( const std::string & first				);
+		void operator+=	( const char * first					);
 
 		void operator+ 	( const char * first 					);
 		void operator+ 	( const std::string & first				);
@@ -78,7 +80,7 @@ public:
     	/// @brief Obtain a reference to the linked mapper object which maps nodes to CIs
     	/// @return Reference to xmlMapper object
 
-    	static void 	get	( const XMLCh * raw, std::string & msg	);
+    	static std::string &	get	( const XMLCh * raw, std::string & msg	);
 
 
 		// Inline instance methods

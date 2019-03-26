@@ -16,6 +16,10 @@
 //
 // *****************************************************************************************
 
+// Include Arta headers
+#include "xml_types.hh"
+#include "xml_hprocessor.hh"
+
 // Include standard C++ headers
 #include <string>
 
@@ -37,6 +41,8 @@ public:
 	void 			specificElement		( const std::string & name, const std::string & value	);
 	void 			specificInstruction	( const std::string & type, const std::string & data	);
 	void 			specificAttribute	( const std::string & name, const std::string & value	);
+	void 			specificComment		( const std::string & data								);
+	void 			specificText		( const std::string & data								);
 
 };
 

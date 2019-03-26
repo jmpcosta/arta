@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Implementation of a generic XML processor
+// Purpose:	Implementation of a generic XML hierarchical processor
 //
 // *****************************************************************************************
 
@@ -69,34 +69,38 @@ void hProcessor::process( void )
 
  try
  {
-	XML_PARSER * p_parser = iParser.getParser();
-	if( p_parser == nullptr ) throw error( "No XML parser found !" );
+	const NODE * p_rootNode = getDocument();
 
-	TRACE( "Parser pointer:", p_parser )
-
-	XML_DOC * xmlDoc = p_parser->getDocument();
-	if( xmlDoc == nullptr ) throw error( "No XML well format document found" );
-
-	TRACE( "Root Document node:", xmlDoc )
-
-	// Get the top-level element, i.e."root" which has no attributes
-	//NODE_ELEM * elementRoot = xmlDoc->getDocumentElement();
-	xercesc::DOMElement * elementRoot = xmlDoc->getDocumentElement();
-	TRACE( "Root element:", elementRoot )
-
-	// Did we get a root element?
-	if( elementRoot == nullptr ) throw error( "empty XML document" );
-
-	// Convert to the generic node type
-	// const NODE * nodeRoot = dynamic_cast< const NODE * >( elementRoot );
-
-	processDescendants( elementRoot );
+	if( hasDescendants( p_rootNode ) )
+		processDescendants( p_rootNode );
  }
 
  catch( const xercesc::XMLException & e )
  { throw error( e ); }
 
+ catch( const xercesc::DOMException & e )
+ { throw error( e ); }
+
+ catch( const xercesc::SAXParseException & e )
+ { throw error( e ); }
+
  TRACE_EXIT
+}
+
+
+const NODE * hProcessor::getDocument( void )
+{
+ XML_PARSER * p_parser = iParser.getParser();
+ if( p_parser == nullptr ) throw error( "No XML parser found !" );
+
+ TRACE( "Parser pointer:", p_parser )
+
+ const XML_DOC * p_document = p_parser->getDocument();
+ if( p_document == nullptr ) throw error( "No XML well format document found" );
+
+ TRACE( "Root Document node:", p_document )
+
+ return dynamic_cast< const NODE * >( p_document );
 }
 
 
@@ -109,7 +113,7 @@ void hProcessor::processDescendants( const NODE * p_father )
  try
  {
 	 NODE_LIST * children = p_father->getChildNodes();
-	 if( children == nullptr ) throw error( "Unable to get nodes of children" );
+	 if( children == nullptr ) throw error( "Unable to get children nodes" );
 
 	 const  XMLSize_t nodeCount = children->getLength();
 
@@ -120,11 +124,11 @@ void hProcessor::processDescendants( const NODE * p_father )
 		  iCurrentNode = currentNode;
 		  processNode( currentNode );
 
-		  // If this node has children, process its descendants first before self
 		  if( hasDescendants( currentNode ) )
+		    {
+			  TRACE( "Processing descendant node:", (int) i )
 			  processDescendants( currentNode );
-
-		  TRACE( "Processing descendant node:", i )
+		    }
 	    }
  }
 
@@ -179,6 +183,24 @@ void hProcessor::getNodePath( const NODE * p_node, std::string & path )
 
 
 
+void hProcessor::processElement( const NODE * p_node )
+{
+ TRACE_ENTER
+
+ if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
+
+ try
+ {
+	processor::processElement( p_node );
+	if( p_node->hasAttributes() )
+		processAttributes( p_node );
+ }
+
+ catch( const xercesc::XMLException & e )
+ { throw error( e ); }
+
+ TRACE_EXIT
+}
 
 
 

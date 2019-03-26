@@ -18,12 +18,14 @@
 #include "xercesc/sax/HandlerBase.hpp"
 #include "xercesc/dom/DOM.hpp"
 #include "xercesc/util/PlatformUtils.hpp"
+#include "xercesc/parsers/AbstractDOMParser.hpp"
 #include "xercesc/parsers/XercesDOMParser.hpp"
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
 #include "xml_trace.hh"
 #include "xml_error.hh"
+#include "xml_errorHandler.hh"
 #include "xml_parser.hh"
 
 // *****************************************************************************************
@@ -56,11 +58,12 @@ parser::parser( const char * filename )
  xercesc::XMLPlatformUtils::Initialize();
 
  p_parser = new XML_PARSER();
- p_parser->setValidationScheme( xercesc::XercesDOMParser::Val_Always );
+ //p_parser->setValidationScheme( xercesc::XercesDOMParser::Val_Always );
  p_parser->setDoNamespaces( true );    // optional
+ p_parser->setValidationConstraintFatal( true );
 
- XML_ERROR_HANDLER * errHandler = (XML_ERROR_HANDLER *) new xercesc::HandlerBase();
- p_parser->setErrorHandler( errHandler );
+ p_errHandler = (XML_ERROR_HANDLER *) new errorHandler();
+ p_parser->setErrorHandler( p_errHandler );
 
  try {
 	   TRACE( "Before parsing" )
@@ -80,15 +83,15 @@ parser::parser( const char * filename )
  catch( const xercesc::SAXParseException & e )
  { throw error( e ); }
 
- delete p_parser;
- delete errHandler;
-
  TRACE_EXIT
 }
 
 
 parser::~parser()
 {
+ delete p_parser;
+ delete p_errHandler;
+
  xercesc::XMLPlatformUtils::Terminate();
 }
 

@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Defines the XML Parser API
+// Purpose:	Defines a generic XML hierarchical processor API
 //
 // *****************************************************************************************
 
@@ -55,13 +55,15 @@ protected:
     	// Instance methods
     	void 				processDescendants	( const NODE * node								);
     	NODE	*			getCurrentNode		( void ) const { return iCurrentNode; }
-
+    	void 				processElement		( const NODE * node								);
 
     	// Instance variables
     	NODE	*			iCurrentNode;
 
     	// Check if the element has descendants
     	bool 				hasDescendants		( const NODE    * node							);
+
+    	const NODE *		getDocument			( void );
 
 		// Get path to the node
 		void				getNodePath			( const NODE * p_node, std::string & path		);

@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Defines the XML Parser API
+// Purpose:	Defines the top level XML processor API
 //
 // *****************************************************************************************
 
@@ -61,6 +61,9 @@ protected:
     	virtual void 			processNode			( const NODE * node													);
     	virtual void 			processElement		( const NODE * node													);
     	virtual void 			processInstruction	( const NODE * node													);
+    	virtual void 			processText			( const NODE * node													);
+    	virtual void 			processComment		( const NODE * node													);
+    	virtual void 			processAttributes	( const NODE * node													);
     	virtual void 			processAttribute	( const NODE * node													);
 
     	// The following specific methods must be implemented by descendants classes
@@ -68,11 +71,13 @@ protected:
     	virtual void 			specificElement		( const std::string & name, const std::string & value				) {};
     	virtual void 			specificInstruction	( const std::string & type, const std::string & data				) {};
     	virtual void 			specificAttribute	( const std::string & name, const std::string & value				) {};
+    	virtual void 			specificComment		( const std::string & data											) {};
+    	virtual void 			specificText		( const std::string & data											) {};
 
     	virtual const NOTE 	*	getNodeNote			( const NODE * node													);
     	virtual void 			attachNodeNote		( const NODE * node, NOTE * note 									);
 
-    	// Is node an element
+    	// Is node of a given type
     	virtual bool 			isElement			( const NODE * node													);
 
 		// Get the name the element
