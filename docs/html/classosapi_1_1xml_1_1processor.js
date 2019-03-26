@@ -1,0 +1,26 @@
+var classosapi_1_1xml_1_1processor =
+[
+    [ "~processor", "classosapi_1_1xml_1_1processor.html#a572a5b1e26e0e386de7ea77c03d51998", null ],
+    [ "attachNodeNote", "classosapi_1_1xml_1_1processor.html#ae7fc963b486ed7c6fea4bbfe4b5e1803", null ],
+    [ "getAttributeList", "classosapi_1_1xml_1_1processor.html#a3bdc889ae28191bf80943513505e47f5", null ],
+    [ "getAttributeValue", "classosapi_1_1xml_1_1processor.html#aa7b3467f91f60298db8516d8c3818a0d", null ],
+    [ "getElementName", "classosapi_1_1xml_1_1processor.html#ae1485c601d36318dec96e6f102afd9b9", null ],
+    [ "getElementValue", "classosapi_1_1xml_1_1processor.html#ad67f9fd508492a629d3efbdcc7332a4b", null ],
+    [ "getMemoryManager", "classosapi_1_1xml_1_1processor.html#a37a08a4cb9bafee5273e79e25eb81878", null ],
+    [ "getNodeNote", "classosapi_1_1xml_1_1processor.html#ad75ceb8ece73c71c2323759756ae947a", null ],
+    [ "isElement", "classosapi_1_1xml_1_1processor.html#a5681dc23357de4d8aa9549e145b0c037", null ],
+    [ "process", "classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4", null ],
+    [ "processAttribute", "classosapi_1_1xml_1_1processor.html#a055a19c57ae27952992996b45621c7e3", null ],
+    [ "processAttributes", "classosapi_1_1xml_1_1processor.html#a01b151467583ebf113b711cf09fcf128", null ],
+    [ "processComment", "classosapi_1_1xml_1_1processor.html#af91c40b84eb7f7a0e9baa0134680d5fc", null ],
+    [ "processElement", "classosapi_1_1xml_1_1processor.html#a97ac9510e76051abdd02ca6bacb8cd39", null ],
+    [ "processInstruction", "classosapi_1_1xml_1_1processor.html#acf9fa6e64d2c103c73f4fede09f2d6a6", null ],
+    [ "processNode", "classosapi_1_1xml_1_1processor.html#af9d6c12257547bf974b671bfd02e6889", null ],
+    [ "processText", "classosapi_1_1xml_1_1processor.html#aa1a14c984d1be951fd6375ed0ce777d5", null ],
+    [ "specificAttribute", "classosapi_1_1xml_1_1processor.html#acb1e6641f9e37f37a1436b505c06dbbe", null ],
+    [ "specificComment", "classosapi_1_1xml_1_1processor.html#a5f82a6132ffe2199c3b94692d8445a00", null ],
+    [ "specificElement", "classosapi_1_1xml_1_1processor.html#ae18d5dd273ad5453a3bc2d040baf6bac", null ],
+    [ "specificInstruction", "classosapi_1_1xml_1_1processor.html#aecd0f47e7fdfdf6132d13dd4f8527bfe", null ],
+    [ "specificNode", "classosapi_1_1xml_1_1processor.html#a3f6429942e6fa7645e49e67fc65bc5ef", null ],
+    [ "specificText", "classosapi_1_1xml_1_1processor.html#a81ad5f5f75cc42ee8c55afd7bd500914", null ]
+];
