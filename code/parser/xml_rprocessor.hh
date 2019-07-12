@@ -17,6 +17,7 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include <parser/xml_processor.hh>
 #include "xercesc/sax/SAXException.hpp"
 #include "xercesc/parsers/XercesDOMParser.hpp"
 
@@ -24,7 +25,6 @@
 #include <string>
 
 // Import project headers
-#include "xml_processor.hh"
 
 
 // *****************************************************************************************
@@ -43,31 +43,29 @@ class rProcessor : public processor
 {
 public:
 		/// @brief Class destructor
-							rProcessor( parser & p );
-
+		explicit			rProcessor( parser & p, const char * expression );
 
 		/// @brief Class destructor
 							~rProcessor();
 
     	void 				process		(  void 							);
-    	void 				process		(  const char * expression			);
-    	void 				process		(  const std::string & expression	);
 
 protected:
     	// Instance methods
-    	NODE	*			getCurrentNode		( void ) const { return iCurrentNode; }
-
+    	//NODE		*		getCurrentNode		( void ) const { return iCurrentNode; }
+    	const NODE	* 		getDocument( void );
 
     	// Instance variables
-    	NODE	*			iCurrentNode;
+    	//NODE		*		iCurrentNode;
+
 
 
     	// Instance variables
     	// Instance variables
     	parser			&	iParser;
     	dataHandler			iHandler;
-    	std::string			iExp;
-    	NODE_LIST		*	iList;
+    	const char	*		ip_exp;;
+    	NODE_LIST	*		ip_List;
 
 private:
 

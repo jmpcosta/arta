@@ -3,9 +3,13 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Implementation of an handler to operate on user attached information (to node)
+// Purpose:	Declaration of an abstract XMl Note object
 //
 // *****************************************************************************************
+
+#ifndef OSAPI_XML_NOTE_HH_
+#define OSAPI_XML_NOTE_HH_
+
 
 // *****************************************************************************************
 //
@@ -13,48 +17,39 @@
 //
 // *****************************************************************************************
 
-
-
 // Import project headers
-#include "xml_data_handler.hh"
-#include "xml_note.hh"
-#include "xml_error.hh"
-
-// Import own headers
+#include "defs/xml_trace.hh"
 
 
 // *****************************************************************************************
 //
-// Section: Function definitions
+// Section: API declaration
 //
 // *****************************************************************************************
+
 
 namespace osapi
 {
 namespace xml
 {
 
-void dataHandler::handle(
-							DOMOperationType 				operation,
-							const XMLCh 			* const p_key,
-							void 					* 		p_data,
-							const xercesc::DOMNode	* 		p_src,
-							xercesc::DOMNode 		* 		p_dest
-					  	   )
+
+class note
 {
- if( p_src == nullptr || p_key == nullptr )
-	 throw osapi::xml::error( "Source Node pointer is null" );
+public:
 
- if( p_key == nullptr )
-	 throw osapi::xml::error( "Pointer to Node key is null" );
+		/// @brief Class destructor
+    	virtual			~note() {}
+};
 
- if( operation == DOMOperationType::NODE_DELETED && p_data != nullptr )
-   {
-	 delete (NOTE *) p_data;
-   }
-}
 
+
+using NOTE = note;
 
 
 }	// End of namespace "xml"
 }	// End of namespace "osapi"
+
+
+
+#endif /* OSAPI_XML_NOTE_HH_ */

@@ -12,9 +12,9 @@ CPP_SRCS :=
 C_SRCS := 
 O_SRCS := 
 S_UPPER_SRCS := 
-LIBRARIES := 
 CC_DEPS := 
 C++_DEPS := 
+EXECUTABLES := 
 C_UPPER_DEPS := 
 CXX_DEPS := 
 OBJS := 
@@ -23,8 +23,5 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-code/error \
-code/maker \
-code/parser \
-code/string \
+code \
 

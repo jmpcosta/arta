@@ -17,6 +17,12 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include <defs/xml_defs.hh>
+#include <defs/xml_types.hh>
+#include <parser/xml_data_handler.hh>
+#include <parser/xml_note.hh>
+#include <parser/xml_parser.hh>
+#include <string/xml_string.hh>
 #include "xercesc/sax/SAXException.hpp"
 #include "xercesc/parsers/XercesDOMParser.hpp"
 
@@ -26,12 +32,6 @@
 
 
 // Import project headers
-#include "xml_defs.hh"
-#include "xml_types.hh"
-#include "xml_string.hh"
-#include "xml_parser.hh"
-#include "xml_note.hh"
-#include "xml_data_handler.hh"
 
 
 // *****************************************************************************************

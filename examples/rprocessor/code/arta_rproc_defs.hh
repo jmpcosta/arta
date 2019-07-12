@@ -3,13 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Declaration of an abstract XMl Note object
+// Purpose:	Common definitions for Arta RPROC test aplication
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_XML_NOTE_HH_
-#define OSAPI_XML_NOTE_HH_
-
+#ifndef ARTA_RPROC_DEFS_HH_
+#define ARTA_RPROC_DEFS_HH_
 
 // *****************************************************************************************
 //
@@ -17,39 +16,23 @@
 //
 // *****************************************************************************************
 
-// Import project headers
-#include "xml_trace.hh"
+// Include XML Config headers
+#include "parser/xml_parser.hh"
+#include "parser/xml_rprocessor.hh"
 
 
 // *****************************************************************************************
 //
-// Section: API declaration
+// Section: Constants and other definitions
 //
 // *****************************************************************************************
 
+// Utility type alias
+using PARSER		= osapi::xml::parser;
+using PROCESSOR		= osapi::xml::processor;
+using RPROCESSOR		= osapi::xml::rProcessor;
 
-namespace osapi
-{
-namespace xml
-{
-
-
-class note
-{
-public:
-
-		/// @brief Class destructor
-    	virtual			~note() {}
-};
+constexpr const char * ARTA_TEST_FILE = "../test.xml";
 
 
-
-using NOTE = note;
-
-
-}	// End of namespace "xml"
-}	// End of namespace "osapi"
-
-
-
-#endif /* OSAPI_XML_NOTE_HH_ */
+#endif /* ARTA_RPROC_DEFS_HH_ */

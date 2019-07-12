@@ -14,6 +14,10 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include <defs/xml_defs.hh>
+#include <error/xml_error.hh>
+#include <parser/xml_processor.hh>
+#include <string/xml_string.hh>
 #include "xercesc/sax/SAXException.hpp"
 #include "xercesc/sax/HandlerBase.hpp"
 #include "xercesc/dom/DOM.hpp"
@@ -22,11 +26,7 @@
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
-#include "xml_defs.hh"
-#include "xml_error.hh"
-#include "xml_trace.hh"
-#include "xml_string.hh"
-#include "xml_processor.hh"
+#include "defs/xml_trace.hh"
 
 // *****************************************************************************************
 //

@@ -14,6 +14,8 @@
 // *****************************************************************************************
 
 // Import C++ standard headers
+#include <error/xml_errorHandler.hh>
+#include <string/xml_string.hh>
 #include <iostream>
 
 // Import Xerces C++ headers
@@ -21,8 +23,6 @@
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
-#include "xml_string.hh"
-#include "xml_errorHandler.hh"
 
 // *****************************************************************************************
 //

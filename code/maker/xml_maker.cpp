@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Implementation of the Xerces wrapper parser class
+// Purpose:	Implementation of the Xerces wrapper class to assist the creation of a XML file
 //
 // *****************************************************************************************
 
@@ -22,11 +22,14 @@
 #include "xercesc/parsers/XercesDOMParser.hpp"
 #include "xercesc/util/XMLString.hpp"
 
+// Import project declarations
+#include "defs/xml_trace.hh"
+#include "error/xml_error.hh"
+#include "error/xml_errorHandler.hh"
+
 // Import own declarations
-#include "xml_trace.hh"
-#include "xml_error.hh"
-#include "xml_errorHandler.hh"
-#include "xml_parser.hh"
+#include "maker/xml_maker.hh"
+
 
 // *****************************************************************************************
 //
@@ -39,7 +42,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( parser )
+TRACE_CLASSNAME( maker )
 
 // *****************************************************************************************
 //
@@ -49,29 +52,15 @@ TRACE_CLASSNAME( parser )
 
 
 
-parser::parser( const char * filename )
+maker::maker( const char * filename )
 {
- if( filename == nullptr ) throw error( "No filename provided !" );
+ if( filename == nullptr ) throw error( "No destinatio filename provided !" );
 
  TRACE( "Entering with <", filename, ">" )
 
- xercesc::XMLPlatformUtils::Initialize();
-
- p_parser = new XML_PARSER();
- //p_parser->setValidationScheme( xercesc::XercesDOMParser::Val_Always );
- p_parser->setDoNamespaces( true );    // optional
- p_parser->setValidationConstraintFatal( true );
-
- p_errHandler = (XML_ERROR_HANDLER *) new errorHandler();
- p_parser->setErrorHandler( p_errHandler );
-
  try {
-	   TRACE( "Before parsing" )
 
-       p_parser->parse( filename );
-
-	   TRACE( "After parsing" )
-     }
+ 	 }
 
  // Wrap Xerces exceptions with our own
  catch( const xercesc::XMLException & e )
@@ -87,12 +76,9 @@ parser::parser( const char * filename )
 }
 
 
-parser::~parser()
+maker::~maker()
 {
- delete p_parser;
- delete p_errHandler;
 
- xercesc::XMLPlatformUtils::Terminate();
 }
 
 

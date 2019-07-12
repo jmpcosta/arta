@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide tracing declarations/definitions
+// Purpose:	Declare the XML string wrapper API
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_XML_ERROR_HH_
-#define OSAPI_XML_ERROR_HH_
+#ifndef OSAPI_XML_STRING_HH_
+#define OSAPI_XML_STRING_HH_
 
 // *****************************************************************************************
 //
@@ -17,15 +17,13 @@
 // *****************************************************************************************
 
 // Import Xerces headers
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/dom/DOMException.hpp"
+#include "xercesc/util/XMLString.hpp"
 
 // Import C++ Standard headers
 #include <string>
-#include <exception>
 
 // Include project headers
-#include "xml_trace.hh"
+#include "defs/xml_trace.hh"
 
 // *****************************************************************************************
 //
@@ -46,31 +44,52 @@ namespace osapi
 namespace xml
 {
 
-class error : std::exception
+class string : public std::string
 {
 public:
 		// Inline constructors
 
 		/// @brief class constructor
-		explicit	error	( std::string & message				) { iMsg = message; }
-		explicit	error	( const char * message				) { iMsg = message; }
-		explicit 	error	( const xercesc::XMLException & exc	);
-		explicit	error	( const xercesc::DOMException & exc	);
-		explicit	error	( const xercesc::SAXException & exc	);
+		explicit			string( const XMLCh * message		);
+		explicit			string( const std::string & message	);
+		explicit			string( const char * message		);
+		explicit			string( void						);
+
+		void operator+=	( const XMLCh * first 					);
+		void operator+=	( const std::string & first				);
+		void operator+=	( const char * first					);
+
+		void operator+ 	( const char * first 					);
+		void operator+ 	( const std::string & first				);
+		void operator+ 	( const XMLCh * second 					);
+
+		void operator= 	( const XMLCh * message 				);
+		void operator= 	( const char  * message 				);
+		void operator= 	( const std::string & message 			);
+
+		bool operator== ( const XMLCh * message 				);
+		bool operator== ( const char * message 					);
+		bool operator== ( const std::string & message			);
+
+		//void operator+( const string & str, const XMLCh * p_message );
 
 		/// @brief Class destructor
-    						~error() {}
+    						~string() {}
 
 
     	/// @brief Obtain a reference to the linked mapper object which maps nodes to CIs
     	/// @return Reference to xmlMapper object
 
+    	static std::string &	get	( const XMLCh * raw, std::string & msg	);
+
 
 		// Inline instance methods
-		const char * 		what () const noexcept { return iMsg.c_str(); }
+		void 			get	( std::string & msg	)	{ msg = iMsg;			}
+		const char 	* 	get	() 	const				{ return iMsg.c_str();	}
 
 private:
 		std::string		iMsg;
+
 
 		TRACE_CLASSNAME_DECLARATION
 };
@@ -83,4 +102,4 @@ private:
 
 
 
-#endif /* OSAPI_XML_ERROR_HH_ */
+#endif /* OSAPI_XML_STRING_HH_ */

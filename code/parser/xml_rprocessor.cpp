@@ -14,6 +14,10 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include <defs/xml_defs.hh>
+#include <error/xml_error.hh>
+#include <parser/xml_rprocessor.hh>
+#include <string/xml_string.hh>
 #include "xercesc/sax/SAXException.hpp"
 #include "xercesc/sax/HandlerBase.hpp"
 #include "xercesc/dom/DOM.hpp"
@@ -22,11 +26,7 @@
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
-#include "xml_defs.hh"
-#include "xml_error.hh"
-#include "xml_trace.hh"
-#include "xml_string.hh"
-#include "xml_rprocessor.hh"
+#include "defs/xml_trace.hh"
 
 // *****************************************************************************************
 //
@@ -49,12 +49,15 @@ TRACE_CLASSNAME( rProcessor )
 
 
 
-rProcessor::rProcessor( parser & p ) : iParser{p}
+rProcessor::rProcessor( parser & p, const char * p_expression ) : iParser{p}
 {
  TRACE_POINT
 
- iCurrentNode = nullptr;
+ // iCurrentNode	= nullptr;
+ ip_exp			= p_expression;
+ ip_List		= nullptr;
 }
+
 
 
 rProcessor::~rProcessor()
@@ -70,26 +73,14 @@ void rProcessor::process( void )
 
  try
  {
-	XML_PARSER * p_parser = iParser.getParser();
-	if( p_parser == nullptr ) throw error( "No XML parser found !" );
+	 const NODE * p_rootNode = getDocument();
 
-	TRACE( "Parser pointer:", p_parser )
+	 if( p_rootNode != nullptr )
+	   {
+		 // Evaluate the XPath expression
+		 //ip_List = ...
 
-	XML_DOC * xmlDoc = p_parser->getDocument();
-	if( xmlDoc == nullptr ) throw error( "No XML well format document found" );
-
-	TRACE( "Root Document node:", xmlDoc )
-
-	// Get the top-level element, i.e."root" which has no attributes
-	//NODE_ELEM * elementRoot = xmlDoc->getDocumentElement();
-	xercesc::DOMElement * elementRoot = xmlDoc->getDocumentElement();
-	TRACE( "Root element:", elementRoot )
-
-	// Did we get a root element?
-	if( elementRoot == nullptr ) throw error( "empty XML document" );
-
-	// Evaluate the XPath expression
-	//iList = ...
+	   }
  }
 
  catch( const xercesc::XMLException & e )
@@ -106,30 +97,21 @@ void rProcessor::process( void )
 
 
 
-void rProcessor::process( const char * p_expression )
+const NODE * rProcessor::getDocument( void )
 {
- TRACE_POINT
+ XML_PARSER * p_parser = iParser.getParser();
+ if( p_parser == nullptr ) throw error( "No XML parser found !" );
 
- // Set the working expression
- if( p_expression == nullptr )
-	 iExp = empty_string;
- else
-	 iExp = p_expression;
+ TRACE( "Parser pointer:", p_parser )
 
- // Call the interface method to process the expression
- process();
+ const XML_DOC * p_document = p_parser->getDocument();
+ if( p_document == nullptr ) throw error( "No XML well format document found" );
+
+ TRACE( "Root Document node:", p_document )
+
+ return dynamic_cast< const NODE * >( p_document );
 }
 
-void rProcessor::process( const std::string & expression )
-{
- TRACE_POINT
-
- // Set the working expression
- iExp = expression;
-
- // Call the interface method to process the expression
- process();
-}
 
 
 

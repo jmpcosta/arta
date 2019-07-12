@@ -14,11 +14,11 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+#include <defs/xml_defs.hh>
+#include <error/xml_error.hh>
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
-#include "xml_defs.hh"
-#include "xml_error.hh"
 
 // *****************************************************************************************
 //

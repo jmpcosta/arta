@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef ARTA_HPROC_PROC_HH_
-#define ARTA_HPROC_PROC_HH_
+#ifndef ARTA_RPROC_PROC_HH_
+#define ARTA_RPROC_PROC_HH_
 
 // *****************************************************************************************
 //
@@ -16,7 +16,7 @@
 //
 // *****************************************************************************************
 
-// Import Standard C++ declarations
+// Import C++ headers
 #include <string>
 
 // Include Arta headers
@@ -24,7 +24,7 @@
 #include "parser/xml_hprocessor.hh"
 
 // Include own project headers
-#include "arta_hproc_defs.hh"
+#include "arta_rproc_defs.hh"
 
 
 // *****************************************************************************************
@@ -33,10 +33,10 @@
 //
 // *****************************************************************************************
 
-class proc : public HPROCESSOR
+class proc : public RPROCESSOR
 {
 public:
-	using 			HPROCESSOR::hProcessor;
+	using 			RPROCESSOR::rProcessor;
 
 	void 			specificElement		( const std::string & name, const std::string & value	);
 	void 			specificInstruction	( const std::string & type, const std::string & data	);

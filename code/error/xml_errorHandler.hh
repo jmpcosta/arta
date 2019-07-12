@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	API responsible for wrapping the parsing of a XML file
+// Purpose:	Defines the XML Parser API
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_XML_PARSER_HH_
-#define OSAPI_XML_PARSER_HH_
+#ifndef OSAPI_XML__ERRORHANDLER_HH_
+#define OSAPI_XML__ERRORHANDLER_HH_
 
 // *****************************************************************************************
 //
@@ -16,12 +16,18 @@
 //
 // *****************************************************************************************
 
+// Import Xerces C++ headers
+//#include "xercesc/util/XercesDefs.hpp"
+//#include "xercesc/sax/SAXParseException.hpp"
+#include <defs/xml_defs.hh>
+#include <defs/xml_types.hh>
+#include "xercesc/sax/ErrorHandler.hpp"
+
 // Import C++ system headers
-#include <string>
+// #include <string>
 
 // Import project headers
-#include "xml_trace.hh"
-#include "xml_types.hh"
+#include "defs/xml_trace.hh"
 
 // *****************************************************************************************
 //
@@ -35,22 +41,26 @@ namespace osapi
 namespace xml
 {
 
-class parser
+class errorHandler : public XML_ERROR_HANDLER
 {
 public:
-		/// @brief class constructor
-		/// @param [in] filename - XML file name to parse
-		explicit			parser( const char * filename );
+		/// @brief Class destructor
+							errorHandler	();
+
 
 		/// @brief Class destructor
-    						~parser();
+							~errorHandler	();
+		void				cerr			( const char * msg, const XML_SAX_PARSE_EXCEPTION & exc );
+		void				warning			( const XML_SAX_PARSE_EXCEPTION & exc 					);
+		void				error			( const XML_SAX_PARSE_EXCEPTION & exc 					);
+		void				fatalError		( const XML_SAX_PARSE_EXCEPTION & exc 					);
 
-    	XML_PARSER	*		getParser	( void ) { return p_parser; }
+		void				resetErrors		( void ) {}
+
+
+protected:
 
 private:
-
-    	XML_PARSER		  *	p_parser;
-    	XML_ERROR_HANDLER * p_errHandler;
 
 		TRACE_CLASSNAME_DECLARATION
 };
@@ -64,4 +74,5 @@ private:
 }	// End of namespace "osapi"
 
 
-#endif /* OSAPI_XML_PARSER_HH_ */
+
+#endif /* OSAPI_XML__ERRORHANDLER_HH_ */
