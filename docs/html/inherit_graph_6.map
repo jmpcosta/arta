@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classosapi_1_1xml_1_1string.html" title="osapi::xml::string" alt="" coords="108,5,231,32"/>
+<area shape="rect" id="node1" href="$classosapi_1_1xml_1_1processor.html" title="osapi::xml::processor" alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$classosapi_1_1xml_1_1h_processor.html" title="osapi::xml::hProcessor" alt="" coords="200,5,356,32"/>
+<area shape="rect" id="node3" href="$classosapi_1_1xml_1_1r_processor.html" title="osapi::xml::rProcessor" alt="" coords="201,56,355,83"/>
 </map>

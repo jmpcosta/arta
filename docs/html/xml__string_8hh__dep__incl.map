@@ -1,10 +1,10 @@
-<map id="code/xml_string.hh" name="code/xml_string.hh">
-<area shape="rect" id="node2" href="$xml__error_handler_8cpp.html" title="code/xml_errorHandler.cpp" alt="" coords="5,80,184,107"/>
-<area shape="rect" id="node3" href="$xml__hprocessor_8cpp.html" title="code/xml_hprocessor.cpp" alt="" coords="224,229,395,256"/>
-<area shape="rect" id="node4" href="$xml__processor_8hh.html" title="code/xml_processor.hh" alt="" coords="467,80,624,107"/>
-<area shape="rect" id="node6" href="$xml__processor_8cpp.html" title="code/xml_processor.cpp" alt="" coords="633,155,797,181"/>
-<area shape="rect" id="node8" href="$xml__rprocessor_8cpp.html" title="code/xml_rprocessor.cpp" alt="" coords="475,229,643,256"/>
-<area shape="rect" id="node9" href="$xml__string_8cpp.html" title="code/xml_string.cpp" alt="" coords="872,80,1011,107"/>
-<area shape="rect" id="node5" href="$xml__hprocessor_8hh.html" title="code/xml_hprocessor.hh" alt="" coords="259,155,423,181"/>
-<area shape="rect" id="node7" href="$xml__rprocessor_8hh.html" title="code/xml_rprocessor.hh" alt="" coords="447,155,609,181"/>
+<map id="code/string/xml_string.hh" name="code/string/xml_string.hh">
+<area shape="rect" id="node2" href="$xml__error_handler_8cpp.html" title="code/error/xml_errorHandler.cpp" alt="" coords="5,80,213,107"/>
+<area shape="rect" id="node3" href="$xml__hprocessor_8cpp.html" title="code/parser/xml_hprocessor.cpp" alt="" coords="396,229,607,256"/>
+<area shape="rect" id="node4" href="$xml__processor_8cpp.html" title="code/parser/xml_processor.cpp" alt="" coords="289,155,493,181"/>
+<area shape="rect" id="node5" href="$xml__processor_8hh.html" title="code/parser/xml_processor.hh" alt="" coords="475,80,672,107"/>
+<area shape="rect" id="node8" href="$xml__rprocessor_8cpp.html" title="code/parser/xml_rprocessor.cpp" alt="" coords="811,229,1019,256"/>
+<area shape="rect" id="node9" href="$xml__string_8cpp.html" title="code/string/xml_string.cpp" alt="" coords="1022,80,1197,107"/>
+<area shape="rect" id="node6" href="$xml__hprocessor_8hh.html" title="code/parser/xml_hprocessor.hh" alt="" coords="517,155,721,181"/>
+<area shape="rect" id="node7" href="$xml__rprocessor_8hh.html" title="code/parser/xml_rprocessor.hh" alt="" coords="745,155,946,181"/>
 </map>

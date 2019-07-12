@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ARTA: code/xml_parser.hh File Reference</title>
+<title>ARTA: code/parser/xml_parser.hh File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ARTA
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">XML wrapper for the Apache Xerces C++ library</div>
   </td>
@@ -88,30 +88,30 @@ $(document).ready(function(){initNavTree('xml__parser_8hh.html','');});
 <div class="title">xml_parser.hh File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="xml__trace_8hh_source.html">xml_trace.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__types_8hh_source.html">xml_types.hh</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="xml__types_8hh_source.html">defs/xml_types.hh</a>&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="xml__trace_8hh_source.html">defs/xml_trace.hh</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for xml_parser.hh:</div>
 <div class="dyncontent">
-<div class="center"><img src="xml__parser_8hh__incl.png" border="0" usemap="#code_2xml__parser_8hh" alt=""/></div>
-<map name="code_2xml__parser_8hh" id="code_2xml__parser_8hh">
-<area shape="rect" id="node3" href="xml__trace_8hh.html" title="xml_trace.hh" alt="" coords="134,80,231,107"/>
-<area shape="rect" id="node5" href="xml__types_8hh.html" title="xml_types.hh" alt="" coords="397,80,497,107"/>
+<div class="center"><img src="xml__parser_8hh__incl.png" border="0" usemap="#code_2parser_2xml__parser_8hh" alt=""/></div>
+<map name="code_2parser_2xml__parser_8hh" id="code_2parser_2xml__parser_8hh">
+<area shape="rect" id="node2" href="xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="485,80,615,107"/>
+<area shape="rect" id="node8" href="xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="872,80,999,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="xml__parser_8hh__dep__incl.png" border="0" usemap="#code_2xml__parser_8hhdep" alt=""/></div>
-<map name="code_2xml__parser_8hhdep" id="code_2xml__parser_8hhdep">
-<area shape="rect" id="node2" href="xml__processor_8hh.html" title="code/xml_processor.hh" alt="" coords="200,80,357,107"/>
-<area shape="rect" id="node8" href="xml__parser_8cpp.html" title="code/xml_parser.cpp" alt="" coords="382,80,525,107"/>
-<area shape="rect" id="node3" href="xml__hprocessor_8hh.html" title="code/xml_hprocessor.hh" alt="" coords="9,155,173,181"/>
-<area shape="rect" id="node5" href="xml__processor_8cpp.html" title="code/xml_processor.cpp" alt="" coords="197,155,361,181"/>
-<area shape="rect" id="node6" href="xml__rprocessor_8hh.html" title="code/xml_rprocessor.hh" alt="" coords="385,155,546,181"/>
-<area shape="rect" id="node4" href="xml__hprocessor_8cpp.html" title="code/xml_hprocessor.cpp" alt="" coords="5,229,176,256"/>
-<area shape="rect" id="node7" href="xml__rprocessor_8cpp.html" title="code/xml_rprocessor.cpp" alt="" coords="381,229,549,256"/>
+<div class="center"><img src="xml__parser_8hh__dep__incl.png" border="0" usemap="#code_2parser_2xml__parser_8hhdep" alt=""/></div>
+<map name="code_2parser_2xml__parser_8hhdep" id="code_2parser_2xml__parser_8hhdep">
+<area shape="rect" id="node2" href="xml__parser_8cpp.html" title="code/parser/xml_parser.cpp" alt="" coords="33,80,215,107"/>
+<area shape="rect" id="node3" href="xml__processor_8hh.html" title="code/parser/xml_processor.hh" alt="" coords="240,80,437,107"/>
+<area shape="rect" id="node4" href="xml__hprocessor_8hh.html" title="code/parser/xml_hprocessor.hh" alt="" coords="9,155,213,181"/>
+<area shape="rect" id="node6" href="xml__processor_8cpp.html" title="code/parser/xml_processor.cpp" alt="" coords="237,155,441,181"/>
+<area shape="rect" id="node7" href="xml__rprocessor_8hh.html" title="code/parser/xml_rprocessor.hh" alt="" coords="465,155,666,181"/>
+<area shape="rect" id="node5" href="xml__hprocessor_8cpp.html" title="code/parser/xml_hprocessor.cpp" alt="" coords="5,229,216,256"/>
+<area shape="rect" id="node8" href="xml__rprocessor_8cpp.html" title="code/parser/xml_rprocessor.cpp" alt="" coords="461,229,669,256"/>
 </map>
 </div>
 </div>
@@ -134,7 +134,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="xml__parser_8hh.html">xml_parser.hh</a></li>
+    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_50eef20fccd8bfc96628c41bdb5ba242.html">parser</a></li><li class="navelem"><a class="el" href="xml__parser_8hh.html">xml_parser.hh</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

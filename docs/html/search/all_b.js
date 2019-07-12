@@ -1,7 +1,7 @@
 var searchData=
 [
   ['parser',['parser',['../classosapi_1_1xml_1_1parser.html',1,'osapi::xml::parser'],['../classosapi_1_1xml_1_1parser.html#a838001972b2a31bc7f12dc3292de1644',1,'osapi::xml::parser::parser()']]],
-  ['process',['process',['../classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20',1,'osapi::xml::hProcessor::process()'],['../classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4',1,'osapi::xml::processor::process()'],['../classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035',1,'osapi::xml::rProcessor::process(void)'],['../classosapi_1_1xml_1_1r_processor.html#a1b53296dfb3840a736a04fff7a181ad1',1,'osapi::xml::rProcessor::process(const char *expression)'],['../classosapi_1_1xml_1_1r_processor.html#a1e087607432d1855658dd90a8d5ebbb6',1,'osapi::xml::rProcessor::process(const std::string &amp;expression)']]],
+  ['process',['process',['../classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20',1,'osapi::xml::hProcessor::process()'],['../classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4',1,'osapi::xml::processor::process()'],['../classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035',1,'osapi::xml::rProcessor::process()']]],
   ['processattribute',['processAttribute',['../classosapi_1_1xml_1_1processor.html#a055a19c57ae27952992996b45621c7e3',1,'osapi::xml::processor']]],
   ['processattributes',['processAttributes',['../classosapi_1_1xml_1_1processor.html#a01b151467583ebf113b711cf09fcf128',1,'osapi::xml::processor']]],
   ['processcomment',['processComment',['../classosapi_1_1xml_1_1processor.html#af91c40b84eb7f7a0e9baa0134680d5fc',1,'osapi::xml::processor']]],

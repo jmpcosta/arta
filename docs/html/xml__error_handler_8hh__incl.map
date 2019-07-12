@@ -1,5 +1,5 @@
-<map id="code/xml_errorHandler.hh" name="code/xml_errorHandler.hh">
-<area shape="rect" id="node3" href="$xml__defs_8hh.html" title="xml_defs.hh" alt="" coords="382,80,475,107"/>
-<area shape="rect" id="node4" href="$xml__types_8hh.html" title="xml_types.hh" alt="" coords="500,80,600,107"/>
-<area shape="rect" id="node9" href="$xml__trace_8hh.html" title="xml_trace.hh" alt="" coords="781,80,879,107"/>
+<map id="code/error/xml_errorHandler.hh" name="code/error/xml_errorHandler.hh">
+<area shape="rect" id="node2" href="$xml__defs_8hh.html" title="defs/xml_defs.hh" alt="" coords="338,80,461,107"/>
+<area shape="rect" id="node3" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="485,80,615,107"/>
+<area shape="rect" id="node9" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="891,80,1017,107"/>
 </map>

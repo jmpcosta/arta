@@ -1,4 +1,5 @@
-<map id="code/xml_errorHandler.hh" name="code/xml_errorHandler.hh">
-<area shape="rect" id="node2" href="$xml__error_handler_8cpp.html" title="code/xml_errorHandler.cpp" alt="" coords="5,80,184,107"/>
-<area shape="rect" id="node3" href="$xml__parser_8cpp.html" title="code/xml_parser.cpp" alt="" coords="209,80,351,107"/>
+<map id="code/error/xml_errorHandler.hh" name="code/error/xml_errorHandler.hh">
+<area shape="rect" id="node2" href="$xml__error_handler_8cpp.html" title="code/error/xml_errorHandler.cpp" alt="" coords="5,80,213,107"/>
+<area shape="rect" id="node3" href="$xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="238,80,421,107"/>
+<area shape="rect" id="node4" href="$xml__parser_8cpp.html" title="code/parser/xml_parser.cpp" alt="" coords="445,80,627,107"/>
 </map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ARTA: code/xml_processor.cpp File Reference</title>
+<title>ARTA: code/parser/xml_processor.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ARTA
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
    <div id="projectbrief">XML wrapper for the Apache Xerces C++ library</div>
   </td>
@@ -87,31 +87,31 @@ $(document).ready(function(){initNavTree('xml__processor_8cpp.html','');});
 <div class="title">xml_processor.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;xercesc/sax/SAXException.hpp&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="xml__defs_8hh_source.html">defs/xml_defs.hh</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="xml__error_8hh_source.html">error/xml_error.hh</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="xml__processor_8hh_source.html">parser/xml_processor.hh</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="xml__string_8hh_source.html">string/xml_string.hh</a>&gt;</code><br />
+<code>#include &quot;xercesc/sax/SAXException.hpp&quot;</code><br />
 <code>#include &quot;xercesc/sax/HandlerBase.hpp&quot;</code><br />
 <code>#include &quot;xercesc/dom/DOM.hpp&quot;</code><br />
 <code>#include &quot;xercesc/util/PlatformUtils.hpp&quot;</code><br />
 <code>#include &quot;xercesc/parsers/XercesDOMParser.hpp&quot;</code><br />
 <code>#include &quot;xercesc/util/XMLString.hpp&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__defs_8hh_source.html">xml_defs.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__error_8hh_source.html">xml_error.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__trace_8hh_source.html">xml_trace.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__string_8hh_source.html">xml_string.hh</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="xml__processor_8hh_source.html">xml_processor.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="xml__trace_8hh_source.html">defs/xml_trace.hh</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for xml_processor.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="xml__processor_8cpp__incl.png" border="0" usemap="#code_2xml__processor_8cpp" alt=""/></div>
-<map name="code_2xml__processor_8cpp" id="code_2xml__processor_8cpp">
-<area shape="rect" id="node8" href="xml__defs_8hh.html" title="xml_defs.hh" alt="" coords="1404,155,1498,181"/>
-<area shape="rect" id="node9" href="xml__error_8hh.html" title="xml_error.hh" alt="" coords="340,80,434,107"/>
-<area shape="rect" id="node13" href="xml__trace_8hh.html" title="xml_trace.hh" alt="" coords="749,229,846,256"/>
-<area shape="rect" id="node15" href="xml__string_8hh.html" title="xml_string.hh" alt="" coords="749,155,849,181"/>
-<area shape="rect" id="node16" href="xml__processor_8hh.html" title="xml_processor.hh" alt="" coords="1095,80,1220,107"/>
-<area shape="rect" id="node18" href="xml__types_8hh.html" title="xml_types.hh" alt="" coords="1228,229,1328,256"/>
-<area shape="rect" id="node20" href="xml__parser_8hh.html" title="xml_parser.hh" alt="" coords="991,155,1095,181"/>
-<area shape="rect" id="node21" href="xml__note_8hh.html" title="xml_note.hh" alt="" coords="874,155,967,181"/>
-<area shape="rect" id="node22" href="xml__data__handler_8hh.html" title="xml_data_handler.hh" alt="" coords="1408,229,1550,256"/>
+<div class="center"><img src="xml__processor_8cpp__incl.png" border="0" usemap="#code_2parser_2xml__processor_8cpp" alt=""/></div>
+<map name="code_2parser_2xml__processor_8cpp" id="code_2parser_2xml__processor_8cpp">
+<area shape="rect" id="node2" href="xml__defs_8hh.html" title="defs/xml_defs.hh" alt="" coords="783,155,906,181"/>
+<area shape="rect" id="node3" href="xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="312,80,436,107"/>
+<area shape="rect" id="node8" href="xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="908,229,1035,256"/>
+<area shape="rect" id="node10" href="xml__processor_8hh.html" title="parser/xml_processor.hh" alt="" coords="1182,80,1347,107"/>
+<area shape="rect" id="node19" href="xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="1490,155,1626,181"/>
+<area shape="rect" id="node11" href="xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="1344,229,1473,256"/>
+<area shape="rect" id="node16" href="xml__data__handler_8hh.html" title="parser/xml_data_handler.hh" alt="" coords="1137,229,1320,256"/>
+<area shape="rect" id="node17" href="xml__note_8hh.html" title="parser/xml_note.hh" alt="" coords="930,155,1063,181"/>
+<area shape="rect" id="node18" href="xml__parser_8hh.html" title="parser/xml_parser.hh" alt="" coords="1138,155,1282,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -127,7 +127,7 @@ Namespaces</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="xml__processor_8cpp.html">xml_processor.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="dir_50eef20fccd8bfc96628c41bdb5ba242.html">parser</a></li><li class="navelem"><a class="el" href="xml__processor_8cpp.html">xml_processor.cpp</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>

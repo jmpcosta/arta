@@ -9,6 +9,8 @@ var searchData=
   ['xml_5ferrorhandler_2ehh',['xml_errorHandler.hh',['../xml__error_handler_8hh.html',1,'']]],
   ['xml_5fhprocessor_2ecpp',['xml_hprocessor.cpp',['../xml__hprocessor_8cpp.html',1,'']]],
   ['xml_5fhprocessor_2ehh',['xml_hprocessor.hh',['../xml__hprocessor_8hh.html',1,'']]],
+  ['xml_5fmaker_2ecpp',['xml_maker.cpp',['../xml__maker_8cpp.html',1,'']]],
+  ['xml_5fmaker_2ehh',['xml_maker.hh',['../xml__maker_8hh.html',1,'']]],
   ['xml_5fnote_2ehh',['xml_note.hh',['../xml__note_8hh.html',1,'']]],
   ['xml_5fparser_2ecpp',['xml_parser.cpp',['../xml__parser_8cpp.html',1,'']]],
   ['xml_5fparser_2ehh',['xml_parser.hh',['../xml__parser_8hh.html',1,'']]],

@@ -1,8 +1,9 @@
-<map id="code/xml_error.hh" name="code/xml_error.hh">
-<area shape="rect" id="node2" href="$xml__data__handler_8cpp.html" title="code/xml_data_handler.cpp" alt="" coords="5,80,187,107"/>
-<area shape="rect" id="node3" href="$xml__error_8cpp.html" title="code/xml_error.cpp" alt="" coords="211,80,344,107"/>
-<area shape="rect" id="node4" href="$xml__hprocessor_8cpp.html" title="code/xml_hprocessor.cpp" alt="" coords="368,80,539,107"/>
-<area shape="rect" id="node5" href="$xml__parser_8cpp.html" title="code/xml_parser.cpp" alt="" coords="563,80,706,107"/>
-<area shape="rect" id="node6" href="$xml__processor_8cpp.html" title="code/xml_processor.cpp" alt="" coords="730,80,894,107"/>
-<area shape="rect" id="node7" href="$xml__rprocessor_8cpp.html" title="code/xml_rprocessor.cpp" alt="" coords="919,80,1087,107"/>
+<map id="code/error/xml_error.hh" name="code/error/xml_error.hh">
+<area shape="rect" id="node2" href="$xml__error_8cpp.html" title="code/error/xml_error.cpp" alt="" coords="5,87,168,114"/>
+<area shape="rect" id="node3" href="$xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="193,87,375,114"/>
+<area shape="rect" id="node4" href="$xml__data__handler_8cpp.html" title="code/parser/xml_data\l_handler.cpp" alt="" coords="400,80,547,121"/>
+<area shape="rect" id="node5" href="$xml__hprocessor_8cpp.html" title="code/parser/xml_hprocessor.cpp" alt="" coords="571,87,781,114"/>
+<area shape="rect" id="node6" href="$xml__parser_8cpp.html" title="code/parser/xml_parser.cpp" alt="" coords="806,87,989,114"/>
+<area shape="rect" id="node7" href="$xml__processor_8cpp.html" title="code/parser/xml_processor.cpp" alt="" coords="1013,87,1217,114"/>
+<area shape="rect" id="node8" href="$xml__rprocessor_8cpp.html" title="code/parser/xml_rprocessor.cpp" alt="" coords="1241,87,1449,114"/>
 </map>

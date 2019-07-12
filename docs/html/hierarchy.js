@@ -6,6 +6,7 @@ var hierarchy =
     [ "exception", null, [
       [ "osapi::xml::error", "classosapi_1_1xml_1_1error.html", null ]
     ] ],
+    [ "osapi::xml::maker", "classosapi_1_1xml_1_1maker.html", null ],
     [ "osapi::xml::note", "classosapi_1_1xml_1_1note.html", null ],
     [ "osapi::xml::parser", "classosapi_1_1xml_1_1parser.html", null ],
     [ "osapi::xml::processor", "classosapi_1_1xml_1_1processor.html", [
