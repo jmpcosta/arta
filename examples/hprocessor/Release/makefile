@@ -41,7 +41,7 @@ endif
 all: arta_hproc
 
 dependents:
-	-cd /home/joao/workspace/arta/Release && $(MAKE) all
+	-cd /home/joao/workspace/arta/Release && $(MAKE) clean all
 
 # Tool invocations
 arta_hproc: $(OBJS) $(USER_OBJS) /home/joao/workspace/arta/Release/libarta.so
