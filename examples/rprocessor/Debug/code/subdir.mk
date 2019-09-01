@@ -4,20 +4,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/string/xml_string.cpp 
+../code/arta_rproc_proc.cpp \
+../code/main.cpp 
 
 OBJS += \
-./code/string/xml_string.o 
+./code/arta_rproc_proc.o \
+./code/main.o 
 
 CPP_DEPS += \
-./code/string/xml_string.d 
+./code/arta_rproc_proc.d \
+./code/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-code/string/%.o: ../code/string/%.cpp
+code/%.o: ../code/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -std=c++0x -I"${XERCES_DIR}/src" -I"${ARTA_DIR}/code" -O3 -Wall -c -fmessage-length=0 -fPIC -pthread -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -std=c++17 -DOSAPI_TRACING -I"/home/joao/Software/xerces/src" -I"/home/joao/workspace/arta/code" -O0 -g3 -Wall -c -fmessage-length=0 -v -pthread -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
