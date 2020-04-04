@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['memory_5fmgr',['MEMORY_MGR',['../namespaceosapi_1_1xml.html#a2548641504ca939e71280e0ded57d4d7',1,'osapi::xml']]]
+  ['hprocessor',['HPROCESSOR',['../arta__alias_8hh.html#a2f2eac0a654ca5c7de43a1ad66fc9318',1,'arta_alias.hh']]]
 ];

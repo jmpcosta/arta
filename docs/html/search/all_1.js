@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cerr',['cerr',['../classosapi_1_1xml_1_1error_handler.html#adfa6c3d68de1d5606495489b3772f433',1,'osapi::xml::errorHandler']]]
+  ['build',['build',['../classosapi_1_1xml_1_1maker.html#ab89b9f12b85a2c7e9e86328eec9c50e2',1,'osapi::xml::maker']]]
 ];

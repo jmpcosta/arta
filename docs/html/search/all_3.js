@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['empty_5fstring',['empty_string',['../namespaceosapi_1_1xml.html#a24171faeff7a4c0c02bb6780d5389c92',1,'osapi::xml']]],
-  ['error',['error',['../classosapi_1_1xml_1_1error.html',1,'osapi::xml::error'],['../classosapi_1_1xml_1_1error.html#aafb57fc602024a3f6af506f29f104863',1,'osapi::xml::error::error(std::string &amp;message)'],['../classosapi_1_1xml_1_1error.html#aa3a8a8ea39c28baf0a653f8b9b4358f1',1,'osapi::xml::error::error(const char *message)'],['../classosapi_1_1xml_1_1error.html#a434a0ee70aca3787e0de225db6948d44',1,'osapi::xml::error::error(const xercesc::XMLException &amp;exc)'],['../classosapi_1_1xml_1_1error.html#ac433516e14521c5108fd1f670353391c',1,'osapi::xml::error::error(const xercesc::DOMException &amp;exc)'],['../classosapi_1_1xml_1_1error.html#abb6e644cbc3e5f121bea1d20e978c9c1',1,'osapi::xml::error::error(const xercesc::SAXException &amp;exc)'],['../classosapi_1_1xml_1_1error_handler.html#a24d85a7730650aeff58f1ab64a745ebb',1,'osapi::xml::errorHandler::error()']]],
-  ['errorhandler',['errorHandler',['../classosapi_1_1xml_1_1error_handler.html',1,'osapi::xml::errorHandler'],['../classosapi_1_1xml_1_1error_handler.html#a5651f0a890acb6187772f282596c11dc',1,'osapi::xml::errorHandler::errorHandler()']]]
+  ['datahandler',['dataHandler',['../classosapi_1_1xml_1_1data_handler.html',1,'osapi::xml::dataHandler'],['../classosapi_1_1xml_1_1data_handler.html#a4c6f4ff8f119106019996caf5c97b835',1,'osapi::xml::dataHandler::dataHandler()']]],
+  ['docfragment',['docFragment',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa3bf621ea9a1d3650ad9f7f38201d6525',1,'osapi::xml']]],
+  ['doctype',['docType',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aade5645feb6a3fd6a6653129fd610fe66',1,'osapi::xml']]],
+  ['document',['document',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa9ac5e07ed17e96d17eda2c323d658d8b',1,'osapi::xml']]]
 ];

@@ -14,11 +14,13 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
-#include <defs/xml_defs.hh>
-#include <string/xml_string.hh>
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
+#include "defs/xml_defs.hh"
+#include "defs/xml_types.hh"
+#include "string/xml_string.hh"
+
 
 // *****************************************************************************************
 //
@@ -72,13 +74,13 @@ string::string( const XMLCh * p_message )
 	 iMsg = empty_string;
  else
    {
-	 xercesc::MemoryManager * p_manager = xercesc::XMLPlatformUtils::fgMemoryManager;
+	 XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
 
-	 char * p_msg = xercesc::XMLString::transcode( p_message, p_manager );
+	 char * p_msg = XML_STRING::transcode( p_message, p_manager );
 
 	 iMsg = p_msg;
 
-	 xercesc::XMLString::release( &p_msg );
+	 XML_STRING::release( &p_msg );
    }
 
  TRACE_EXIT
@@ -91,13 +93,13 @@ void string::operator+=( const XMLCh * p_message )
 
  if( p_message != nullptr )
    {
-	 xercesc::MemoryManager * p_manager = xercesc::XMLPlatformUtils::fgMemoryManager;
+	 XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
 
-	 char * p_msg = xercesc::XMLString::transcode( p_message, p_manager );
+	 char * p_msg = XML_STRING::transcode( p_message, p_manager );
 
 	 iMsg += p_msg;
 
-	 xercesc::XMLString::release( &p_msg );
+	 XML_STRING::release( &p_msg );
    }
 
  TRACE_EXIT
@@ -128,13 +130,13 @@ void string::operator+( const XMLCh * p_message )
 
  if( p_message != nullptr )
    {
-	 xercesc::MemoryManager * p_manager = xercesc::XMLPlatformUtils::fgMemoryManager;
+	 XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
 
-	 char * p_msg = xercesc::XMLString::transcode( p_message, p_manager );
+	 char * p_msg = XML_STRING::transcode( p_message, p_manager );
 
 	 iMsg += p_msg;
 
-	 xercesc::XMLString::release( &p_msg );
+	 XML_STRING::release( &p_msg );
    }
 
  TRACE_EXIT
@@ -163,13 +165,13 @@ void string::operator=( const XMLCh * p_message )
 
  if( p_message != nullptr )
    {
-	 xercesc::MemoryManager * p_manager = xercesc::XMLPlatformUtils::fgMemoryManager;
+	 XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
 
-	 char * p_msg = xercesc::XMLString::transcode( p_message, p_manager );
+	 char * p_msg = XML_STRING::transcode( p_message, p_manager );
 
 	 iMsg = p_msg;
 
-	 xercesc::XMLString::release( &p_msg );
+	 XML_STRING::release( &p_msg );
    }
 
  TRACE_EXIT
@@ -210,13 +212,13 @@ bool string::operator==( const XMLCh * p_message )
 
  if( p_message == nullptr ) return false;
 
- xercesc::MemoryManager * p_manager = xercesc::XMLPlatformUtils::fgMemoryManager;
+ XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
 
- char * p_msg = xercesc::XMLString::transcode( p_message, p_manager );
+ char * p_msg = XML_STRING::transcode( p_message, p_manager );
 
  std::string str( p_msg );
 
- xercesc::XMLString::release( &p_msg );
+ XML_STRING::release( &p_msg );
 
  return ( iMsg == str );
 }
@@ -236,11 +238,11 @@ std::string & string::get( const XMLCh * p_raw, std::string & msg )
 
  if( p_raw != nullptr )
    {
-	 char * errorMsg = xercesc::XMLString::transcode( p_raw );
+	 char * errorMsg = XML_STRING::transcode( p_raw );
 
 	 msg += errorMsg;
 
-	 xercesc::XMLString::release( &errorMsg );
+	 XML_STRING::release( &errorMsg );
    }
 
  TRACE_EXIT

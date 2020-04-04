@@ -14,6 +14,7 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
+/*
 #include <error/xml_error.hh>
 #include <error/xml_errorHandler.hh>
 #include <parser/xml_parser.hh>
@@ -24,9 +25,20 @@
 #include "xercesc/parsers/AbstractDOMParser.hpp"
 #include "xercesc/parsers/XercesDOMParser.hpp"
 #include "xercesc/util/XMLString.hpp"
+*/
 
-// Import own declarations
+// Import Project declarations
+#include "defs/xml_defs.hh"
 #include "defs/xml_trace.hh"
+#include "defs/xml_node_type.hh"
+#include "defs/xml_types.hh"
+#include "error/xml_error.hh"
+#include "error/xml_errorHandler.hh"
+#include "string/xml_string.hh"
+
+// Import module declarations
+#include "parser/xml_parser.hh"
+
 
 // *****************************************************************************************
 //
@@ -55,32 +67,43 @@ parser::parser( const char * filename )
 
  TRACE( "Entering with <", filename, ">" )
 
- xercesc::XMLPlatformUtils::Initialize();
+ try { XML_PLATFORM_UTILS::Initialize(); }
 
- p_parser = new XML_PARSER();
- //p_parser->setValidationScheme( xercesc::XercesDOMParser::Val_Always );
- p_parser->setDoNamespaces( true );    // optional
- p_parser->setValidationConstraintFatal( true );
-
- p_errHandler = (XML_ERROR_HANDLER *) new errorHandler();
- p_parser->setErrorHandler( p_errHandler );
+ catch( const XML_EXCEPTION & e )
+      { throw error( e ); }
 
  try {
+
+	   XML_DOM_PARSER		* pParser	= new XML_DOM_PARSER();
+	   XML_ERROR_HANDLER	* pHandler	= (XML_ERROR_HANDLER *) new errorHandler();
+
+	   //p_parser->setValidationScheme( xercesc::XercesDOMParser::Val_Always );
+	   pParser->setDoNamespaces( true );    // optional
+	   pParser->setValidationConstraintFatal( true );
+	   pParser->setErrorHandler( pHandler );
+
 	   TRACE( "Before parsing" )
 
-       p_parser->parse( filename );
+	   pParser->parse( filename );
 
 	   TRACE( "After parsing" )
+
+	   // All OK, copy pointers
+	   p_errHandler	= (void *) pHandler;
+	   p_parser		= (void *) pParser;
      }
 
  // Wrap Xerces exceptions with our own
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::DOMException & e )
+ catch( const XML_DOM_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::SAXParseException & e )
+ catch( const XML_SAX_PARSE_EXCEPTION & e )
+ { throw error( e ); }
+
+ catch( const std::exception & e )
  { throw error( e ); }
 
  TRACE_EXIT
@@ -89,10 +112,25 @@ parser::parser( const char * filename )
 
 parser::~parser()
 {
- delete p_parser;
- delete p_errHandler;
+ TRACE_ENTER
 
- xercesc::XMLPlatformUtils::Terminate();
+ XML_DOM_PARSER		* pParser	= (XML_DOM_PARSER *)	p_parser;
+ XML_ERROR_HANDLER	* pHandler	= (errorHandler *)		p_errHandler;
+
+ try {
+	   delete pParser;
+	   delete pHandler;
+
+	   p_errHandler	= nullptr;
+	   p_parser		= nullptr;
+
+	   XML_PLATFORM_UTILS::Terminate();
+ 	 }
+
+ catch(...)
+      { /* Do nothing */ }
+
+ TRACE_EXIT
 }
 
 

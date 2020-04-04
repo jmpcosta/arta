@@ -16,16 +16,14 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-#include <parser/xml_processor.hh>
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/parsers/XercesDOMParser.hpp"
-
 // Import C++ system headers
 #include <string>
 
-// Import project headers
+// Import module headers
 
+// Import project headers
+#include "parser/xml_processor.hh"
+#include "parser/xml_parser.hh"
 
 // *****************************************************************************************
 //
@@ -53,7 +51,7 @@ public:
 protected:
     	// Instance methods
     	//NODE		*		getCurrentNode		( void ) const { return iCurrentNode; }
-    	const NODE	* 		getDocument( void );
+    	const void	* 		getDocument( void );
 
     	// Instance variables
     	//NODE		*		iCurrentNode;
@@ -63,9 +61,11 @@ protected:
     	// Instance variables
     	// Instance variables
     	parser			&	iParser;
-    	dataHandler			iHandler;
-    	const char	*		ip_exp;;
-    	NODE_LIST	*		ip_List;
+
+    	//dataHandler			iHandler;
+    	const char	*		ip_exp;
+
+    	//NODE_LIST	*		ip_List;
 
 private:
 

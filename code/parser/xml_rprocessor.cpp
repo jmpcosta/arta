@@ -13,20 +13,14 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-#include <defs/xml_defs.hh>
-#include <error/xml_error.hh>
-#include <parser/xml_rprocessor.hh>
-#include <string/xml_string.hh>
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/sax/HandlerBase.hpp"
-#include "xercesc/dom/DOM.hpp"
-#include "xercesc/util/PlatformUtils.hpp"
-#include "xercesc/parsers/XercesDOMParser.hpp"
-#include "xercesc/util/XMLString.hpp"
+// Import Project headers
+#include "defs/xml_defs.hh"
+#include "defs/xml_trace.hh"
+#include "error/xml_error.hh"
+#include "string/xml_string.hh"
 
 // Import own declarations
-#include "defs/xml_trace.hh"
+#include "parser/xml_rprocessor.hh"
 
 // *****************************************************************************************
 //
@@ -55,7 +49,12 @@ rProcessor::rProcessor( parser & p, const char * p_expression ) : iParser{p}
 
  // iCurrentNode	= nullptr;
  ip_exp			= p_expression;
- ip_List		= nullptr;
+ //p_List		= nullptr;
+
+ try { XML_PLATFORM_UTILS::Initialize(); }
+
+ catch( const XML_EXCEPTION & e )
+      { throw error( e ); }
 }
 
 
@@ -63,6 +62,11 @@ rProcessor::rProcessor( parser & p, const char * p_expression ) : iParser{p}
 rProcessor::~rProcessor()
 {
  TRACE_POINT
+
+ try { XML_PLATFORM_UTILS::Terminate(); }
+
+ catch(...)
+      { /* Do nothing */ }
 }
 
 
@@ -73,7 +77,7 @@ void rProcessor::process( void )
 
  try
  {
-	 const NODE * p_rootNode = getDocument();
+	 const void * p_rootNode = getDocument();
 
 	 if( p_rootNode != nullptr )
 	   {
@@ -83,13 +87,13 @@ void rProcessor::process( void )
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::DOMException & e )
+ catch( const XML_DOM_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::SAXParseException & e )
+ catch( const XML_SAX_PARSE_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
@@ -97,19 +101,31 @@ void rProcessor::process( void )
 
 
 
-const NODE * rProcessor::getDocument( void )
+const void * rProcessor::getDocument( void )
 {
- XML_PARSER * p_parser = iParser.getParser();
- if( p_parser == nullptr ) throw error( "No XML parser found !" );
+  const void * p_document = nullptr;
 
- TRACE( "Parser pointer:", p_parser )
+  try {
+	  	XML_DOM_PARSER * p_parser = (XML_DOM_PARSER *) iParser.getParser();
 
- const XML_DOC * p_document = p_parser->getDocument();
- if( p_document == nullptr ) throw error( "No XML well format document found" );
+	  	if( p_parser == nullptr ) throw error( "No XML parser found !" );
 
- TRACE( "Root Document node:", p_document )
+	  	TRACE( "Parser pointer:", p_parser )
 
- return dynamic_cast< const NODE * >( p_document );
+	  	p_document = (const void *) p_parser->getDocument();
+	 	 }
+
+  catch( const XML_EXCEPTION & e )
+	   { throw error( e ); }
+
+  catch( const XML_DOM_EXCEPTION & e )
+  	   { throw error( e ); }
+
+  if( p_document == nullptr ) throw error( "No XML well format document found" );
+
+  TRACE( "Root Document node:", p_document )
+
+  return p_document;
 }
 
 

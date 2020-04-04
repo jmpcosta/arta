@@ -9,6 +9,10 @@
 #include <exception>
 #include <filesystem>
 
+// Import ARTA library
+#include "arta.hh"
+#include "arta_alias.hh"
+
 // Include own headers
 #include "arta_hproc_proc.hh"
 

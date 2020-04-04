@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Defines the XML Parser API
+// Purpose:	Defines the XML Parser Error handling API
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_XML__ERRORHANDLER_HH_
-#define OSAPI_XML__ERRORHANDLER_HH_
+#ifndef OSAPI_XML_ERRORHANDLER_HH_
+#define OSAPI_XML_ERRORHANDLER_HH_
 
 // *****************************************************************************************
 //
@@ -16,18 +16,12 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-//#include "xercesc/util/XercesDefs.hpp"
-//#include "xercesc/sax/SAXParseException.hpp"
-#include <defs/xml_defs.hh>
-#include <defs/xml_types.hh>
+// Import Xerces headers
 #include "xercesc/sax/ErrorHandler.hpp"
 
-// Import C++ system headers
-// #include <string>
+// Import Project headers
+#include "defs/xml_types.hh"
 
-// Import project headers
-#include "defs/xml_trace.hh"
 
 // *****************************************************************************************
 //
@@ -58,8 +52,6 @@ public:
 		void				resetErrors		( void ) {}
 
 
-protected:
-
 private:
 
 		TRACE_CLASSNAME_DECLARATION
@@ -75,4 +67,4 @@ private:
 
 
 
-#endif /* OSAPI_XML__ERRORHANDLER_HH_ */
+#endif /* OSAPI_XML_ERRORHANDLER_HH_ */

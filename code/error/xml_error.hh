@@ -16,16 +16,13 @@
 //
 // *****************************************************************************************
 
-// Import Xerces headers
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/dom/DOMException.hpp"
-
 // Import C++ Standard headers
 #include <string>
 #include <exception>
 
 // Include project headers
 #include "defs/xml_trace.hh"
+#include "defs/xml_types.hh"
 
 // *****************************************************************************************
 //
@@ -52,11 +49,14 @@ public:
 		// Inline constructors
 
 		/// @brief class constructor
-		explicit	error	( std::string & message				) { iMsg = message; }
-		explicit	error	( const char * message				) { iMsg = message; }
-		explicit 	error	( const xercesc::XMLException & exc	);
-		explicit	error	( const xercesc::DOMException & exc	);
-		explicit	error	( const xercesc::SAXException & exc	);
+		explicit			error	( std::string & message					) { iMsg = message; }
+		explicit			error	( const char * message					) { iMsg = message; }
+
+		explicit 			error	( const std::exception			& exc	);
+		explicit 			error	( const XML_EXCEPTION			& exc	);
+		explicit			error	( const XML_DOM_EXCEPTION		& exc	);
+		explicit			error	( const XML_SAX_EXCEPTION		& exc	);
+		explicit			error	( const XML_SAX_PARSE_EXCEPTION	& exc	);
 
 		/// @brief Class destructor
     						~error() {}

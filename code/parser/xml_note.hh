@@ -43,13 +43,10 @@ public:
 };
 
 
-
-using NOTE = note;
-
-
 }	// End of namespace "xml"
 }	// End of namespace "osapi"
 
+using NOTE = ::osapi::xml::note;
 
 
 #endif /* OSAPI_XML_NOTE_HH_ */

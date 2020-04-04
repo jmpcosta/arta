@@ -19,9 +19,9 @@
 // Import Standard C++ declarations
 #include <string>
 
-// Include Arta headers
-#include "defs/xml_types.hh"
-#include "parser/xml_hprocessor.hh"
+// Import Arta library
+#include "arta.hh"
+#include "arta_alias.hh"
 
 // Include own project headers
 #include "arta_hproc_defs.hh"

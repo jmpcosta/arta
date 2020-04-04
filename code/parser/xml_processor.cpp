@@ -13,20 +13,18 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-#include <defs/xml_defs.hh>
-#include <error/xml_error.hh>
-#include <parser/xml_processor.hh>
-#include <string/xml_string.hh>
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/sax/HandlerBase.hpp"
-#include "xercesc/dom/DOM.hpp"
-#include "xercesc/util/PlatformUtils.hpp"
-#include "xercesc/parsers/XercesDOMParser.hpp"
-#include "xercesc/util/XMLString.hpp"
-
-// Import own declarations
+// Import Project declarations
+#include "defs/xml_defs.hh"
 #include "defs/xml_trace.hh"
+#include "defs/xml_node_type.hh"
+#include "defs/xml_types.hh"
+
+#include "error/xml_error.hh"
+#include "string/xml_string.hh"
+
+// Import module declarations
+#include "parser/xml_processor.hh"
+
 
 // *****************************************************************************************
 //
@@ -40,6 +38,7 @@ namespace xml
 {
 
 TRACE_CLASSNAME( processor )
+
 
 // *****************************************************************************************
 //
@@ -55,14 +54,8 @@ processor::~processor()
 }
 
 
-MEMORY_MGR * processor::getMemoryManager( void )
-{
-  return xercesc::XMLPlatformUtils::fgMemoryManager;
-}
-
-
 // Process Single Node
-void processor::processNode( const NODE * p_node )
+void processor::processNode( void * p_node )
 {
  TRACE_ENTER
 
@@ -71,36 +64,40 @@ void processor::processNode( const NODE * p_node )
  // Call client application hook method
  specificNode( p_node );
 
+ XML_NODE *	p_xnode	= (XML_NODE *) p_node;
+
  try
  {
-	 switch( p_node->getNodeType() )
+	 switch( p_xnode->getNodeType() )
 	 	   {
-	 	 	 case NODE_TYPE::ELEMENT_NODE: 	 	 			processElement		( p_node ); break;
-	 	 	 case NODE_TYPE::ATTRIBUTE_NODE: 	 			processAttribute	( p_node ); break;
-	 	 	 case NODE_TYPE::PROCESSING_INSTRUCTION_NODE:	processInstruction  ( p_node );	break;
-	 	 	 case NODE_TYPE::TEXT_NODE:						processText  		( p_node );	break;
-	 	 	 case NODE_TYPE::COMMENT_NODE:					processComment	  ( p_node );	break;
-	 	 	 default:							 											break;
+	 	 	 case nodeType::element: 		processElement		( p_node );	break;
+	 	 	 case nodeType::attribute:		processAttribute	( p_node );	break;
+	 	 	 case nodeType::PI:				processInstruction  ( p_node );	break;
+	 	 	 case nodeType::text:			processText  		( p_node );	break;
+	 	 	 case nodeType::comment:		processComment	  	( p_node );	break;
+	 	 	 default:														break;
 	 	   }
 
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-void processor::processElement( const NODE * p_node )
+void processor::processElement( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
+
  try
  {
-	 if( p_node->getNodeType() == NODE_TYPE::ELEMENT_NODE )
+	 if( p_xnode->getNodeType() == XML_NODE_TYPE::ELEMENT_NODE )
 	   {
 		 std::string name, value, containerName;
 
@@ -114,24 +111,26 @@ void processor::processElement( const NODE * p_node )
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-void processor::processInstruction( const NODE * p_node )
+void processor::processInstruction( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
+
  try
  {
-	 if( p_node->getNodeType() == NODE_TYPE::PROCESSING_INSTRUCTION_NODE )
+	 if( p_xnode->getNodeType() == XML_NODE_TYPE::PROCESSING_INSTRUCTION_NODE )
 	   {
-		 const NODE_PI * p_pi = dynamic_cast< const NODE_PI * >( p_node );
+		 const XML_NODE_PI * p_pi = (const XML_NODE_PI *) p_node;
 
 		 if( p_pi != nullptr )
 		   {
@@ -148,86 +147,85 @@ void processor::processInstruction( const NODE * p_node )
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-void processor::processText( const NODE * p_node )
+void processor::processText( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
+
  try
  {
-	 if( p_node->getNodeType() == NODE_TYPE::TEXT_NODE )
+	 if( p_xnode->getNodeType() == XML_NODE_TYPE::TEXT_NODE )
 	   {
-		 const NODE_TEXT * p_pi = dynamic_cast< const NODE_TEXT * >( p_node );
+		 const XML_NODE_TEXT * p_text = (const XML_NODE_TEXT *) p_node;
 
-		 if( p_pi != nullptr )
-		   {
-			 string data;
+		 string data;
 
-			 data = p_pi->getData();
+		 data = p_text->getData();
 
-			 TRACE( "Text:", data.get() )
+		 TRACE( "Text:", data.get() )
 
-			 // Call client application hook method
-			 specificText( data.get() );
-		   }
+		 // Call client application hook method
+		 specificText( data.get() );
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-void processor::processComment( const NODE * p_node )
+void processor::processComment( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
+
  try
  {
-	 if( p_node->getNodeType() == NODE_TYPE::COMMENT_NODE )
+	 if( p_xnode->getNodeType() == XML_NODE_TYPE::COMMENT_NODE )
 	   {
-		 const NODE_COMMENT * p_comment = dynamic_cast< const NODE_COMMENT * >( p_node );
+		 const XML_NODE_COMMENT * p_comment = (const XML_NODE_COMMENT *) p_node;
 
-		 if( p_comment != nullptr )
-		   {
-			 string data;
+		 string data;
 
-			 data = p_comment->getData();
+		 data = p_comment->getData();
 
-			 TRACE( "Comment:", data.get() )
+		 TRACE( "Comment:", data.get() )
 
-			 // Call client application hook method
-			 specificComment( data.get() );
-		   }
+		 // Call client application hook method
+		 specificComment( data.get() );
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-void processor::processAttributes( const NODE * p_node )
+void processor::processAttributes( void * p_node )
 {
  TRACE_ENTER
 
  if( isElement( p_node ) )
    {
-	 NODE_MAP * p_attr_nodes = p_node->getAttributes();
+	 XML_NODE		* p_xnode		= (XML_NODE *) p_node;
+	 XML_NODE_MAP	* p_attr_nodes	= p_xnode->getAttributes();
 
 	 if( p_attr_nodes != nullptr )
 	   {
@@ -235,8 +233,8 @@ void processor::processAttributes( const NODE * p_node )
 
 		 for( XMLSize_t i = 0; i < nodeCount; i++ )
 		 	{
-			  const NODE * p_attr = dynamic_cast< const NODE * >( p_attr_nodes->item(i) );
-			  processAttribute( p_attr );
+			  void * pAttribute	= (void *) p_attr_nodes->item(i);
+			  processAttribute	( pAttribute );
 		 	}
 	   }
    }
@@ -245,23 +243,23 @@ void processor::processAttributes( const NODE * p_node )
 }
 
 
-void processor::processAttribute( const NODE * p_node )
+void processor::processAttribute( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
+
  try
  {
-	 TRACE( "Is node attribute?" )
-
-	 if( p_node->getNodeType() == NODE_TYPE::ATTRIBUTE_NODE )
+	 if( p_xnode->getNodeType() == XML_NODE_TYPE::ATTRIBUTE_NODE )
 	   {
 		 string name, value;
 
 		 TRACE( "Node is Attribute" )
 
-		 const NODE_ATTR * p_attr = dynamic_cast< const NODE_ATTR * >( p_node );
+		 const XML_NODE_ATTR * p_attr = (XML_NODE_ATTR *) p_node;
 
 		 if( p_attr != nullptr )
 		   {
@@ -276,7 +274,7 @@ void processor::processAttribute( const NODE * p_node )
 	   }
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
@@ -284,9 +282,10 @@ void processor::processAttribute( const NODE * p_node )
 
 
 
-const NOTE * processor::getNodeNote( const NODE * p_node )
+const NOTE * processor::getNodeNote( void * p_node )
 {
- NOTE * ret = nullptr;
+ NOTE	* 	ret 	= nullptr;
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
 
  TRACE_ENTER
 
@@ -294,10 +293,10 @@ const NOTE * processor::getNodeNote( const NODE * p_node )
 
  try
  {
-	 ret = (NOTE *) p_node->getUserData( p_node->getLocalName() );
+	 ret = (NOTE *) p_xnode->getUserData( p_xnode->getLocalName() );
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
@@ -306,23 +305,21 @@ const NOTE * processor::getNodeNote( const NODE * p_node )
 }
 
 // Attach a note to a node to add meta information required for mapping it into a configuration type: container, CI, etc.
-void processor::attachNodeNote( const NODE * p_node, NOTE * p_note )
+void processor::attachNodeNote( void * p_node, NOTE * p_note )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
-
- if( p_note == nullptr )
-	 throw error( "No pointer for XML Note provided" );
+ if( p_note == nullptr ) throw error( "No pointer for XML Note provided" );
 
  try
  {
-	 NODE * p_currentNode = (NODE *) p_node;
+	 XML_NODE * p_currentNode = (XML_NODE *) p_node;
 	 if( p_currentNode->setUserData( p_currentNode->getLocalName(), (void *) p_note, nullptr ) == nullptr )
 		 throw error( "Unable to attach a note to the current node" );
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
@@ -334,34 +331,37 @@ void processor::attachNodeNote( const NODE * p_node, NOTE * p_note )
 // Utility functions for XML documents
 
 // Is node an element
-bool processor::isElement( const NODE * p_node )
+bool processor::isElement( void * p_node )
 {
  TRACE_ENTER
 
- if( p_node == nullptr )
-   {
-	 TRACE( "Not an Node element" )
-	 return false;
-   }
+ if( p_node == nullptr ) return false;
+
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
 
  TRACE_EXIT
 
- return ( p_node->getNodeType() == NODE_TYPE::ELEMENT_NODE );
+ return ( p_xnode->getNodeType() == XML_NODE_TYPE::ELEMENT_NODE );
 }
 
 // Get the name the element
-bool processor::getElementName( const NODE * p_node, std::string & name )
+bool processor::getElementName( void * p_node, std::string & name )
 {
  TRACE_ENTER
 
  if( p_node == nullptr    )	return false;
  if( ! isElement( p_node ))	return false;
 
- const NODE_ELEM * p_element = dynamic_cast< const NODE_ELEM * >( p_node );
+ try {
+	   XML_NODE_ELEM * p_element = (XML_NODE_ELEM *) p_node;
 
- string str( p_element->getTagName() );
+	   string str( p_element->getTagName() );
 
- str.get( name );
+	   str.get( name );
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
 
  TRACE( "Element name =", name )
 
@@ -372,16 +372,23 @@ bool processor::getElementName( const NODE * p_node, std::string & name )
 
 
 // Get the value of an element
-bool processor::getElementValue( const NODE * p_node, std::string & value )
+bool processor::getElementValue( void * p_node, std::string & value )
 {
  TRACE_ENTER
 
- if( p_node == nullptr )	return false;
+ if( p_node == nullptr ) return false;
 
- string str( p_node->getNodeValue() );
- str.get( value );
+ try {
+	   XML_NODE * ptr = (XML_NODE *) p_node;
 
- TRACE( "Element value =", value )
+	   string str( ptr->getNodeValue() );
+	   str.get( value );
+
+	   TRACE( "Element value =", value )
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
 
  TRACE_EXIT
 
@@ -391,27 +398,33 @@ bool processor::getElementValue( const NODE * p_node, std::string & value )
 
 
 // Get the name of element/node attributes
-bool processor::getAttributeList( const NODE * p_node, std::vector<std::string> & list )
+bool processor::getAttributeList( void * p_node, std::vector<std::string> & list )
 {
  TRACE_ENTER
 
- if( ! isElement( p_node ) )	return false;
+ if( ! isElement( p_node ) ) return false;
 
- NODE_MAP * p_attr_nodes = p_node->getAttributes();
+ try {
+	   XML_NODE_ELEM	* pNode			= (XML_NODE_ELEM *) p_node;
+	   XML_NODE_MAP		* p_attr_nodes	= pNode->getAttributes();
 
- if( p_attr_nodes == nullptr )	return false;
+	   if( p_attr_nodes == nullptr )	return false;
 
- const  XMLSize_t nodeCount = p_attr_nodes->getLength();
+	   const  XMLSize_t nodeCount = p_attr_nodes->getLength();
 
- std::string tmp;
- string		 str;
+	   std::string	tmp;
+	   string		str;
 
- for( XMLSize_t i = 0; i < nodeCount; i++ )
-    {
-	  str = p_attr_nodes->item( i )->getNodeName();
-	  str.get( tmp );
- 	  list.push_back( std::move( tmp ) );
-    }
+	   for( XMLSize_t i = 0; i < nodeCount; i++ )
+	   	  {
+		    str = p_attr_nodes->item( i )->getNodeName();
+		    str.get( tmp );
+		    list.push_back( std::move( tmp ) );
+	   	  }
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
 
  TRACE_EXIT
 
@@ -420,24 +433,30 @@ bool processor::getAttributeList( const NODE * p_node, std::vector<std::string> 
 
 
 // Given an attribute name of an node element, get the respective value
-bool processor::getAttributeValue( const NODE * p_node, const std::string & name, std::string & value	)
+bool processor::getAttributeValue( void * p_node, const std::string & name, std::string & value )
 {
  TRACE_ENTER
 
  if( ! isElement( p_node ) )	return false;
 
- NODE_MAP * p_attr_nodes = p_node->getAttributes();
+ try {
+	   XML_NODE_ELEM	* pNode			= (XML_NODE_ELEM *) p_node;
+	   XML_NODE_MAP		* p_attr_nodes	= pNode->getAttributes();
 
- if( p_attr_nodes == nullptr )	return false;
+	   if( p_attr_nodes == nullptr )	return false;
 
- const  XMLSize_t nodeCount = p_attr_nodes->getLength();
+	   const  XMLSize_t nodeCount = p_attr_nodes->getLength();
 
- string str;
- for( XMLSize_t i = 0; i < nodeCount; i++ )
-    {
-	  str = p_attr_nodes->item( i )->getNodeName();
- 	  if( str == name )  value = str.get();
-    }
+	   string str;
+	   for( XMLSize_t i = 0; i < nodeCount; i++ )
+	   	  {
+		    str = p_attr_nodes->item( i )->getNodeName();
+		    if( str == name )  value = str.get();
+	   	  }
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
 
  TRACE_EXIT
 

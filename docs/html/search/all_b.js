@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['parser',['parser',['../classosapi_1_1xml_1_1parser.html',1,'osapi::xml::parser'],['../classosapi_1_1xml_1_1parser.html#a838001972b2a31bc7f12dc3292de1644',1,'osapi::xml::parser::parser()']]],
-  ['process',['process',['../classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20',1,'osapi::xml::hProcessor::process()'],['../classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4',1,'osapi::xml::processor::process()'],['../classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035',1,'osapi::xml::rProcessor::process()']]],
-  ['processattribute',['processAttribute',['../classosapi_1_1xml_1_1processor.html#a055a19c57ae27952992996b45621c7e3',1,'osapi::xml::processor']]],
-  ['processattributes',['processAttributes',['../classosapi_1_1xml_1_1processor.html#a01b151467583ebf113b711cf09fcf128',1,'osapi::xml::processor']]],
-  ['processcomment',['processComment',['../classosapi_1_1xml_1_1processor.html#af91c40b84eb7f7a0e9baa0134680d5fc',1,'osapi::xml::processor']]],
-  ['processdescendants',['processDescendants',['../classosapi_1_1xml_1_1h_processor.html#ac11d7c1846f1d2a6a77b7e00783b35b4',1,'osapi::xml::hProcessor']]],
-  ['processelement',['processElement',['../classosapi_1_1xml_1_1h_processor.html#a2ba719126ef72de7b2c5db2985c3a002',1,'osapi::xml::hProcessor::processElement()'],['../classosapi_1_1xml_1_1processor.html#a97ac9510e76051abdd02ca6bacb8cd39',1,'osapi::xml::processor::processElement()']]],
-  ['processinstruction',['processInstruction',['../classosapi_1_1xml_1_1processor.html#acf9fa6e64d2c103c73f4fede09f2d6a6',1,'osapi::xml::processor']]],
-  ['processnode',['processNode',['../classosapi_1_1xml_1_1processor.html#af9d6c12257547bf974b671bfd02e6889',1,'osapi::xml::processor']]],
-  ['processor',['processor',['../classosapi_1_1xml_1_1processor.html',1,'osapi::xml']]],
-  ['processtext',['processText',['../classosapi_1_1xml_1_1processor.html#aa1a14c984d1be951fd6375ed0ce777d5',1,'osapi::xml::processor']]]
+  ['operator_2b',['operator+',['../classosapi_1_1xml_1_1string.html#a2083a1d5bca4bddfdddd6a06e2f8216b',1,'osapi::xml::string::operator+(const char *first)'],['../classosapi_1_1xml_1_1string.html#ac43ca09c93943a7996470e8f882d9d32',1,'osapi::xml::string::operator+(const std::string &amp;first)'],['../classosapi_1_1xml_1_1string.html#a461c4272810b45ce06ec647d2c64cc92',1,'osapi::xml::string::operator+(const XMLCh *second)']]],
+  ['operator_2b_3d',['operator+=',['../classosapi_1_1xml_1_1string.html#acdcab9cfe62e6e3126a417d3eb4d5a5b',1,'osapi::xml::string::operator+=(const XMLCh *first)'],['../classosapi_1_1xml_1_1string.html#a2e44c3133cc551672e66736c2832249e',1,'osapi::xml::string::operator+=(const std::string &amp;first)'],['../classosapi_1_1xml_1_1string.html#a895b8528fed040b9992738a2ad5d8d4e',1,'osapi::xml::string::operator+=(const char *first)']]],
+  ['operator_3d',['operator=',['../classosapi_1_1xml_1_1maker.html#a7cd3f0f86d53039c75f0591ea08a1616',1,'osapi::xml::maker::operator=(maker const &amp;)=delete'],['../classosapi_1_1xml_1_1maker.html#ad2db1fe56d14c2d28a352228d8e367f0',1,'osapi::xml::maker::operator=(maker &amp;&amp;)=delete'],['../classosapi_1_1xml_1_1string.html#ab5430011cb1f9c4582f6993f42ad3527',1,'osapi::xml::string::operator=(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#a8390666bd9e35355baf5fc92b1a95c31',1,'osapi::xml::string::operator=(const char *message)'],['../classosapi_1_1xml_1_1string.html#a9d9fcf8fdb67dbfc16794ba75e5c7409',1,'osapi::xml::string::operator=(const std::string &amp;message)']]],
+  ['operator_3d_3d',['operator==',['../classosapi_1_1xml_1_1string.html#aed433744f04f10d2baff5e2649b45403',1,'osapi::xml::string::operator==(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#a8279599cd5bde4f6f440c4ad0170b9c0',1,'osapi::xml::string::operator==(const char *message)'],['../classosapi_1_1xml_1_1string.html#a6595f3f12249f17f472afce8b0c70f68',1,'osapi::xml::string::operator==(const std::string &amp;message)']]],
+  ['osapi',['osapi',['../namespaceosapi.html',1,'']]],
+  ['xml',['xml',['../namespaceosapi_1_1xml.html',1,'osapi']]]
 ];

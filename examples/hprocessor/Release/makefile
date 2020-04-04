@@ -47,7 +47,7 @@ dependents:
 arta_hproc: $(OBJS) $(USER_OBJS) /home/joao/workspace/arta/Release/libarta.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/joao/workspace/arta/Release" -L"/home/joao/Software/xerces/src" -o "arta_hproc" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"${ARTA_DIR}/Release" -L"${XERCES_DIR}/src" -o "arta_hproc" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

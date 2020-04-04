@@ -17,12 +17,11 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <string>
 
 
 // Import project headers
-#include "defs/xml_types.hh"
 #include "defs/xml_trace.hh"
+
 
 
 // *****************************************************************************************
@@ -40,15 +39,30 @@ namespace xml
 class maker
 {
 public:
-		/// @brief class constructor
-		/// @param [in] filename - XML file name to parse
-		explicit			maker( const char * filename );
 
 		/// @brief Class destructor
-    						~maker();
+    						~maker		();
 
+    	// Factory method
+    	static maker &		getMaker	();
+
+		/// @brief Create/write a XML file from a root node
+		/// @param [in] filename - XML file name to parse
+    	void				build( const char * filename );
+
+    	void				createDocument( const char * RootNode );
+
+    	// delete copy and move constructors and assign operators
+    	maker( maker const & 	)			= delete;		// Copy construct
+    	maker( maker && 		)			= delete;		// Move construct
+    	maker& operator=( maker const&)		= delete; 		// Copy assign
+    	maker& operator=( maker &&	)		= delete;		// Move assign
 
 private:
+		/// @brief class constructor
+		explicit			maker( void );
+
+		void		*		p_iRootNode;
 
 		TRACE_CLASSNAME_DECLARATION
 };

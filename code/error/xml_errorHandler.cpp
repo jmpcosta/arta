@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Implementation of a generic XML processor
+// Purpose:	Handling Xerces Errors
 //
 // *****************************************************************************************
 
@@ -14,15 +14,16 @@
 // *****************************************************************************************
 
 // Import C++ standard headers
-#include <error/xml_errorHandler.hh>
-#include <string/xml_string.hh>
 #include <iostream>
 
-// Import Xerces C++ headers
-#include "xercesc/sax/SAXParseException.hpp"
-#include "xercesc/util/XMLString.hpp"
+// Import Project headers
+#include "defs/xml_defs.hh"
+#include "defs/xml_trace.hh"
+#include "defs/xml_types.hh"
+#include "string/xml_string.hh"
 
 // Import own declarations
+#include "error/xml_errorHandler.hh"
 
 // *****************************************************************************************
 //

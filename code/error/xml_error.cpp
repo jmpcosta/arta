@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Implementation of XML to OSAPI Configuration
+// Purpose:	Implementation of a XML error wrapper
 //
 // *****************************************************************************************
 
@@ -14,11 +14,11 @@
 // *****************************************************************************************
 
 // Import Xerces C++ headers
-#include <defs/xml_defs.hh>
-#include <error/xml_error.hh>
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
+#include "error/xml_error.hh"
+
 
 // *****************************************************************************************
 //
@@ -40,9 +40,16 @@ TRACE_CLASSNAME( error )
 // *****************************************************************************************
 
 
+error::error( const std::exception & exc )
+{
+ TRACE_ENTER
 
+ iMsg = exc.what();
 
-error::error( const xercesc::XMLException & exc )
+ TRACE_EXIT
+}
+
+error::error( const XML_EXCEPTION & exc )
 {
  TRACE_ENTER
 
@@ -58,7 +65,7 @@ error::error( const xercesc::XMLException & exc )
 }
 
 
-error::error( const xercesc::DOMException & exc )
+error::error( const XML_DOM_EXCEPTION & exc )
 {
  TRACE_ENTER
 
@@ -72,7 +79,7 @@ error::error( const xercesc::DOMException & exc )
 }
 
 
-error::error( const xercesc::SAXException & exc )
+error::error( const XML_SAX_EXCEPTION & exc )
 {
  TRACE_ENTER
 
@@ -85,6 +92,18 @@ error::error( const xercesc::SAXException & exc )
  TRACE_EXIT
 }
 
+error::error( const XML_SAX_PARSE_EXCEPTION & exc )
+{
+ TRACE_ENTER
+
+ char * errorMsg = xercesc::XMLString::transcode( exc.getMessage() );
+
+ iMsg += errorMsg;
+
+ xercesc::XMLString::release( &errorMsg );
+
+ TRACE_EXIT
+}
 
 
 }	// End of namespace "xml"

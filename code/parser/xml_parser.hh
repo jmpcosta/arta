@@ -17,7 +17,6 @@
 // *****************************************************************************************
 
 // Import C++ system headers
-#include <defs/xml_types.hh>
 #include <string>
 
 // Import project headers
@@ -45,12 +44,12 @@ public:
 		/// @brief Class destructor
     						~parser();
 
-    	XML_PARSER	*		getParser	( void ) { return p_parser; }
+    	void	*		getParser	( void ) { return p_parser; }
 
 private:
 
-    	XML_PARSER		  *	p_parser;
-    	XML_ERROR_HANDLER * p_errHandler;
+    	void	*		p_parser;
+    	void	*		p_errHandler;
 
 		TRACE_CLASSNAME_DECLARATION
 };

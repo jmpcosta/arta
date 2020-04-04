@@ -1,25 +1,5 @@
 var searchData=
 [
-  ['xml_5fdata_5fhandler_2ecpp',['xml_data_handler.cpp',['../xml__data__handler_8cpp.html',1,'']]],
-  ['xml_5fdata_5fhandler_2ehh',['xml_data_handler.hh',['../xml__data__handler_8hh.html',1,'']]],
-  ['xml_5fdefs_2ehh',['xml_defs.hh',['../xml__defs_8hh.html',1,'']]],
-  ['xml_5ferror_2ecpp',['xml_error.cpp',['../xml__error_8cpp.html',1,'']]],
-  ['xml_5ferror_2ehh',['xml_error.hh',['../xml__error_8hh.html',1,'']]],
-  ['xml_5ferrorhandler_2ecpp',['xml_errorHandler.cpp',['../xml__error_handler_8cpp.html',1,'']]],
-  ['xml_5ferrorhandler_2ehh',['xml_errorHandler.hh',['../xml__error_handler_8hh.html',1,'']]],
-  ['xml_5fhprocessor_2ecpp',['xml_hprocessor.cpp',['../xml__hprocessor_8cpp.html',1,'']]],
-  ['xml_5fhprocessor_2ehh',['xml_hprocessor.hh',['../xml__hprocessor_8hh.html',1,'']]],
-  ['xml_5fmaker_2ecpp',['xml_maker.cpp',['../xml__maker_8cpp.html',1,'']]],
-  ['xml_5fmaker_2ehh',['xml_maker.hh',['../xml__maker_8hh.html',1,'']]],
-  ['xml_5fnote_2ehh',['xml_note.hh',['../xml__note_8hh.html',1,'']]],
-  ['xml_5fparser_2ecpp',['xml_parser.cpp',['../xml__parser_8cpp.html',1,'']]],
-  ['xml_5fparser_2ehh',['xml_parser.hh',['../xml__parser_8hh.html',1,'']]],
-  ['xml_5fprocessor_2ecpp',['xml_processor.cpp',['../xml__processor_8cpp.html',1,'']]],
-  ['xml_5fprocessor_2ehh',['xml_processor.hh',['../xml__processor_8hh.html',1,'']]],
-  ['xml_5frprocessor_2ecpp',['xml_rprocessor.cpp',['../xml__rprocessor_8cpp.html',1,'']]],
-  ['xml_5frprocessor_2ehh',['xml_rprocessor.hh',['../xml__rprocessor_8hh.html',1,'']]],
-  ['xml_5fstring_2ecpp',['xml_string.cpp',['../xml__string_8cpp.html',1,'']]],
-  ['xml_5fstring_2ehh',['xml_string.hh',['../xml__string_8hh.html',1,'']]],
-  ['xml_5ftrace_2ehh',['xml_trace.hh',['../xml__trace_8hh.html',1,'']]],
-  ['xml_5ftypes_2ehh',['xml_types.hh',['../xml__types_8hh.html',1,'']]]
+  ['arta_2ehh',['arta.hh',['../arta_8hh.html',1,'']]],
+  ['arta_5falias_2ehh',['arta_alias.hh',['../arta__alias_8hh.html',1,'']]]
 ];

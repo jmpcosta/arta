@@ -44,7 +44,7 @@ all: arta_rproc
 arta_rproc: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/joao/workspace/arta/Debug" -L"/home/joao/Software/xerces/src" -pthread -o "arta_rproc" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"${ARTA_DIR}/Debug" -L"${XERCES_DIR}/src" -pthread -o "arta_rproc" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

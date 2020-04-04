@@ -13,20 +13,21 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-#include <defs/xml_defs.hh>
-#include <error/xml_error.hh>
-#include <parser/xml_hprocessor.hh>
-#include <string/xml_string.hh>
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/sax/HandlerBase.hpp"
-#include "xercesc/dom/DOM.hpp"
-#include "xercesc/util/PlatformUtils.hpp"
-#include "xercesc/parsers/XercesDOMParser.hpp"
-#include "xercesc/util/XMLString.hpp"
+// Import C++ headers
+#include <vector>
 
-// Import own declarations
+// Import Module headers
+#include "defs/xml_defs.hh"
 #include "defs/xml_trace.hh"
+#include "defs/xml_node_type.hh"
+#include "defs/xml_types.hh"
+#include "error/xml_error.hh"
+#include "string/xml_string.hh"
+
+// Import module declarations
+#include "parser/xml_hprocessor.hh"
+#include "parser/xml_parser.hh"
+
 
 // *****************************************************************************************
 //
@@ -53,13 +54,27 @@ hProcessor::hProcessor( parser & p ) : iParser{p}
 {
  TRACE_POINT
 
- iCurrentNode = nullptr;
+ iDoc			= nullptr;
+ iCurrentNode	= nullptr;
+ iData			= nullptr;
+
+ try { XML_PLATFORM_UTILS::Initialize(); }
+
+ catch( const XML_EXCEPTION & e )
+      { throw error( e ); }
 }
 
 
 hProcessor::~hProcessor()
 {
  TRACE_POINT
+
+ try { XML_PLATFORM_UTILS::Terminate(); }
+
+ catch(...)
+      {
+	 	 TRACE("Exception found !")
+      }
 }
 
 
@@ -67,73 +82,76 @@ void hProcessor::process( void )
 {
  TRACE_ENTER
 
- try
- {
-	const NODE * p_rootNode = getDocument();
+ try {
+	   // First get the DOM parser
+	   XML_DOM_PARSER * p_parser = (XML_DOM_PARSER *) iParser.getParser();
 
-	if( hasDescendants( p_rootNode ) )
-		processDescendants( p_rootNode );
- }
+	   TRACE( "Parser pointer: ", p_parser )
 
- catch( const xercesc::XMLException & e )
+	   // Get the Document Node
+	   XML_NODE_DOC * p_doc = p_parser->getDocument();
+	   iDoc = (void *) p_doc;
+
+	   //processDocument( iDoc );
+
+	   //XML_NODE_ELEM * p_rootElem = p_doc->getDocumentElement();
+	   XML_NODE * p_node = dynamic_cast<XML_NODE *>( p_doc );
+
+	   if( hasDescendants    ( (void *) p_node ) )
+		   processDescendants( (void *) p_node );
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::DOMException & e )
+ catch( const XML_DOM_EXCEPTION & e )
  { throw error( e ); }
 
- catch( const xercesc::SAXParseException & e )
+ catch( const XML_SAX_PARSE_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT
 }
 
 
-const NODE * hProcessor::getDocument( void )
-{
- XML_PARSER * p_parser = iParser.getParser();
- if( p_parser == nullptr ) throw error( "No XML parser found !" );
-
- TRACE( "Parser pointer:", p_parser )
-
- const XML_DOC * p_document = p_parser->getDocument();
- if( p_document == nullptr ) throw error( "No XML well format document found" );
-
- TRACE( "Root Document node:", p_document )
-
- return dynamic_cast< const NODE * >( p_document );
-}
-
-
-void hProcessor::processDescendants( const NODE * p_father )
+void hProcessor::processDescendants( void * p_node )
 {
  TRACE_ENTER
 
- if( p_father == nullptr ) throw error( "No pointer for DOMNode provided" );
+ if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
+
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
 
  try
  {
-	 NODE_LIST * children = p_father->getChildNodes();
-	 if( children == nullptr ) throw error( "Unable to get children nodes" );
+	 XML_NODE_LIST * p_children = p_xnode->getChildNodes();
+	 if( p_children == nullptr ) throw error( "Unable to get children nodes" );		// This getChildNodes returns null if no children?
 
-	 const  XMLSize_t nodeCount = children->getLength();
+	 XMLSize_t nodeCount = p_children->getLength();
+
+	 TRACE( "Number of children: ", nodeCount )
 
 	 for( XMLSize_t i = 0; i < nodeCount; i++ )
 	    {
-		  NODE * currentNode = children->item( i );
+		  TRACE( "Processing child: ", i )
 
-		  iCurrentNode = currentNode;
-		  processNode( currentNode );
+		  XML_NODE * p_current = p_children->item( i );
 
-		  if( hasDescendants( currentNode ) )
+		  iCurrentNode = p_current;
+		  processNode( p_current );
+
+		  if( hasDescendants( p_current ) )
 		    {
 			  TRACE( "Processing descendant node:", (int) i )
-			  processDescendants( currentNode );
+			  processDescendants( p_current );
 		    }
 	    }
  }
 
- catch( const xercesc::XMLException & e )
- { throw error( e ); }
+ catch( const XML_EXCEPTION & e )
+ {
+   throw error( e );
+ }
 
  TRACE_EXIT
 }
@@ -141,37 +159,63 @@ void hProcessor::processDescendants( const NODE * p_father )
 
 
 // Check if the node has descendants
-bool hProcessor::hasDescendants( const NODE * p_currentNode )
+bool hProcessor::hasDescendants( void * p_node )
 {
  TRACE_ENTER
 
- if( p_currentNode == nullptr ) return false;
+ if( p_node == nullptr ) return false;
 
- TRACE_POINT
+ XML_NODE * p_xnode = (XML_NODE *) p_node;
 
- return p_currentNode->hasChildNodes();
+ bool hasChildrens = false;
+ try {
+	   hasChildrens = p_xnode->hasChildNodes();
+
+	   if( hasChildrens )
+	     { TRACE( "Children found" ) }
+ 	 }
+
+ catch( const XML_DOM_EXCEPTION & e )
+ { throw error( e ); }
+
+ TRACE_EXIT
+
+ return hasChildrens;
 }
 
 
 
 
 // Build a XML Path
-void hProcessor::getNodePath( const NODE * p_node, std::string & path )
+void hProcessor::getNodePath( void * p_node, std::string & path )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
- string nodename("/");
- while( p_node->getNodeType() != NODE_TYPE::DOCUMENT_NODE )
- {
-   nodename += p_node->getNodeName();
+ XML_NODE *	p_xnode	= (XML_NODE *) p_node;
 
-   path = nodename.get() + path;
-   nodename = "/";
+ try {
+	   XML_NODE_TYPE	type	= p_xnode->getNodeType();
 
-   p_node = p_node->getParentNode();
- }
+	   string nodename( "/" );
+	   while( type != XML_NODE_TYPE::DOCUMENT_NODE )
+	   	   	{
+		   	  nodename += p_xnode->getNodeName();
+
+		   	  path = nodename.get() + path;
+		   	  nodename = "/";
+
+		   	  p_xnode	= p_xnode->getParentNode();
+		   	  type		= p_xnode->getNodeType();
+	   	   	}
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
+
+ catch( const XML_DOM_EXCEPTION & e )
+ { throw error( e ); }
 
  if( path.size() > 0 )	 	path = "/" + path;
  else						throw error( "No path found" );
@@ -183,20 +227,25 @@ void hProcessor::getNodePath( const NODE * p_node, std::string & path )
 
 
 
-void hProcessor::processElement( const NODE * p_node )
+void hProcessor::processElement( void * p_node )
 {
  TRACE_ENTER
 
  if( p_node == nullptr ) throw error( "No pointer for DOM node provided" );
 
+ XML_NODE_ELEM * p_xnode = (XML_NODE_ELEM *) p_node;
+
  try
  {
-	processor::processElement( p_node );
-	if( p_node->hasAttributes() )
-		processAttributes( p_node );
+	processor::processElement( p_xnode );
+	if( p_xnode->hasAttributes() )
+		processAttributes( p_xnode );
  }
 
- catch( const xercesc::XMLException & e )
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
+
+ catch( const XML_DOM_EXCEPTION & e )
  { throw error( e ); }
 
  TRACE_EXIT

@@ -16,15 +16,15 @@
 //
 // *****************************************************************************************
 
-// Import Xerces C++ headers
-#include <parser/xml_processor.hh>
-#include "xercesc/sax/SAXException.hpp"
-#include "xercesc/parsers/XercesDOMParser.hpp"
-
 // Import C++ system headers
 #include <string>
 
 // Import project headers
+#include "defs/xml_defs.hh"
+
+// Import module headers
+#include "parser/xml_processor.hh"
+#include "parser/xml_parser.hh"
 
 
 // *****************************************************************************************
@@ -39,7 +39,7 @@ namespace osapi
 namespace xml
 {
 
-class hProcessor : public processor
+class hProcessor : processor
 {
 public:
 		/// @brief Class destructor
@@ -57,35 +57,40 @@ protected:
 
     	/// @brief Process a XMl tree node
     	/// @param [in] node - A pointer to the XML node
-    	void 				processDescendants	( const NODE * node								);
-    	NODE	*			getCurrentNode		( void ) const { return iCurrentNode; }
+    	void 				processDescendants	( void * node									);
+    	void	*			getCurrentNode		( void ) const { return iCurrentNode; }
 
     	/// @brief Process a XMl node element
     	/// @param [in] node - A pointer to the XML node
-    	void 				processElement		( const NODE * node								);
+    	void 				processElement		( void * node									);
 
 
     	/// @brief Check if the node element has descendants
     	/// @param [in] node - A pointer to the XML node
     	/// @return True if node has children. False, otherwise.
-    	bool 				hasDescendants		( const NODE    * node							);
+    	bool 				hasDescendants		( void * node									);
 
     	/// @brief Get the Document node
-    	/// @return A pointer to the XML document root node
-    	const NODE *		getDocument			( void );
+    	/// @return A pointer to the ARTA NODE document node
+    	void 	*			getDocument			( void 											) { return iDoc; };
 
     	/// @brief Get path to the node
     	/// @param [in] node - A pointer to the current XML node
     	/// @param [out] path - The full path to the current node
-		void				getNodePath			( const NODE * node, std::string & path			);
+		void				getNodePath			( void * node, std::string & path				);
 
     	// Instance variables
 		/// @brief The XML parser instance
     	parser			&	iParser;
-    	/// @brief The handler to the node handler function
-    	dataHandler			iHandler;
+
+    	/// @brief The Document
+    	void	*			iDoc;
+
+    	/// @brief The raw handler to the node handler function
+    	void 	*			iData;
+
     	/// @brief The current node
-    	NODE	*			iCurrentNode;		// May be not necessary?
+    	void	*			iCurrentNode;		// May be not necessary?
 
 private:
 

@@ -1,10 +1,6 @@
 <map id="code/parser/xml_rprocessor.hh" name="code/parser/xml_rprocessor.hh">
-<area shape="rect" id="node2" href="$xml__processor_8hh.html" title="parser/xml_processor.hh" alt="" coords="650,80,815,107"/>
-<area shape="rect" id="node3" href="$xml__defs_8hh.html" title="defs/xml_defs.hh" alt="" coords="463,155,586,181"/>
-<area shape="rect" id="node4" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="367,229,496,256"/>
-<area shape="rect" id="node9" href="$xml__data__handler_8hh.html" title="parser/xml_data_handler.hh" alt="" coords="569,229,752,256"/>
-<area shape="rect" id="node10" href="$xml__note_8hh.html" title="parser/xml_note.hh" alt="" coords="829,155,962,181"/>
-<area shape="rect" id="node13" href="$xml__parser_8hh.html" title="parser/xml_parser.hh" alt="" coords="661,155,805,181"/>
-<area shape="rect" id="node15" href="$xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="986,155,1122,181"/>
-<area shape="rect" id="node11" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="813,229,940,256"/>
+<area shape="rect" id="node3" href="$xml__processor_8hh.html" title="parser/xml_processor.hh" alt="" coords="59,80,224,107"/>
+<area shape="rect" id="node8" href="$xml__parser_8hh.html" title="parser/xml_parser.hh" alt="" coords="299,80,443,107"/>
+<area shape="rect" id="node5" href="$xml__note_8hh.html" title="parser/xml_note.hh" alt="" coords="88,155,221,181"/>
+<area shape="rect" id="node6" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="183,229,310,256"/>
 </map>
