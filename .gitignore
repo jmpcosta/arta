@@ -46,9 +46,13 @@ Thumbs.db
 *.gcno
 
 # My own exclusions
+example.xml
 Debug/libarta.so
 Release/libarta.so
 Debug/arta_hproc
 Debug/arta_rproc
+Debug/arta_creator
 Release/arta_hproc
 Release/arta_rproc
+Release/arta_creator
+
