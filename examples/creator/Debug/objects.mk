@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lstdc++fs
+LIBS := -lstdc++fs -lxerces-c-3.2 -larta
 

@@ -1,5 +1,13 @@
 var searchData=
 [
-  ['reseterrors',['resetErrors',['../classosapi_1_1xml_1_1error_handler.html#a8b4a5bacd5c38ffa56e5d7a9aa9c1dd4',1,'osapi::xml::errorHandler']]],
-  ['rprocessor',['rProcessor',['../classosapi_1_1xml_1_1r_processor.html#afddc44edd6ee6b7e4377190fba23db20',1,'osapi::xml::rProcessor']]]
+  ['parser',['parser',['../classosapi_1_1xml_1_1parser.html#a838001972b2a31bc7f12dc3292de1644',1,'osapi::xml::parser']]],
+  ['process',['process',['../classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20',1,'osapi::xml::hProcessor::process()'],['../classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4',1,'osapi::xml::processor::process()'],['../classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035',1,'osapi::xml::rProcessor::process()']]],
+  ['processattribute',['processAttribute',['../classosapi_1_1xml_1_1processor.html#a7ff57764f70bbd074f91b82d15d0b5f6',1,'osapi::xml::processor']]],
+  ['processattributes',['processAttributes',['../classosapi_1_1xml_1_1processor.html#a9561bfd248aae9dd2ee8ec76fa5845e4',1,'osapi::xml::processor']]],
+  ['processcomment',['processComment',['../classosapi_1_1xml_1_1processor.html#a4623cd9ab5316098955a7f7f10af3103',1,'osapi::xml::processor']]],
+  ['processdescendants',['processDescendants',['../classosapi_1_1xml_1_1h_processor.html#aa3ce28a91f927812a9b3d27ccab4c7a9',1,'osapi::xml::hProcessor']]],
+  ['processelement',['processElement',['../classosapi_1_1xml_1_1h_processor.html#abee6771fbf14598f9837d9bdb20ad652',1,'osapi::xml::hProcessor::processElement()'],['../classosapi_1_1xml_1_1processor.html#ab15f8a1fb07ff0f0d8439529359393d6',1,'osapi::xml::processor::processElement()']]],
+  ['processinstruction',['processInstruction',['../classosapi_1_1xml_1_1processor.html#a1f2f33762a0fbb6ee3ae49cd5490a7be',1,'osapi::xml::processor']]],
+  ['processnode',['processNode',['../classosapi_1_1xml_1_1processor.html#a7c79260872fb36eb0c13a7ae99026fcd',1,'osapi::xml::processor']]],
+  ['processtext',['processText',['../classosapi_1_1xml_1_1processor.html#a4405ef980e6adce6e1767ca138405456',1,'osapi::xml::processor']]]
 ];

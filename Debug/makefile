@@ -12,7 +12,6 @@ RM := rm -rf
 -include code/parser/subdir.mk
 -include code/maker/subdir.mk
 -include code/error/subdir.mk
--include code/subdir.mk
 -include subdir.mk
 -include objects.mk
 

@@ -1,5 +1,9 @@
 <map id="code/maker/xml_maker.hh" name="code/maker/xml_maker.hh">
 <area shape="rect" id="node2" href="$arta_8hh.html" title="code/arta.hh" alt="" coords="5,80,100,107"/>
 <area shape="rect" id="node3" href="$arta__alias_8hh.html" title="code/arta_alias.hh" alt="" coords="125,80,253,107"/>
-<area shape="rect" id="node4" href="$xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="277,80,460,107"/>
+<area shape="rect" id="node4" href="$xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="431,155,613,181"/>
+<area shape="rect" id="node5" href="$xml__maker_d_o_m_8hh.html" title="code/maker/xml_makerDOM.hh" alt="" coords="277,80,484,107"/>
+<area shape="rect" id="node7" href="$xml__maker_writer_8hh.html" title="code/maker/xml_makerWriter.hh" alt="" coords="559,80,770,107"/>
+<area shape="rect" id="node6" href="$xml__maker_d_o_m_8cpp.html" title="code/maker/xml_makerDOM.cpp" alt="" coords="192,155,407,181"/>
+<area shape="rect" id="node8" href="$xml__maker_writer_8cpp.html" title="code/maker/xml_makerWriter.cpp" alt="" coords="638,155,857,181"/>
 </map>

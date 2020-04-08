@@ -23,5 +23,4 @@
 #include "parser/xml_rprocessor.hh"
 #include "maker/xml_maker.hh"
 
-
 #endif /* ARTA_HH_ */

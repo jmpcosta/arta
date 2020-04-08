@@ -44,7 +44,7 @@ all: arta_creator
 arta_creator: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L"/home/joao/workspace/arta/Debug" -o "arta_creator" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/home/joao/workspace/arta/Debug" -L"/home/joao/Software/xerces/src" -o "arta_creator" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

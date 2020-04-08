@@ -4,13 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../code/maker/xml_maker.cpp 
+../code/maker/xml_maker.cpp \
+../code/maker/xml_makerDOM.cpp \
+../code/maker/xml_makerWriter.cpp 
 
 OBJS += \
-./code/maker/xml_maker.o 
+./code/maker/xml_maker.o \
+./code/maker/xml_makerDOM.o \
+./code/maker/xml_makerWriter.o 
 
 CPP_DEPS += \
-./code/maker/xml_maker.d 
+./code/maker/xml_maker.d \
+./code/maker/xml_makerDOM.d \
+./code/maker/xml_makerWriter.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

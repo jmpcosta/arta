@@ -1,10 +1,10 @@
 <map id="code/parser/xml_processor.cpp" name="code/parser/xml_processor.cpp">
-<area shape="rect" id="node2" href="$xml__defs_8hh.html" title="defs/xml_defs.hh" alt="" coords="842,80,965,107"/>
-<area shape="rect" id="node3" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="1627,229,1753,256"/>
-<area shape="rect" id="node5" href="$xml__node__type_8hh.html" title="defs/xml_node_type.hh" alt="" coords="1039,80,1197,107"/>
-<area shape="rect" id="node6" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="937,155,1067,181"/>
-<area shape="rect" id="node14" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="1221,80,1345,107"/>
-<area shape="rect" id="node17" href="$xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="1370,80,1506,107"/>
-<area shape="rect" id="node18" href="$xml__processor_8hh.html" title="parser/xml_processor.hh" alt="" coords="1530,80,1695,107"/>
-<area shape="rect" id="node20" href="$xml__note_8hh.html" title="parser/xml_note.hh" alt="" coords="1638,155,1771,181"/>
+<area shape="rect" id="node2" href="$xml__defs_8hh.html" title="defs/xml_defs.hh" alt="" coords="1001,80,1123,107"/>
+<area shape="rect" id="node3" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="1812,237,1939,263"/>
+<area shape="rect" id="node5" href="$xml__node__type_8hh.html" title="defs/xml_node_type.hh" alt="" coords="1198,80,1355,107"/>
+<area shape="rect" id="node6" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="1031,155,1160,181"/>
+<area shape="rect" id="node15" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="1380,80,1504,107"/>
+<area shape="rect" id="node18" href="$xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="1529,80,1665,107"/>
+<area shape="rect" id="node19" href="$xml__processor_8hh.html" title="parser/xml_processor.hh" alt="" coords="1689,80,1854,107"/>
+<area shape="rect" id="node21" href="$xml__note_8hh.html" title="parser/xml_note.hh" alt="" coords="1809,155,1942,181"/>
 </map>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['maker',['maker',['../classosapi_1_1xml_1_1maker.html#a2a2a1e3b8918163ef4a2c09a1f2b3312',1,'osapi::xml::maker::maker(maker const &amp;)=delete'],['../classosapi_1_1xml_1_1maker.html#a1c1b206160640753db4f99fa084d9722',1,'osapi::xml::maker::maker(maker &amp;&amp;)=delete']]]
+  ['maker',['maker',['../classosapi_1_1xml_1_1maker.html#a9cb22b1e42fbd8a8b7178c54dc91d789',1,'osapi::xml::maker']]],
+  ['makerdom',['makerDOM',['../classosapi_1_1xml_1_1maker_d_o_m.html#a4bb243ee1681660ada12abc20132a09a',1,'osapi::xml::makerDOM']]],
+  ['makerwriter',['makerWriter',['../classosapi_1_1xml_1_1maker_writer.html#ac095a107e96a97f4d063ff55f774dfd4',1,'osapi::xml::makerWriter']]]
 ];

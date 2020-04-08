@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('xml__types_8hh.html','');});
 <div class="textblock"><code>#include &quot;xercesc/util/XercesDefs.hpp&quot;</code><br />
 <code>#include &quot;xercesc/util/PlatformUtils.hpp&quot;</code><br />
 <code>#include &quot;xercesc/util/XMLString.hpp&quot;</code><br />
+<code>#include &quot;xercesc/framework/LocalFileFormatTarget.hpp&quot;</code><br />
 <code>#include &quot;xercesc/dom/DOM.hpp&quot;</code><br />
 <code>#include &quot;xercesc/sax/SAXParseException.hpp&quot;</code><br />
 <code>#include &quot;xercesc/parsers/SAXParser.hpp&quot;</code><br />
@@ -99,25 +100,25 @@ $(document).ready(function(){initNavTree('xml__types_8hh.html','');});
 Include dependency graph for xml_types.hh:</div>
 <div class="dyncontent">
 <div class="center"><img src="xml__types_8hh__incl.png" border="0" usemap="#code_2defs_2xml__types_8hh" alt=""/></div>
-<map name="code_2defs_2xml__types_8hh" id="code_2defs_2xml__types_8hh">
-</map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="xml__types_8hh__dep__incl.png" border="0" usemap="#code_2defs_2xml__types_8hhdep" alt=""/></div>
 <map name="code_2defs_2xml__types_8hhdep" id="code_2defs_2xml__types_8hhdep">
-<area shape="rect" id="node2" href="xml__error_8hh.html" title="code/error/xml_error.hh" alt="" coords="655,80,811,107"/>
-<area shape="rect" id="node4" href="xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="238,162,421,189"/>
-<area shape="rect" id="node6" href="xml__hprocessor_8cpp.html" title="code/parser/xml_hprocessor.cpp" alt="" coords="1241,162,1452,189"/>
-<area shape="rect" id="node7" href="xml__parser_8cpp.html" title="code/parser/xml_parser.cpp" alt="" coords="445,162,627,189"/>
-<area shape="rect" id="node8" href="xml__processor_8cpp.html" title="code/parser/xml_processor.cpp" alt="" coords="1477,162,1681,189"/>
-<area shape="rect" id="node10" href="xml__error_handler_8cpp.html" title="code/error/xml_errorHandler.cpp" alt="" coords="5,162,213,189"/>
-<area shape="rect" id="node11" href="xml__error_handler_8hh.html" title="code/error/xml_errorHandler.hh" alt="" coords="233,80,434,107"/>
-<area shape="rect" id="node12" href="xml__string_8cpp.html" title="code/string/xml_string.cpp" alt="" coords="938,80,1113,107"/>
-<area shape="rect" id="node3" href="xml__error_8cpp.html" title="code/error/xml_error.cpp" alt="" coords="652,162,815,189"/>
-<area shape="rect" id="node5" href="xml__data__handler_8cpp.html" title="code/parser/xml_data\l_handler.cpp" alt="" coords="839,155,985,196"/>
-<area shape="rect" id="node9" href="xml__rprocessor_8cpp.html" title="code/parser/xml_rprocessor.cpp" alt="" coords="1009,162,1217,189"/>
+<area shape="rect" id="node2" href="xml__error_8hh.html" title="code/error/xml_error.hh" alt="" coords="980,80,1136,107"/>
+<area shape="rect" id="node4" href="xml__maker_8cpp.html" title="code/maker/xml_maker.cpp" alt="" coords="5,162,188,189"/>
+<area shape="rect" id="node5" href="xml__maker_d_o_m_8cpp.html" title="code/maker/xml_makerDOM.cpp" alt="" coords="1265,162,1480,189"/>
+<area shape="rect" id="node6" href="xml__maker_writer_8cpp.html" title="code/maker/xml_makerWriter.cpp" alt="" coords="1505,162,1723,189"/>
+<area shape="rect" id="node8" href="xml__hprocessor_8cpp.html" title="code/parser/xml_hprocessor.cpp" alt="" coords="213,162,423,189"/>
+<area shape="rect" id="node9" href="xml__parser_8cpp.html" title="code/parser/xml_parser.cpp" alt="" coords="1748,162,1931,189"/>
+<area shape="rect" id="node10" href="xml__processor_8cpp.html" title="code/parser/xml_processor.cpp" alt="" coords="1037,162,1241,189"/>
+<area shape="rect" id="node12" href="xml__error_handler_8cpp.html" title="code/error/xml_errorHandler.cpp" alt="" coords="1955,162,2163,189"/>
+<area shape="rect" id="node13" href="xml__error_handler_8hh.html" title="code/error/xml_errorHandler.hh" alt="" coords="1507,80,1708,107"/>
+<area shape="rect" id="node14" href="xml__string_8cpp.html" title="code/string/xml_string.cpp" alt="" coords="1835,80,2009,107"/>
+<area shape="rect" id="node3" href="xml__error_8cpp.html" title="code/error/xml_error.cpp" alt="" coords="850,162,1013,189"/>
+<area shape="rect" id="node7" href="xml__data__handler_8cpp.html" title="code/parser/xml_data\l_handler.cpp" alt="" coords="447,155,594,196"/>
+<area shape="rect" id="node11" href="xml__rprocessor_8cpp.html" title="code/parser/xml_rprocessor.cpp" alt="" coords="618,162,826,189"/>
 </map>
 </div>
 </div>
@@ -132,52 +133,64 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aff99c93011c2ab4a7be71c850446ee21"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aff99c93011c2ab4a7be71c850446ee21">osapi::xml::XML_MEMORY_MGR</a> = xercesc::MemoryManager</td></tr>
-<tr class="separator:aff99c93011c2ab4a7be71c850446ee21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac03174f26308acf18dc7834bc725b42c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ac03174f26308acf18dc7834bc725b42c">osapi::xml::XML_PLATFORM_UTILS</a> = xercesc::XMLPlatformUtils</td></tr>
-<tr class="separator:ac03174f26308acf18dc7834bc725b42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a312ed42904ecf26d015fca5ab2341673"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a312ed42904ecf26d015fca5ab2341673">osapi::xml::XML_EXCEPTION</a> = xercesc::XMLException</td></tr>
-<tr class="separator:a312ed42904ecf26d015fca5ab2341673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4a2f08a1bb83bb0b390ef3c81918d7c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ad4a2f08a1bb83bb0b390ef3c81918d7c">osapi::xml::XML_ERROR_HANDLER</a> = xercesc::ErrorHandler</td></tr>
-<tr class="separator:ad4a2f08a1bb83bb0b390ef3c81918d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada8ffc17018f7d58073e91ba92c8c118"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ada8ffc17018f7d58073e91ba92c8c118">osapi::xml::XML_SAX_PARSER</a> = xercesc::SAXParser</td></tr>
-<tr class="separator:ada8ffc17018f7d58073e91ba92c8c118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b6318ff9f14069c19c9ebeba0e8166f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a7b6318ff9f14069c19c9ebeba0e8166f">osapi::xml::XML_SAX_EXCEPTION</a> = xercesc::SAXException</td></tr>
-<tr class="separator:a7b6318ff9f14069c19c9ebeba0e8166f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317e9b3dd12fca4540feca41d13af6c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a317e9b3dd12fca4540feca41d13af6c0">osapi::xml::XML_SAX_PARSE_EXCEPTION</a> = xercesc::SAXParseException</td></tr>
-<tr class="separator:a317e9b3dd12fca4540feca41d13af6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3afc1f2785f367b6f8ea99b3cc2a80a9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3afc1f2785f367b6f8ea99b3cc2a80a9">osapi::xml::XML_DOM_PARSER</a> = xercesc::XercesDOMParser</td></tr>
-<tr class="separator:a3afc1f2785f367b6f8ea99b3cc2a80a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23294125fdc37d3f62c3c9eb8f3147f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#af23294125fdc37d3f62c3c9eb8f3147f">osapi::xml::XML_DOM_EXCEPTION</a> = xercesc::DOMException</td></tr>
-<tr class="separator:af23294125fdc37d3f62c3c9eb8f3147f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a047c07aa26df435367cedb445f618e27"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a047c07aa26df435367cedb445f618e27">osapi::xml::XML_DOM_IMPLEMENTATION</a> = xercesc::DOMImplementation</td></tr>
-<tr class="separator:a047c07aa26df435367cedb445f618e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c35f4946dd8453f0c3a1ee33f949f5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aa5c35f4946dd8453f0c3a1ee33f949f5">osapi::xml::XML_DOM_REGISTRY</a> = xercesc::DOMImplementationRegistry</td></tr>
-<tr class="separator:aa5c35f4946dd8453f0c3a1ee33f949f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e3683b09f815ec4096b5edbe687393"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a51e3683b09f815ec4096b5edbe687393">osapi::xml::XML_DOM_DOCUMENT</a> = xercesc::DOMDocument</td></tr>
-<tr class="separator:a51e3683b09f815ec4096b5edbe687393"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94eb75a4f321e18c54a0ec23d92ecbe7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a94eb75a4f321e18c54a0ec23d92ecbe7">osapi::xml::XML_STRING</a> = xercesc::XMLString</td></tr>
-<tr class="separator:a94eb75a4f321e18c54a0ec23d92ecbe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d4190f6257039a1445ccb51d54b52e4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3d4190f6257039a1445ccb51d54b52e4">osapi::xml::XML_NODE</a> = xercesc::DOMNode</td></tr>
-<tr class="separator:a3d4190f6257039a1445ccb51d54b52e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c3d1a2b68f317d0e32fc5396ca5b017"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a9c3d1a2b68f317d0e32fc5396ca5b017">osapi::xml::XML_NODE_DOC</a> = xercesc::DOMDocument</td></tr>
-<tr class="separator:a9c3d1a2b68f317d0e32fc5396ca5b017"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c85302d4773f01067ebfdb20d3cf590"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a7c85302d4773f01067ebfdb20d3cf590">osapi::xml::XML_NODE_TYPE</a> = xercesc::DOMNode::NodeType</td></tr>
-<tr class="separator:a7c85302d4773f01067ebfdb20d3cf590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5170483c2dd3761c2f4ffd9cd4e92bb6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a5170483c2dd3761c2f4ffd9cd4e92bb6">osapi::xml::XML_NODE_PI</a> = xercesc::DOMProcessingInstruction</td></tr>
-<tr class="separator:a5170483c2dd3761c2f4ffd9cd4e92bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69c158364b2b701058591dbaa3581706"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a69c158364b2b701058591dbaa3581706">osapi::xml::XML_NODE_LIST</a> = xercesc::DOMNodeList</td></tr>
-<tr class="separator:a69c158364b2b701058591dbaa3581706"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b2a2b5cb437d67eabebdae5e55c2fe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ae7b2a2b5cb437d67eabebdae5e55c2fe">osapi::xml::XML_NODE_ATTR</a> = xercesc::DOMAttr</td></tr>
-<tr class="separator:ae7b2a2b5cb437d67eabebdae5e55c2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a100b145e09cda8baf7c7a7a8e4bca7a1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a100b145e09cda8baf7c7a7a8e4bca7a1">osapi::xml::XML_NODE_ELEM</a> = xercesc::DOMElement</td></tr>
-<tr class="separator:a100b145e09cda8baf7c7a7a8e4bca7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f1dc468440447d0c93216e80f7578b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a07f1dc468440447d0c93216e80f7578b">osapi::xml::XML_NODE_TEXT</a> = xercesc::DOMText</td></tr>
-<tr class="separator:a07f1dc468440447d0c93216e80f7578b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7687fdc9dd7126641678330ddb1e45a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ae7687fdc9dd7126641678330ddb1e45a">osapi::xml::XML_NODE_COMMENT</a> = xercesc::DOMComment</td></tr>
-<tr class="separator:ae7687fdc9dd7126641678330ddb1e45a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3304db6c3b11461d277e6db4241bb70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ab3304db6c3b11461d277e6db4241bb70">osapi::xml::XML_NODE_MAP</a> = xercesc::DOMNamedNodeMap</td></tr>
-<tr class="separator:ab3304db6c3b11461d277e6db4241bb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237e4fc3dbbd23b81d01103dbf3e8b3d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a237e4fc3dbbd23b81d01103dbf3e8b3d">osapi::xml::XML_UTIL_STRINGS</a> = ::xercesc::XMLUni</td></tr>
+<tr class="separator:a237e4fc3dbbd23b81d01103dbf3e8b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990f6cd26c7e94638dc8e0bfeae49e34"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a990f6cd26c7e94638dc8e0bfeae49e34">osapi::xml::XML_MEMORY_MGR</a> = ::xercesc::MemoryManager</td></tr>
+<tr class="separator:a990f6cd26c7e94638dc8e0bfeae49e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1407e15d955198343963fccfbbcef4e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ad1407e15d955198343963fccfbbcef4e">osapi::xml::XML_PLATFORM_UTILS</a> = ::xercesc::XMLPlatformUtils</td></tr>
+<tr class="separator:ad1407e15d955198343963fccfbbcef4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa3ee5afee22e1dc30a5b729e16c20d0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aaa3ee5afee22e1dc30a5b729e16c20d0">osapi::xml::XML_FORMAT_TARGET</a> = ::xercesc::XMLFormatTarget</td></tr>
+<tr class="separator:aaa3ee5afee22e1dc30a5b729e16c20d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a60addd8bc470072bd5e0ba3f1d7336"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3a60addd8bc470072bd5e0ba3f1d7336">osapi::xml::XML_TARGET_FILE</a> = ::xercesc::LocalFileFormatTarget</td></tr>
+<tr class="separator:a3a60addd8bc470072bd5e0ba3f1d7336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3748870ef3cef3edb63c37c4f91d9f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aad3748870ef3cef3edb63c37c4f91d9f">osapi::xml::XML_EXCEPTION</a> = ::xercesc::XMLException</td></tr>
+<tr class="separator:aad3748870ef3cef3edb63c37c4f91d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade14161b373e5fcb9bf97a4c79f9ecd9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ade14161b373e5fcb9bf97a4c79f9ecd9">osapi::xml::XML_ERROR_HANDLER</a> = ::xercesc::ErrorHandler</td></tr>
+<tr class="separator:ade14161b373e5fcb9bf97a4c79f9ecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3436e1e28853f7951619e11b6a275983"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3436e1e28853f7951619e11b6a275983">osapi::xml::XML_SAX_PARSER</a> = ::xercesc::SAXParser</td></tr>
+<tr class="separator:a3436e1e28853f7951619e11b6a275983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5957defc440fff7fe6125c1ebac2b42f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a5957defc440fff7fe6125c1ebac2b42f">osapi::xml::XML_SAX_EXCEPTION</a> = ::xercesc::SAXException</td></tr>
+<tr class="separator:a5957defc440fff7fe6125c1ebac2b42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14dea85c4ef23e81f2365accb17dc6b1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a14dea85c4ef23e81f2365accb17dc6b1">osapi::xml::XML_SAX_PARSE_EXCEPTION</a> = ::xercesc::SAXParseException</td></tr>
+<tr class="separator:a14dea85c4ef23e81f2365accb17dc6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5edb7cee872db0117ca39e31c9e0f0a7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a5edb7cee872db0117ca39e31c9e0f0a7">osapi::xml::XML_DOM_PARSER</a> = ::xercesc::XercesDOMParser</td></tr>
+<tr class="separator:a5edb7cee872db0117ca39e31c9e0f0a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cdb434ab58876b7e51080e7684763d7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a4cdb434ab58876b7e51080e7684763d7">osapi::xml::XML_DOM_EXCEPTION</a> = ::xercesc::DOMException</td></tr>
+<tr class="separator:a4cdb434ab58876b7e51080e7684763d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1c881b3470a31c7f6d6edc2d68827c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#acc1c881b3470a31c7f6d6edc2d68827c">osapi::xml::XML_DOM_CONFIGURATION</a> = ::xercesc::DOMConfiguration</td></tr>
+<tr class="separator:acc1c881b3470a31c7f6d6edc2d68827c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fe5116dcd76d98b434c315bd96868e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#af1fe5116dcd76d98b434c315bd96868e">osapi::xml::XML_DOM_IMPLEMENTATION</a> = ::xercesc::DOMImplementation</td></tr>
+<tr class="separator:af1fe5116dcd76d98b434c315bd96868e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0cd180e98fe28097ec8e51911b5d72b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ae0cd180e98fe28097ec8e51911b5d72b">osapi::xml::XML_DOM_IMPLEMENTATION_LS</a> = ::xercesc::DOMImplementationLS</td></tr>
+<tr class="separator:ae0cd180e98fe28097ec8e51911b5d72b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c5d43382cfb1f3f7ff11a8be5968f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a81c5d43382cfb1f3f7ff11a8be5968f6">osapi::xml::XML_DOM_REGISTRY</a> = ::xercesc::DOMImplementationRegistry</td></tr>
+<tr class="separator:a81c5d43382cfb1f3f7ff11a8be5968f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501547a9a4e34f820e3d8d4da6aea710"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a501547a9a4e34f820e3d8d4da6aea710">osapi::xml::XML_DOM_SERIALIZER</a> = ::xercesc::DOMLSSerializer</td></tr>
+<tr class="separator:a501547a9a4e34f820e3d8d4da6aea710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc9ff3a81cf5110bf140c85299a0062"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a2fc9ff3a81cf5110bf140c85299a0062">osapi::xml::XML_DOM_OUTPUT</a> = ::xercesc::DOMLSOutput</td></tr>
+<tr class="separator:a2fc9ff3a81cf5110bf140c85299a0062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d68b4f0e36a43a25f565d0968027bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a58d68b4f0e36a43a25f565d0968027bb">osapi::xml::XML_STRING</a> = ::xercesc::XMLString</td></tr>
+<tr class="separator:a58d68b4f0e36a43a25f565d0968027bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11931cfbded176677980d0fb4c912466"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a11931cfbded176677980d0fb4c912466">osapi::xml::XML_NODE</a> = ::xercesc::DOMNode</td></tr>
+<tr class="separator:a11931cfbded176677980d0fb4c912466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4238e4599739ba33bccd972e7e2471"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ada4238e4599739ba33bccd972e7e2471">osapi::xml::XML_NODE_DOC</a> = ::xercesc::DOMDocument</td></tr>
+<tr class="separator:ada4238e4599739ba33bccd972e7e2471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a257a79cf30a767f9d54e76d47390effa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a257a79cf30a767f9d54e76d47390effa">osapi::xml::XML_NODE_TYPE</a> = ::xercesc::DOMNode::NodeType</td></tr>
+<tr class="separator:a257a79cf30a767f9d54e76d47390effa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a90021e860cd2e4bc91c4956a440354"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a6a90021e860cd2e4bc91c4956a440354">osapi::xml::XML_NODE_PI</a> = ::xercesc::DOMProcessingInstruction</td></tr>
+<tr class="separator:a6a90021e860cd2e4bc91c4956a440354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04eb0e46a8ba2ddae1fc6b67fa55dbae"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a04eb0e46a8ba2ddae1fc6b67fa55dbae">osapi::xml::XML_NODE_LIST</a> = ::xercesc::DOMNodeList</td></tr>
+<tr class="separator:a04eb0e46a8ba2ddae1fc6b67fa55dbae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae973069096d84f1a706063e5d5f250d0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ae973069096d84f1a706063e5d5f250d0">osapi::xml::XML_NODE_ATTR</a> = ::xercesc::DOMAttr</td></tr>
+<tr class="separator:ae973069096d84f1a706063e5d5f250d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9c61433fb76a14bb0d2b019a1d7f366"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ac9c61433fb76a14bb0d2b019a1d7f366">osapi::xml::XML_NODE_ELEM</a> = ::xercesc::DOMElement</td></tr>
+<tr class="separator:ac9c61433fb76a14bb0d2b019a1d7f366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b66d180ec045f792055679df21c539"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a30b66d180ec045f792055679df21c539">osapi::xml::XML_NODE_TEXT</a> = ::xercesc::DOMText</td></tr>
+<tr class="separator:a30b66d180ec045f792055679df21c539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49c0d6f4e941d2ec0da73f633327aa1a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a49c0d6f4e941d2ec0da73f633327aa1a">osapi::xml::XML_NODE_COMMENT</a> = ::xercesc::DOMComment</td></tr>
+<tr class="separator:a49c0d6f4e941d2ec0da73f633327aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a290bb99b24c8604cd5fdaabd08293"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#af8a290bb99b24c8604cd5fdaabd08293">osapi::xml::XML_NODE_MAP</a> = ::xercesc::DOMNamedNodeMap</td></tr>
+<tr class="separator:af8a290bb99b24c8604cd5fdaabd08293"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade519c6eb2c552c57bf1605383a05543"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ade519c6eb2c552c57bf1605383a05543">osapi::xml::XML_TYPE_CHR</a> = XMLCh</td></tr>
 <tr class="separator:ade519c6eb2c552c57bf1605383a05543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>

@@ -43,7 +43,7 @@ namespace osapi
 namespace xml
 {
 
-class error : std::exception
+class error : public std::exception
 {
 public:
 		// Inline constructors

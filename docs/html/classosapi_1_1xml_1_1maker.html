@@ -84,44 +84,169 @@ $(document).ready(function(){initNavTree('classosapi_1_1xml_1_1maker.html','');}
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classosapi_1_1xml_1_1maker-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">osapi::xml::maker Class Reference</div>  </div>
+<div class="title">osapi::xml::maker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p>Interface to create XML files See Xerces C reference for the specific XML properties of the output file.  
+ <a href="classosapi_1_1xml_1_1maker.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="xml__maker_8hh_source.html">xml_maker.hh</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for osapi::xml::maker:</div>
+<div class="dyncontent">
+<div class="center"><img src="classosapi_1_1xml_1_1maker__inherit__graph.png" border="0" usemap="#osapi_1_1xml_1_1maker_inherit__map" alt="Inheritance graph"/></div>
+<map name="osapi_1_1xml_1_1maker_inherit__map" id="osapi_1_1xml_1_1maker_inherit__map">
+<area shape="rect" id="node2" href="classosapi_1_1xml_1_1maker_d_o_m.html" title="osapi::xml::makerDOM" alt="" coords="5,80,163,107"/>
+<area shape="rect" id="node3" href="classosapi_1_1xml_1_1maker_writer.html" title="osapi::xml::makerWriter" alt="" coords="187,80,349,107"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa42358633a82eec8efd2e5664c74c6f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#aa42358633a82eec8efd2e5664c74c6f6">~maker</a> ()</td></tr>
+<tr class="memitem:aa42358633a82eec8efd2e5664c74c6f6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#aa42358633a82eec8efd2e5664c74c6f6">~maker</a> ()</td></tr>
 <tr class="memdesc:aa42358633a82eec8efd2e5664c74c6f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="#aa42358633a82eec8efd2e5664c74c6f6">More...</a><br /></td></tr>
 <tr class="separator:aa42358633a82eec8efd2e5664c74c6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89b9f12b85a2c7e9e86328eec9c50e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ab89b9f12b85a2c7e9e86328eec9c50e2">build</a> (const char *filename)</td></tr>
-<tr class="memdesc:ab89b9f12b85a2c7e9e86328eec9c50e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create/write a XML file from a root node.  <a href="#ab89b9f12b85a2c7e9e86328eec9c50e2">More...</a><br /></td></tr>
-<tr class="separator:ab89b9f12b85a2c7e9e86328eec9c50e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2c18a77896111591f90e2b8fb3e41b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ab2c18a77896111591f90e2b8fb3e41b7">createDocument</a> (const char *RootNode)</td></tr>
-<tr class="separator:ab2c18a77896111591f90e2b8fb3e41b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2a1e3b8918163ef4a2c09a1f2b3312"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a2a2a1e3b8918163ef4a2c09a1f2b3312">maker</a> (<a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> const &amp;)=delete</td></tr>
-<tr class="separator:a2a2a1e3b8918163ef4a2c09a1f2b3312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c1b206160640753db4f99fa084d9722"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a1c1b206160640753db4f99fa084d9722">maker</a> (<a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:a1c1b206160640753db4f99fa084d9722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cd3f0f86d53039c75f0591ea08a1616"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a7cd3f0f86d53039c75f0591ea08a1616">operator=</a> (<a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> const &amp;)=delete</td></tr>
-<tr class="separator:a7cd3f0f86d53039c75f0591ea08a1616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2db1fe56d14c2d28a352228d8e367f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ad2db1fe56d14c2d28a352228d8e367f0">operator=</a> (<a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&amp;)=delete</td></tr>
-<tr class="separator:ad2db1fe56d14c2d28a352228d8e367f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ef8bcc94169f56e4de7d4c81dfc33f5"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a3ef8bcc94169f56e4de7d4c81dfc33f5">document</a> (const char *filename, const char *RootNode)=0</td></tr>
+<tr class="memdesc:a3ef8bcc94169f56e4de7d4c81dfc33f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create/write a XML file from a root node.  <a href="#a3ef8bcc94169f56e4de7d4c81dfc33f5">More...</a><br /></td></tr>
+<tr class="separator:a3ef8bcc94169f56e4de7d4c81dfc33f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43846feb4a6f36372840ed3eab86c621"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a43846feb4a6f36372840ed3eab86c621">element</a> (const char *name, const char *value, void *where=nullptr)=0</td></tr>
+<tr class="memdesc:a43846feb4a6f36372840ed3eab86c621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node element.  <a href="#a43846feb4a6f36372840ed3eab86c621">More...</a><br /></td></tr>
+<tr class="separator:a43846feb4a6f36372840ed3eab86c621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a051072c88fcfd62fc606a5a841fac865"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a051072c88fcfd62fc606a5a841fac865">attribute</a> (const char *name, const char *value, void *where=nullptr)=0</td></tr>
+<tr class="memdesc:a051072c88fcfd62fc606a5a841fac865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node attribute.  <a href="#a051072c88fcfd62fc606a5a841fac865">More...</a><br /></td></tr>
+<tr class="separator:a051072c88fcfd62fc606a5a841fac865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae027954e7f7d54770ba3199e2096e6db"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae027954e7f7d54770ba3199e2096e6db">comment</a> (const char *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa453c288ea1b53a4fa128d3b886951e3a">text</a>, void *where=nullptr)=0</td></tr>
+<tr class="memdesc:ae027954e7f7d54770ba3199e2096e6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node comment.  <a href="#ae027954e7f7d54770ba3199e2096e6db">More...</a><br /></td></tr>
+<tr class="separator:ae027954e7f7d54770ba3199e2096e6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae702f9190a688ff26da60a34d3a6ddd5"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae702f9190a688ff26da60a34d3a6ddd5">instruction</a> (const char *name, const char *data)=0</td></tr>
+<tr class="memdesc:ae702f9190a688ff26da60a34d3a6ddd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node instruction.  <a href="#ae702f9190a688ff26da60a34d3a6ddd5">More...</a><br /></td></tr>
+<tr class="separator:ae702f9190a688ff26da60a34d3a6ddd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#af663a0bfe7e71c6d7392c5a3bb4d81b3">writeFile</a> (void)=0</td></tr>
+<tr class="memdesc:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a XML document.  <a href="#af663a0bfe7e71c6d7392c5a3bb4d81b3">More...</a><br /></td></tr>
+<tr class="separator:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833c1fd202a21faf2bf540e547d1e43d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a833c1fd202a21faf2bf540e547d1e43d">setCanonicalForm</a> (bool value)</td></tr>
+<tr class="memdesc:a833c1fd202a21faf2bf540e547d1e43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: canonical-form.  <a href="#a833c1fd202a21faf2bf540e547d1e43d">More...</a><br /></td></tr>
+<tr class="separator:a833c1fd202a21faf2bf540e547d1e43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bab46a9148987ea14c2ab017a145e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a2bab46a9148987ea14c2ab017a145e37">keepCDSections</a> (bool value)</td></tr>
+<tr class="memdesc:a2bab46a9148987ea14c2ab017a145e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: cdata-sections.  <a href="#a2bab46a9148987ea14c2ab017a145e37">More...</a><br /></td></tr>
+<tr class="separator:a2bab46a9148987ea14c2ab017a145e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c442cd076a81a307e8d3c5b1f2966ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a7c442cd076a81a307e8d3c5b1f2966ed">keepComments</a> (bool value)</td></tr>
+<tr class="memdesc:a7c442cd076a81a307e8d3c5b1f2966ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: comments.  <a href="#a7c442cd076a81a307e8d3c5b1f2966ed">More...</a><br /></td></tr>
+<tr class="separator:a7c442cd076a81a307e8d3c5b1f2966ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d919dda2bc62eda65283e377e05e5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a86d919dda2bc62eda65283e377e05e5b">typeNormalization</a> (bool value)</td></tr>
+<tr class="memdesc:a86d919dda2bc62eda65283e377e05e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: datatype-normalization.  <a href="#a86d919dda2bc62eda65283e377e05e5b">More...</a><br /></td></tr>
+<tr class="separator:a86d919dda2bc62eda65283e377e05e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf6f7b3bad160262e53fe096b283b59d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#aaf6f7b3bad160262e53fe096b283b59d">discardDefContent</a> (bool value)</td></tr>
+<tr class="memdesc:aaf6f7b3bad160262e53fe096b283b59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: discard-default-content.  <a href="#aaf6f7b3bad160262e53fe096b283b59d">More...</a><br /></td></tr>
+<tr class="separator:aaf6f7b3bad160262e53fe096b283b59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d678ff06352526c8ebd6ec3b498aa8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a17d678ff06352526c8ebd6ec3b498aa8">keepEntities</a> (bool value)</td></tr>
+<tr class="memdesc:a17d678ff06352526c8ebd6ec3b498aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: entities.  <a href="#a17d678ff06352526c8ebd6ec3b498aa8">More...</a><br /></td></tr>
+<tr class="separator:a17d678ff06352526c8ebd6ec3b498aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a467708672cd3a0f305a898a8f5f3f0a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a467708672cd3a0f305a898a8f5f3f0a1">infoSet</a> (bool value)</td></tr>
+<tr class="memdesc:a467708672cd3a0f305a898a8f5f3f0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: infoset.  <a href="#a467708672cd3a0f305a898a8f5f3f0a1">More...</a><br /></td></tr>
+<tr class="separator:a467708672cd3a0f305a898a8f5f3f0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81faf0723ba0d541d9f614043cb43aab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a81faf0723ba0d541d9f614043cb43aab">setNS</a> (bool value)</td></tr>
+<tr class="memdesc:a81faf0723ba0d541d9f614043cb43aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: namespaces.  <a href="#a81faf0723ba0d541d9f614043cb43aab">More...</a><br /></td></tr>
+<tr class="separator:a81faf0723ba0d541d9f614043cb43aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf245774ba7abc33a34db86dd6d221c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#acf245774ba7abc33a34db86dd6d221c9">setNSDeclaritions</a> (bool value)</td></tr>
+<tr class="memdesc:acf245774ba7abc33a34db86dd6d221c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: namespace-declarations.  <a href="#acf245774ba7abc33a34db86dd6d221c9">More...</a><br /></td></tr>
+<tr class="separator:acf245774ba7abc33a34db86dd6d221c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0af8021fd41972fe37e161779c095d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a4c0af8021fd41972fe37e161779c095d">normalChars</a> (bool value)</td></tr>
+<tr class="memdesc:a4c0af8021fd41972fe37e161779c095d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: normalize-characters.  <a href="#a4c0af8021fd41972fe37e161779c095d">More...</a><br /></td></tr>
+<tr class="separator:a4c0af8021fd41972fe37e161779c095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c87a733d98f9ca16cce4aa48e5bdf50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a5c87a733d98f9ca16cce4aa48e5bdf50">splitCDSections</a> (bool value)</td></tr>
+<tr class="memdesc:a5c87a733d98f9ca16cce4aa48e5bdf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: split-cdata-sections.  <a href="#a5c87a733d98f9ca16cce4aa48e5bdf50">More...</a><br /></td></tr>
+<tr class="separator:a5c87a733d98f9ca16cce4aa48e5bdf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a085aff3b4285878cc8c1005152a31075"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a085aff3b4285878cc8c1005152a31075">setValidation</a> (bool value)</td></tr>
+<tr class="memdesc:a085aff3b4285878cc8c1005152a31075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: validate.  <a href="#a085aff3b4285878cc8c1005152a31075">More...</a><br /></td></tr>
+<tr class="separator:a085aff3b4285878cc8c1005152a31075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e5ae2677c593dfbc1c238b13b9f7d52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a0e5ae2677c593dfbc1c238b13b9f7d52">schemaValidation</a> (bool value)</td></tr>
+<tr class="memdesc:a0e5ae2677c593dfbc1c238b13b9f7d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: validate-if-schema.  <a href="#a0e5ae2677c593dfbc1c238b13b9f7d52">More...</a><br /></td></tr>
+<tr class="separator:a0e5ae2677c593dfbc1c238b13b9f7d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264d07d021b51f685639d718103c6971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a264d07d021b51f685639d718103c6971">keepWhitespaces</a> (bool value)</td></tr>
+<tr class="memdesc:a264d07d021b51f685639d718103c6971"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Property: element-content-whitespace.  <a href="#a264d07d021b51f685639d718103c6971">More...</a><br /></td></tr>
+<tr class="separator:a264d07d021b51f685639d718103c6971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a363e080459ca3af1610678615e0af727"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a363e080459ca3af1610678615e0af727">setPrettyPrint</a> (bool value)</td></tr>
+<tr class="memdesc:a363e080459ca3af1610678615e0af727"><td class="mdescLeft">&#160;</td><td class="mdescRight">Xerces shortcut to set several properties.  <a href="#a363e080459ca3af1610678615e0af727">More...</a><br /></td></tr>
+<tr class="separator:a363e080459ca3af1610678615e0af727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae785329406bc08c85aaa8944fe7e94e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae785329406bc08c85aaa8944fe7e94e9">xmlDirective</a> (bool value)</td></tr>
+<tr class="memdesc:ae785329406bc08c85aaa8944fe7e94e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should XML directive be written (to the file)?  <a href="#ae785329406bc08c85aaa8944fe7e94e9">More...</a><br /></td></tr>
+<tr class="separator:ae785329406bc08c85aaa8944fe7e94e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687408454a00574ca04b658d13ac1811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a687408454a00574ca04b658d13ac1811">setBOM</a> (bool value)</td></tr>
+<tr class="memdesc:a687408454a00574ca04b658d13ac1811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should the BOM byte written (to the file)?  <a href="#a687408454a00574ca04b658d13ac1811">More...</a><br /></td></tr>
+<tr class="separator:a687408454a00574ca04b658d13ac1811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aefb8b00a165c6a8fa0def69bd5bec777"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#aefb8b00a165c6a8fa0def69bd5bec777">getMaker</a> ()</td></tr>
-<tr class="separator:aefb8b00a165c6a8fa0def69bd5bec777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27e6c920ad823d6b109693c16fb09f40"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a27e6c920ad823d6b109693c16fb09f40">create</a> (<a class="el" href="namespaceosapi_1_1xml.html#a031e9ffbee60d576d9c2013a87987720">makerType</a> type=<a class="el" href="namespaceosapi_1_1xml.html#a031e9ffbee60d576d9c2013a87987720a7d961b8030c6099ee907f4f4b5fe6b3d">makerType::DOM</a>)</td></tr>
+<tr class="memdesc:a27e6c920ad823d6b109693c16fb09f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new XMl Maker instance according to the required type.  <a href="#a27e6c920ad823d6b109693c16fb09f40">More...</a><br /></td></tr>
+<tr class="separator:a27e6c920ad823d6b109693c16fb09f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9cb22b1e42fbd8a8b7178c54dc91d789"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a9cb22b1e42fbd8a8b7178c54dc91d789">maker</a> (void)</td></tr>
+<tr class="memdesc:a9cb22b1e42fbd8a8b7178c54dc91d789"><td class="mdescLeft">&#160;</td><td class="mdescRight">class constructor  <a href="#a9cb22b1e42fbd8a8b7178c54dc91d789">More...</a><br /></td></tr>
+<tr class="separator:a9cb22b1e42fbd8a8b7178c54dc91d789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ae6f3898848f40b712c73bc86df6d821e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae6f3898848f40b712c73bc86df6d821e">iDoc</a></td></tr>
+<tr class="separator:ae6f3898848f40b712c73bc86df6d821e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b01d11bd6206bf59e0668709484318"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae1b01d11bd6206bf59e0668709484318">iPath</a></td></tr>
+<tr class="memdesc:ae1b01d11bd6206bf59e0668709484318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to document.  <a href="#ae1b01d11bd6206bf59e0668709484318">More...</a><br /></td></tr>
+<tr class="separator:ae1b01d11bd6206bf59e0668709484318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34de1c9e6cb7381089a3c17df0396530"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a34de1c9e6cb7381089a3c17df0396530">output_canonical_form</a></td></tr>
+<tr class="memdesc:a34de1c9e6cb7381089a3c17df0396530"><td class="mdescLeft">&#160;</td><td class="mdescRight">File path where the document has to be saved.  <a href="#a34de1c9e6cb7381089a3c17df0396530">More...</a><br /></td></tr>
+<tr class="separator:a34de1c9e6cb7381089a3c17df0396530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b13cbe17f5bebcf164af671df3717c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a4b13cbe17f5bebcf164af671df3717c4">output_keep_cdsections</a></td></tr>
+<tr class="separator:a4b13cbe17f5bebcf164af671df3717c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4f5b47f82b0d73ed8d36d6e3462c3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a2f4f5b47f82b0d73ed8d36d6e3462c3e">output_keep_comments</a></td></tr>
+<tr class="separator:a2f4f5b47f82b0d73ed8d36d6e3462c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a610417c10294a818d20aff6eda3b9869"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a610417c10294a818d20aff6eda3b9869">output_type_normalization</a></td></tr>
+<tr class="separator:a610417c10294a818d20aff6eda3b9869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fcd97802eec4be5ed2ecce3a19876cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a5fcd97802eec4be5ed2ecce3a19876cc">output_discard_default_content</a></td></tr>
+<tr class="separator:a5fcd97802eec4be5ed2ecce3a19876cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8964993fe02f3a96039e612765d98e0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a8964993fe02f3a96039e612765d98e0c">output_keep_entities</a></td></tr>
+<tr class="separator:a8964993fe02f3a96039e612765d98e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35b99c27c86ab5feee16efd6d67ab749"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a35b99c27c86ab5feee16efd6d67ab749">output_infoset</a></td></tr>
+<tr class="separator:a35b99c27c86ab5feee16efd6d67ab749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3868a17180428e23fc964398beed84ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a3868a17180428e23fc964398beed84ea">output_namespaces</a></td></tr>
+<tr class="separator:a3868a17180428e23fc964398beed84ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aaa5f9af943cc2ffc04719c4834b064"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a5aaa5f9af943cc2ffc04719c4834b064">output_namespaces_declarations</a></td></tr>
+<tr class="separator:a5aaa5f9af943cc2ffc04719c4834b064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715d25a00f41d3f91fc545f29ef208d0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a715d25a00f41d3f91fc545f29ef208d0">output_normalize_characters</a></td></tr>
+<tr class="separator:a715d25a00f41d3f91fc545f29ef208d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e647cb7dc3e3155ac72a9138b06fc11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a9e647cb7dc3e3155ac72a9138b06fc11">output_cdsections_split</a></td></tr>
+<tr class="separator:a9e647cb7dc3e3155ac72a9138b06fc11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b7ae6958ec23d3ae935ddb90308417"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a51b7ae6958ec23d3ae935ddb90308417">output_validation</a></td></tr>
+<tr class="separator:a51b7ae6958ec23d3ae935ddb90308417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d08949972b745009539a4b1fcd7fed0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a7d08949972b745009539a4b1fcd7fed0">output_schema_validation</a></td></tr>
+<tr class="separator:a7d08949972b745009539a4b1fcd7fed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf402f946a4a5d24bbe4fd373f03d07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a2cf402f946a4a5d24bbe4fd373f03d07">output_keep_whitespaces</a></td></tr>
+<tr class="separator:a2cf402f946a4a5d24bbe4fd373f03d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9f698ddafe74817f3f0c946da62571"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a5f9f698ddafe74817f3f0c946da62571">output_pretty_print</a></td></tr>
+<tr class="separator:a5f9f698ddafe74817f3f0c946da62571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a0506a61d68b3bdbe3db26180be3629"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a3a0506a61d68b3bdbe3db26180be3629">output_xml_directive</a></td></tr>
+<tr class="separator:a3a0506a61d68b3bdbe3db26180be3629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b4aef3cb805febf8c4b0f3780b3ba0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a3b4aef3cb805febf8c4b0f3780b3ba0d">output_bom</a></td></tr>
+<tr class="separator:a3b4aef3cb805febf8c4b0f3780b3ba0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface to create XML files See Xerces C reference for the specific XML properties of the output file. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa42358633a82eec8efd2e5664c74c6f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa42358633a82eec8efd2e5664c74c6f6">&#9670;&nbsp;</a></span>~maker()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">osapi::xml::maker::~maker </td>
@@ -130,14 +255,19 @@ Static Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Class destructor. </p>
 
 </div>
 </div>
-<a id="a2a2a1e3b8918163ef4a2c09a1f2b3312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a2a1e3b8918163ef4a2c09a1f2b3312">&#9670;&nbsp;</a></span>maker() <span class="overload">[1/2]</span></h2>
+<a id="a9cb22b1e42fbd8a8b7178c54dc91d789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb22b1e42fbd8a8b7178c54dc91d789">&#9670;&nbsp;</a></span>maker()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,93 +278,25 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">osapi::xml::maker::maker </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> const &amp;&#160;</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a1c1b206160640753db4f99fa084d9722"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c1b206160640753db4f99fa084d9722">&#9670;&nbsp;</a></span>maker() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">osapi::xml::maker::maker </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>class constructor </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab89b9f12b85a2c7e9e86328eec9c50e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab89b9f12b85a2c7e9e86328eec9c50e2">&#9670;&nbsp;</a></span>build()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void osapi::xml::maker::build </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create/write a XML file from a root node. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>- XML file name to parse </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ab2c18a77896111591f90e2b8fb3e41b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2c18a77896111591f90e2b8fb3e41b7">&#9670;&nbsp;</a></span>createDocument()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void osapi::xml::maker::createDocument </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>RootNode</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aefb8b00a165c6a8fa0def69bd5bec777"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefb8b00a165c6a8fa0def69bd5bec777">&#9670;&nbsp;</a></span>getMaker()</h2>
+<a id="a051072c88fcfd62fc606a5a841fac865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a051072c88fcfd62fc606a5a841fac865">&#9670;&nbsp;</a></span>attribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,10 +305,113 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp; osapi::xml::maker::getMaker </td>
+          <td class="memname">virtual void* osapi::xml::maker::attribute </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>where</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a document node attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>- Name of XML element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- Text of element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">where</td><td>- At which place should the node be inserted, default is current element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#af3263e320c525bd7cfd60aab2e90df35">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a7c85bee187ac06e3b69e7c71d576d189">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="ae027954e7f7d54770ba3199e2096e6db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae027954e7f7d54770ba3199e2096e6db">&#9670;&nbsp;</a></span>comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* osapi::xml::maker::comment </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>where</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a node comment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>- XML comment </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">where</td><td>- At which place should the node be inserted, default is current element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#aa8535ecb954b6c71a8c1b45967bd0b43">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a93e03046ee45419b95b32f0133144c46">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="a27e6c920ad823d6b109693c16fb09f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27e6c920ad823d6b109693c16fb09f40">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> * osapi::xml::maker::create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceosapi_1_1xml.html#a031e9ffbee60d576d9c2013a87987720">makerType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="namespaceosapi_1_1xml.html#a031e9ffbee60d576d9c2013a87987720a7d961b8030c6099ee907f4f4b5fe6b3d">makerType::DOM</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -257,10 +422,18 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Create a new XMl Maker instance according to the required type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>- XML Maker type </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a7cd3f0f86d53039c75f0591ea08a1616"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cd3f0f86d53039c75f0591ea08a1616">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aaf6f7b3bad160262e53fe096b283b59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf6f7b3bad160262e53fe096b283b59d">&#9670;&nbsp;</a></span>discardDefContent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -269,24 +442,780 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a>&amp; osapi::xml::maker::operator= </td>
+          <td class="memname">void osapi::xml::maker::discardDefContent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> const &amp;&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: discard-default-content. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ef8bcc94169f56e4de7d4c81dfc33f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ef8bcc94169f56e4de7d4c81dfc33f5">&#9670;&nbsp;</a></span>document()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* osapi::xml::maker::document </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>RootNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create/write a XML file from a root node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>- Pathname of file to create </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">RootNode</td><td>- Name of document root element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- A pointer to the root node element </dd></dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#adb53354e66fb02195b3f09f36d53cb7b">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#aa70bad559c5964b8357463c349342d0f">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="a43846feb4a6f36372840ed3eab86c621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43846feb4a6f36372840ed3eab86c621">&#9670;&nbsp;</a></span>element()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* osapi::xml::maker::element </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>where</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a document node element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>- Name of XML element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- Text of element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">where</td><td>- At which place should the node be inserted, default is current element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#aa13a7ed2bb4ecd54876bea0f27f70262">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a5e68453c71d635678594161f6c44457a">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="a467708672cd3a0f305a898a8f5f3f0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467708672cd3a0f305a898a8f5f3f0a1">&#9670;&nbsp;</a></span>infoSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::infoSet </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: infoset. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae702f9190a688ff26da60a34d3a6ddd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae702f9190a688ff26da60a34d3a6ddd5">&#9670;&nbsp;</a></span>instruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void* osapi::xml::maker::instruction </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a document node instruction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>- Name of XML element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>- Text of element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#a56c291f861210f0a8d5a6a9f714fda55">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a658b481fd800a787d78f4a54837f3ec0">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="a2bab46a9148987ea14c2ab017a145e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bab46a9148987ea14c2ab017a145e37">&#9670;&nbsp;</a></span>keepCDSections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::keepCDSections </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: cdata-sections. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7c442cd076a81a307e8d3c5b1f2966ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c442cd076a81a307e8d3c5b1f2966ed">&#9670;&nbsp;</a></span>keepComments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::keepComments </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: comments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a17d678ff06352526c8ebd6ec3b498aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d678ff06352526c8ebd6ec3b498aa8">&#9670;&nbsp;</a></span>keepEntities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::keepEntities </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: entities. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a264d07d021b51f685639d718103c6971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264d07d021b51f685639d718103c6971">&#9670;&nbsp;</a></span>keepWhitespaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::keepWhitespaces </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: element-content-whitespace. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c0af8021fd41972fe37e161779c095d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0af8021fd41972fe37e161779c095d">&#9670;&nbsp;</a></span>normalChars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::normalChars </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: normalize-characters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0e5ae2677c593dfbc1c238b13b9f7d52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e5ae2677c593dfbc1c238b13b9f7d52">&#9670;&nbsp;</a></span>schemaValidation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::schemaValidation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: validate-if-schema. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a687408454a00574ca04b658d13ac1811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687408454a00574ca04b658d13ac1811">&#9670;&nbsp;</a></span>setBOM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setBOM </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Should the BOM byte written (to the file)? </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a833c1fd202a21faf2bf540e547d1e43d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833c1fd202a21faf2bf540e547d1e43d">&#9670;&nbsp;</a></span>setCanonicalForm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setCanonicalForm </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: canonical-form. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81faf0723ba0d541d9f614043cb43aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81faf0723ba0d541d9f614043cb43aab">&#9670;&nbsp;</a></span>setNS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setNS </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: namespaces. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf245774ba7abc33a34db86dd6d221c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf245774ba7abc33a34db86dd6d221c9">&#9670;&nbsp;</a></span>setNSDeclaritions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setNSDeclaritions </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: namespace-declarations. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a363e080459ca3af1610678615e0af727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a363e080459ca3af1610678615e0af727">&#9670;&nbsp;</a></span>setPrettyPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setPrettyPrint </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Xerces shortcut to set several properties. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a085aff3b4285878cc8c1005152a31075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a085aff3b4285878cc8c1005152a31075">&#9670;&nbsp;</a></span>setValidation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::setValidation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: validate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c87a733d98f9ca16cce4aa48e5bdf50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c87a733d98f9ca16cce4aa48e5bdf50">&#9670;&nbsp;</a></span>splitCDSections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::splitCDSections </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: split-cdata-sections. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86d919dda2bc62eda65283e377e05e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d919dda2bc62eda65283e377e05e5b">&#9670;&nbsp;</a></span>typeNormalization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::typeNormalization </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the Property: datatype-normalization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af663a0bfe7e71c6d7392c5a3bb4d81b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af663a0bfe7e71c6d7392c5a3bb4d81b3">&#9670;&nbsp;</a></span>writeFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void osapi::xml::maker::writeFile </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Write a XML document. </p>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#abeac89dbf839a87d4d2c0ae0cd0b1439">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a1368971b5154c0d141618f73f7df48ff">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
+<a id="ae785329406bc08c85aaa8944fe7e94e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae785329406bc08c85aaa8944fe7e94e9">&#9670;&nbsp;</a></span>xmlDirective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::maker::xmlDirective </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Should XML directive be written (to the file)? </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- True / False. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae6f3898848f40b712c73bc86df6d821e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6f3898848f40b712c73bc86df6d821e">&#9670;&nbsp;</a></span>iDoc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* osapi::xml::maker::iDoc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad2db1fe56d14c2d28a352228d8e367f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2db1fe56d14c2d28a352228d8e367f0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ae1b01d11bd6206bf59e0668709484318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b01d11bd6206bf59e0668709484318">&#9670;&nbsp;</a></span>iPath</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,16 +1224,390 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a>&amp; osapi::xml::maker::operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1maker.html">maker</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">std::string osapi::xml::maker::iPath</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to document. </p>
+
+</div>
+</div>
+<a id="a3b4aef3cb805febf8c4b0f3780b3ba0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b4aef3cb805febf8c4b0f3780b3ba0d">&#9670;&nbsp;</a></span>output_bom</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_bom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34de1c9e6cb7381089a3c17df0396530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34de1c9e6cb7381089a3c17df0396530">&#9670;&nbsp;</a></span>output_canonical_form</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_canonical_form</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File path where the document has to be saved. </p>
+
+</div>
+</div>
+<a id="a9e647cb7dc3e3155ac72a9138b06fc11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e647cb7dc3e3155ac72a9138b06fc11">&#9670;&nbsp;</a></span>output_cdsections_split</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_cdsections_split</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fcd97802eec4be5ed2ecce3a19876cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fcd97802eec4be5ed2ecce3a19876cc">&#9670;&nbsp;</a></span>output_discard_default_content</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_discard_default_content</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35b99c27c86ab5feee16efd6d67ab749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b99c27c86ab5feee16efd6d67ab749">&#9670;&nbsp;</a></span>output_infoset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_infoset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b13cbe17f5bebcf164af671df3717c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b13cbe17f5bebcf164af671df3717c4">&#9670;&nbsp;</a></span>output_keep_cdsections</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_keep_cdsections</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f4f5b47f82b0d73ed8d36d6e3462c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4f5b47f82b0d73ed8d36d6e3462c3e">&#9670;&nbsp;</a></span>output_keep_comments</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_keep_comments</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8964993fe02f3a96039e612765d98e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8964993fe02f3a96039e612765d98e0c">&#9670;&nbsp;</a></span>output_keep_entities</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_keep_entities</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cf402f946a4a5d24bbe4fd373f03d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf402f946a4a5d24bbe4fd373f03d07">&#9670;&nbsp;</a></span>output_keep_whitespaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_keep_whitespaces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3868a17180428e23fc964398beed84ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3868a17180428e23fc964398beed84ea">&#9670;&nbsp;</a></span>output_namespaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_namespaces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aaa5f9af943cc2ffc04719c4834b064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aaa5f9af943cc2ffc04719c4834b064">&#9670;&nbsp;</a></span>output_namespaces_declarations</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_namespaces_declarations</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a715d25a00f41d3f91fc545f29ef208d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715d25a00f41d3f91fc545f29ef208d0">&#9670;&nbsp;</a></span>output_normalize_characters</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_normalize_characters</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f9f698ddafe74817f3f0c946da62571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9f698ddafe74817f3f0c946da62571">&#9670;&nbsp;</a></span>output_pretty_print</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_pretty_print</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7d08949972b745009539a4b1fcd7fed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d08949972b745009539a4b1fcd7fed0">&#9670;&nbsp;</a></span>output_schema_validation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_schema_validation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a610417c10294a818d20aff6eda3b9869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a610417c10294a818d20aff6eda3b9869">&#9670;&nbsp;</a></span>output_type_normalization</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_type_normalization</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51b7ae6958ec23d3ae935ddb90308417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b7ae6958ec23d3ae935ddb90308417">&#9670;&nbsp;</a></span>output_validation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_validation</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a0506a61d68b3bdbe3db26180be3629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a0506a61d68b3bdbe3db26180be3629">&#9670;&nbsp;</a></span>output_xml_directive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::maker::output_xml_directive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

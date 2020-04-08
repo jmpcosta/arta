@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['parser',['parser',['../classosapi_1_1xml_1_1parser.html#a838001972b2a31bc7f12dc3292de1644',1,'osapi::xml::parser']]],
-  ['process',['process',['../classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20',1,'osapi::xml::hProcessor::process()'],['../classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4',1,'osapi::xml::processor::process()'],['../classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035',1,'osapi::xml::rProcessor::process()']]],
-  ['processattribute',['processAttribute',['../classosapi_1_1xml_1_1processor.html#a7ff57764f70bbd074f91b82d15d0b5f6',1,'osapi::xml::processor']]],
-  ['processattributes',['processAttributes',['../classosapi_1_1xml_1_1processor.html#a9561bfd248aae9dd2ee8ec76fa5845e4',1,'osapi::xml::processor']]],
-  ['processcomment',['processComment',['../classosapi_1_1xml_1_1processor.html#a4623cd9ab5316098955a7f7f10af3103',1,'osapi::xml::processor']]],
-  ['processdescendants',['processDescendants',['../classosapi_1_1xml_1_1h_processor.html#aa3ce28a91f927812a9b3d27ccab4c7a9',1,'osapi::xml::hProcessor']]],
-  ['processelement',['processElement',['../classosapi_1_1xml_1_1h_processor.html#abee6771fbf14598f9837d9bdb20ad652',1,'osapi::xml::hProcessor::processElement()'],['../classosapi_1_1xml_1_1processor.html#ab15f8a1fb07ff0f0d8439529359393d6',1,'osapi::xml::processor::processElement()']]],
-  ['processinstruction',['processInstruction',['../classosapi_1_1xml_1_1processor.html#a1f2f33762a0fbb6ee3ae49cd5490a7be',1,'osapi::xml::processor']]],
-  ['processnode',['processNode',['../classosapi_1_1xml_1_1processor.html#a7c79260872fb36eb0c13a7ae99026fcd',1,'osapi::xml::processor']]],
-  ['processtext',['processText',['../classosapi_1_1xml_1_1processor.html#a4405ef980e6adce6e1767ca138405456',1,'osapi::xml::processor']]]
+  ['operator_2b',['operator+',['../classosapi_1_1xml_1_1string.html#a2083a1d5bca4bddfdddd6a06e2f8216b',1,'osapi::xml::string::operator+(const char *first)'],['../classosapi_1_1xml_1_1string.html#ac43ca09c93943a7996470e8f882d9d32',1,'osapi::xml::string::operator+(const std::string &amp;first)'],['../classosapi_1_1xml_1_1string.html#a461c4272810b45ce06ec647d2c64cc92',1,'osapi::xml::string::operator+(const XMLCh *second)']]],
+  ['operator_2b_3d',['operator+=',['../classosapi_1_1xml_1_1string.html#acdcab9cfe62e6e3126a417d3eb4d5a5b',1,'osapi::xml::string::operator+=(const XMLCh *first)'],['../classosapi_1_1xml_1_1string.html#a2e44c3133cc551672e66736c2832249e',1,'osapi::xml::string::operator+=(const std::string &amp;first)'],['../classosapi_1_1xml_1_1string.html#a895b8528fed040b9992738a2ad5d8d4e',1,'osapi::xml::string::operator+=(const char *first)']]],
+  ['operator_3d',['operator=',['../classosapi_1_1xml_1_1string.html#ab5430011cb1f9c4582f6993f42ad3527',1,'osapi::xml::string::operator=(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#a8390666bd9e35355baf5fc92b1a95c31',1,'osapi::xml::string::operator=(const char *message)'],['../classosapi_1_1xml_1_1string.html#a9d9fcf8fdb67dbfc16794ba75e5c7409',1,'osapi::xml::string::operator=(const std::string &amp;message)']]],
+  ['operator_3d_3d',['operator==',['../classosapi_1_1xml_1_1string.html#aed433744f04f10d2baff5e2649b45403',1,'osapi::xml::string::operator==(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#a8279599cd5bde4f6f440c4ad0170b9c0',1,'osapi::xml::string::operator==(const char *message)'],['../classosapi_1_1xml_1_1string.html#a6595f3f12249f17f472afce8b0c70f68',1,'osapi::xml::string::operator==(const std::string &amp;message)']]]
 ];

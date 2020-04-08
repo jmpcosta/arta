@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['element',['element',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aad731ee22a897f3d2933a918be1af6aa9',1,'osapi::xml']]],
-  ['empty_5fstring',['empty_string',['../namespaceosapi_1_1xml.html#a24171faeff7a4c0c02bb6780d5389c92',1,'osapi::xml']]],
-  ['entity',['entity',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa89d0f73ff1dab82aa878c19c22c85c06',1,'osapi::xml']]],
-  ['entityreference',['entityReference',['../namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa0d145cc48b9dc0d3dd59b4d186bf8a4e',1,'osapi::xml']]],
-  ['error',['error',['../classosapi_1_1xml_1_1error.html',1,'osapi::xml::error'],['../classosapi_1_1xml_1_1error.html#aafb57fc602024a3f6af506f29f104863',1,'osapi::xml::error::error(std::string &amp;message)'],['../classosapi_1_1xml_1_1error.html#aa3a8a8ea39c28baf0a653f8b9b4358f1',1,'osapi::xml::error::error(const char *message)'],['../classosapi_1_1xml_1_1error.html#a75d65d68db9dd54279d046b2b2e0f76b',1,'osapi::xml::error::error(const std::exception &amp;exc)'],['../classosapi_1_1xml_1_1error.html#a45731235d55189b53ea462de243c5ee0',1,'osapi::xml::error::error(const XML_EXCEPTION &amp;exc)'],['../classosapi_1_1xml_1_1error.html#a7a5fcb4c03323f13843591559221ea2d',1,'osapi::xml::error::error(const XML_DOM_EXCEPTION &amp;exc)'],['../classosapi_1_1xml_1_1error.html#a9b034970e40b78e192000a7c356115e8',1,'osapi::xml::error::error(const XML_SAX_EXCEPTION &amp;exc)'],['../classosapi_1_1xml_1_1error.html#aee67755ce950f486e526d034efb7334a',1,'osapi::xml::error::error(const XML_SAX_PARSE_EXCEPTION &amp;exc)'],['../classosapi_1_1xml_1_1error_handler.html#a24d85a7730650aeff58f1ab64a745ebb',1,'osapi::xml::errorHandler::error()']]],
-  ['errorhandler',['errorHandler',['../classosapi_1_1xml_1_1error_handler.html',1,'osapi::xml::errorHandler'],['../classosapi_1_1xml_1_1error_handler.html#a5651f0a890acb6187772f282596c11dc',1,'osapi::xml::errorHandler::errorHandler()']]]
+  ['fatalerror',['fatalError',['../classosapi_1_1xml_1_1error_handler.html#ac5fe571190c3a443154ffdc37b9f9328',1,'osapi::xml::errorHandler']]]
 ];
