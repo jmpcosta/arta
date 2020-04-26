@@ -17,6 +17,7 @@
 #include "xercesc/util/XMLString.hpp"
 
 // Import own declarations
+#include "defs/xml_trace_imp.hh"
 #include "error/xml_error.hh"
 
 
@@ -31,7 +32,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( error )
+ARTA_CLASSNAME( error )
 
 // *****************************************************************************************
 //

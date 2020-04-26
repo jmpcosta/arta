@@ -93,6 +93,8 @@ $(document).ready(function(){initNavTree('namespaceosapi_1_1xml.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1c_processor.html">cProcessor</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1data_handler.html">dataHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1error.html">error</a></td></tr>
@@ -157,6 +159,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a501547a9a4e34f820e3d8d4da6aea710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc9ff3a81cf5110bf140c85299a0062"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a2fc9ff3a81cf5110bf140c85299a0062">XML_DOM_OUTPUT</a> = ::xercesc::DOMLSOutput</td></tr>
 <tr class="separator:a2fc9ff3a81cf5110bf140c85299a0062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc560319c6adc55781faee27b0566e46"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#abc560319c6adc55781faee27b0566e46">XML_DOM_RESULT</a> = ::xercesc::DOMXPathResult</td></tr>
+<tr class="separator:abc560319c6adc55781faee27b0566e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d68b4f0e36a43a25f565d0968027bb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a58d68b4f0e36a43a25f565d0968027bb">XML_STRING</a> = ::xercesc::XMLString</td></tr>
 <tr class="separator:a58d68b4f0e36a43a25f565d0968027bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11931cfbded176677980d0fb4c912466"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a11931cfbded176677980d0fb4c912466">XML_NODE</a> = ::xercesc::DOMNode</td></tr>
@@ -212,8 +216,42 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a24171faeff7a4c0c02bb6780d5389c92"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a24171faeff7a4c0c02bb6780d5389c92">empty_string</a> = &quot;&quot;</td></tr>
-<tr class="separator:a24171faeff7a4c0c02bb6780d5389c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab104b3fe552a864e059f7a1be2c933ac"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#ab104b3fe552a864e059f7a1be2c933ac">ARTA_SUCCESS</a> = &quot;Success&quot;</td></tr>
+<tr class="separator:ab104b3fe552a864e059f7a1be2c933ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42530bb30e090312711499a0c926690f"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a42530bb30e090312711499a0c926690f">ARTA_FAILURE</a> = &quot;Failure&quot;</td></tr>
+<tr class="separator:a42530bb30e090312711499a0c926690f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef6d77e144bfdb59b335665be1d91e2"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a2ef6d77e144bfdb59b335665be1d91e2">ARTA_STRING_EMPTY</a> = &quot;&quot;</td></tr>
+<tr class="separator:a2ef6d77e144bfdb59b335665be1d91e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1127974ae8687bc9c7fa9a57a1540e51"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a1127974ae8687bc9c7fa9a57a1540e51">XPATH_CHARACTER_SPACE</a> = ' '</td></tr>
+<tr class="separator:a1127974ae8687bc9c7fa9a57a1540e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee07f670e67ca2d0655ef91eabe63b2"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a8ee07f670e67ca2d0655ef91eabe63b2">XPATH_DELIMITER_PATH</a> = '/'</td></tr>
+<tr class="separator:a8ee07f670e67ca2d0655ef91eabe63b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32eed864f65b4ed112e90a14f458aa15"><td class="memItemLeft" align="right" valign="top">constexpr const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a32eed864f65b4ed112e90a14f458aa15">XPATH_DELIMITER_SATTRIB</a> = '@'</td></tr>
+<tr class="separator:a32eed864f65b4ed112e90a14f458aa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49a4d3fd4a0ce7e68524340e310345b2"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a49a4d3fd4a0ce7e68524340e310345b2">XPATH_DELIMITER_DPATH</a> = &quot;//&quot;</td></tr>
+<tr class="separator:a49a4d3fd4a0ce7e68524340e310345b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba881a5b1036d708e633f36f1e1c1fe7"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aba881a5b1036d708e633f36f1e1c1fe7">XPATH_DELIMITER_LSB</a> = &quot;[&quot;</td></tr>
+<tr class="separator:aba881a5b1036d708e633f36f1e1c1fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3039a521454740b961fe822c5009ec27"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3039a521454740b961fe822c5009ec27">XPATH_DELIMITER_RSB</a> = &quot;]&quot;</td></tr>
+<tr class="separator:a3039a521454740b961fe822c5009ec27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0297d3a43ba3b38979b9b7876bbd520"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#aa0297d3a43ba3b38979b9b7876bbd520">XPATH_OPERATOR_AND</a> = &quot;&amp;&amp;&quot;</td></tr>
+<tr class="separator:aa0297d3a43ba3b38979b9b7876bbd520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaaebf05c5834102c4baf8b2a5509385"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#acaaebf05c5834102c4baf8b2a5509385">XPATH_OPERATOR_OR</a> = &quot;||&quot;</td></tr>
+<tr class="separator:acaaebf05c5834102c4baf8b2a5509385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e26f1bbb90ddf0618471abed19a85b2"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3e26f1bbb90ddf0618471abed19a85b2">XPATH_OPERATOR_EQUAL</a> = &quot;=&quot;</td></tr>
+<tr class="separator:a3e26f1bbb90ddf0618471abed19a85b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2ace5d5a745ccb53b7c2c9bef6981e"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a3f2ace5d5a745ccb53b7c2c9bef6981e">XPATH_ATTRIBUTE_START</a> = &quot;@&quot;</td></tr>
+<tr class="separator:a3f2ace5d5a745ccb53b7c2c9bef6981e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31026e6f0f6bc7d1c8b402a538bdd046"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a31026e6f0f6bc7d1c8b402a538bdd046">XPATH_ATTRIBUTE_QUOTE</a> = &quot;'&quot;</td></tr>
+<tr class="separator:a31026e6f0f6bc7d1c8b402a538bdd046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a997431d189e6d9006c909bdfb0d20877"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a997431d189e6d9006c909bdfb0d20877">XPATH_ATTRIBUTE_QUOTE_VALUE</a> = &quot; '&quot;</td></tr>
+<tr class="separator:a997431d189e6d9006c909bdfb0d20877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33405e005465ed14bb929e3885b8b359"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a33405e005465ed14bb929e3885b8b359">XPATH_ATTRIBUTE_STARTSPACE</a> = &quot; @&quot;</td></tr>
+<tr class="separator:a33405e005465ed14bb929e3885b8b359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2359769dbe8ed6cbe11bde73eb4deef1"><td class="memItemLeft" align="right" valign="top">constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a2359769dbe8ed6cbe11bde73eb4deef1">XPATH_ATTRIBUTE_WHITESPACE</a> = &quot; &quot;</td></tr>
+<tr class="separator:a2359769dbe8ed6cbe11bde73eb4deef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2974c15cce55889f1bcd8af3958cdfa4"><td class="memItemLeft" align="right" valign="top">constexpr std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceosapi_1_1xml.html#a2974c15cce55889f1bcd8af3958cdfa4">NOT_FOUND</a> = std::string::npos</td></tr>
+<tr class="separator:a2974c15cce55889f1bcd8af3958cdfa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="acc1c881b3470a31c7f6d6edc2d68827c"></a>
@@ -308,6 +346,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="namespaceosapi_1_1xml.html#a81c5d43382cfb1f3f7ff11a8be5968f6">osapi::xml::XML_DOM_REGISTRY</a> = typedef ::xercesc::DOMImplementationRegistry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc560319c6adc55781faee27b0566e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc560319c6adc55781faee27b0566e46">&#9670;&nbsp;</a></span>XML_DOM_RESULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespaceosapi_1_1xml.html#abc560319c6adc55781faee27b0566e46">osapi::xml::XML_DOM_RESULT</a> = typedef ::xercesc::DOMXPathResult</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -697,14 +749,252 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a24171faeff7a4c0c02bb6780d5389c92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24171faeff7a4c0c02bb6780d5389c92">&#9670;&nbsp;</a></span>empty_string</h2>
+<a id="a42530bb30e090312711499a0c926690f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42530bb30e090312711499a0c926690f">&#9670;&nbsp;</a></span>ARTA_FAILURE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr const char* osapi::xml::empty_string = &quot;&quot;</td>
+          <td class="memname">constexpr const char* osapi::xml::ARTA_FAILURE = &quot;Failure&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ef6d77e144bfdb59b335665be1d91e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef6d77e144bfdb59b335665be1d91e2">&#9670;&nbsp;</a></span>ARTA_STRING_EMPTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::ARTA_STRING_EMPTY = &quot;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab104b3fe552a864e059f7a1be2c933ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab104b3fe552a864e059f7a1be2c933ac">&#9670;&nbsp;</a></span>ARTA_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::ARTA_SUCCESS = &quot;Success&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2974c15cce55889f1bcd8af3958cdfa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2974c15cce55889f1bcd8af3958cdfa4">&#9670;&nbsp;</a></span>NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr std::size_t osapi::xml::NOT_FOUND = std::string::npos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31026e6f0f6bc7d1c8b402a538bdd046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31026e6f0f6bc7d1c8b402a538bdd046">&#9670;&nbsp;</a></span>XPATH_ATTRIBUTE_QUOTE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_ATTRIBUTE_QUOTE = &quot;'&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a997431d189e6d9006c909bdfb0d20877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997431d189e6d9006c909bdfb0d20877">&#9670;&nbsp;</a></span>XPATH_ATTRIBUTE_QUOTE_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_ATTRIBUTE_QUOTE_VALUE = &quot; '&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f2ace5d5a745ccb53b7c2c9bef6981e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2ace5d5a745ccb53b7c2c9bef6981e">&#9670;&nbsp;</a></span>XPATH_ATTRIBUTE_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_ATTRIBUTE_START = &quot;@&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33405e005465ed14bb929e3885b8b359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33405e005465ed14bb929e3885b8b359">&#9670;&nbsp;</a></span>XPATH_ATTRIBUTE_STARTSPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_ATTRIBUTE_STARTSPACE = &quot; @&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2359769dbe8ed6cbe11bde73eb4deef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2359769dbe8ed6cbe11bde73eb4deef1">&#9670;&nbsp;</a></span>XPATH_ATTRIBUTE_WHITESPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_ATTRIBUTE_WHITESPACE = &quot; &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1127974ae8687bc9c7fa9a57a1540e51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1127974ae8687bc9c7fa9a57a1540e51">&#9670;&nbsp;</a></span>XPATH_CHARACTER_SPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char osapi::xml::XPATH_CHARACTER_SPACE = ' '</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49a4d3fd4a0ce7e68524340e310345b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a4d3fd4a0ce7e68524340e310345b2">&#9670;&nbsp;</a></span>XPATH_DELIMITER_DPATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_DELIMITER_DPATH = &quot;//&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba881a5b1036d708e633f36f1e1c1fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba881a5b1036d708e633f36f1e1c1fe7">&#9670;&nbsp;</a></span>XPATH_DELIMITER_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_DELIMITER_LSB = &quot;[&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ee07f670e67ca2d0655ef91eabe63b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ee07f670e67ca2d0655ef91eabe63b2">&#9670;&nbsp;</a></span>XPATH_DELIMITER_PATH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char osapi::xml::XPATH_DELIMITER_PATH = '/'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3039a521454740b961fe822c5009ec27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3039a521454740b961fe822c5009ec27">&#9670;&nbsp;</a></span>XPATH_DELIMITER_RSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_DELIMITER_RSB = &quot;]&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32eed864f65b4ed112e90a14f458aa15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32eed864f65b4ed112e90a14f458aa15">&#9670;&nbsp;</a></span>XPATH_DELIMITER_SATTRIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char osapi::xml::XPATH_DELIMITER_SATTRIB = '@'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0297d3a43ba3b38979b9b7876bbd520"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0297d3a43ba3b38979b9b7876bbd520">&#9670;&nbsp;</a></span>XPATH_OPERATOR_AND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_OPERATOR_AND = &quot;&amp;&amp;&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e26f1bbb90ddf0618471abed19a85b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e26f1bbb90ddf0618471abed19a85b2">&#9670;&nbsp;</a></span>XPATH_OPERATOR_EQUAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_OPERATOR_EQUAL = &quot;=&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaaebf05c5834102c4baf8b2a5509385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaaebf05c5834102c4baf8b2a5509385">&#9670;&nbsp;</a></span>XPATH_OPERATOR_OR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr const char* osapi::xml::XPATH_OPERATOR_OR = &quot;||&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

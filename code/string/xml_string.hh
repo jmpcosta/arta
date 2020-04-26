@@ -77,9 +77,6 @@ public:
     						~string() {}
 
 
-    	/// @brief Obtain a reference to the linked mapper object which maps nodes to CIs
-    	/// @return Reference to xmlMapper object
-
     	static std::string &	get	( const XMLCh * raw, std::string & msg	);
 
 
@@ -91,7 +88,7 @@ private:
 		std::string		iMsg;
 
 
-		TRACE_CLASSNAME_DECLARATION
+		ARTA_CLASSNAME_DECLARATION
 };
 
 

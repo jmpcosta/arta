@@ -14,6 +14,7 @@
 // *****************************************************************************************
 
 // Import project headers
+#include "defs/xml_trace_imp.hh"
 #include "parser/xml_note.hh"
 #include "error/xml_error.hh"
 

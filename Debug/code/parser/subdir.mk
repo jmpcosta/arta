@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../code/parser/xml_cprocessor.cpp \
 ../code/parser/xml_data_handler.cpp \
 ../code/parser/xml_hprocessor.cpp \
 ../code/parser/xml_parser.cpp \
@@ -11,6 +12,7 @@ CPP_SRCS += \
 ../code/parser/xml_rprocessor.cpp 
 
 OBJS += \
+./code/parser/xml_cprocessor.o \
 ./code/parser/xml_data_handler.o \
 ./code/parser/xml_hprocessor.o \
 ./code/parser/xml_parser.o \
@@ -18,6 +20,7 @@ OBJS += \
 ./code/parser/xml_rprocessor.o 
 
 CPP_DEPS += \
+./code/parser/xml_cprocessor.d \
 ./code/parser/xml_data_handler.d \
 ./code/parser/xml_hprocessor.d \
 ./code/parser/xml_parser.d \

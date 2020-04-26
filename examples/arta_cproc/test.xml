@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<!-- An XML file for the Configuration processor example -->
+
+<apps>
+ <!-- Configuration settings for applications  -->
+
+ <app name="app1" id="1">
+ 	<environment>
+ 		<var name="path">/usr/bin:/bin</var>
+ 		<var name="dir">/opt/example1</var>
+ 	</environment>
+ 	<executable>${dir}/app1</executable>
+ </app>
+ 
+ <app name="app2" id="2">
+ 	<environment>
+ 		<var name="path">/opt/example2/bin</var>
+ 		<var name="dir">/home/example2</var>
+ 	</environment>
+ 	<executable>${dir}/app2</executable>
+ </app>
+
+ <app name="app3" id="3">
+ 	<environment>
+ 		<var name="path">/opt/example3/bin</var>
+ 		<var name="dir">/home/example3</var>
+ 	</environment>
+ 	<executable user="root">${dir}/app2</executable>
+ </app>
+ 
+</apps>

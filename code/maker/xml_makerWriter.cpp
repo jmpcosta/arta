@@ -16,7 +16,7 @@
 // *****************************************************************************************
 
 // Import project declarations
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_types.hh"
 #include "error/xml_error.hh"
 #include "error/xml_errorHandler.hh"
@@ -36,7 +36,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( makerWriter )
+ARTA_CLASSNAME( makerWriter )
 
 // *****************************************************************************************
 //
@@ -114,14 +114,20 @@ void * makerWriter::comment( const char * text, void * where )
  return iCurrentNode;
 }
 
-void * makerWriter::instruction( const char * name, const char * data )
+void makerWriter::instruction( const char * name, const char * data )
 {
  TRACE_ENTER
 
  TRACE_EXIT
- return iCurrentNode;
 }
 
+
+void makerWriter::docComment( const char * p_comment )
+{
+ TRACE_ENTER
+
+ TRACE_EXIT
+}
 
 
 void makerWriter::writeFile( void )

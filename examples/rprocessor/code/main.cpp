@@ -8,6 +8,7 @@
 #include <iostream>
 #include <exception>
 #include <filesystem>
+#include <vector>
 
 // Import ARTA library
 #include "arta.hh"
@@ -18,7 +19,6 @@
 
 int main()
 {
-
  if( ! std::filesystem::exists( ARTA_TEST_FILE ) )
    {
 	 std::cerr << "XML file (" << ARTA_TEST_FILE << ") not found !" << std::endl;
@@ -27,16 +27,11 @@ int main()
 
  try
  {
-	 //ARTA::begin();
-
 	 PARSER myParser( ARTA_TEST_FILE );
 
-	 // Select all nodes that are cities of Portugal
-	 proc myProcessor( myParser, "//countries/country[@name='Portugal']/cities" );
+	 proc myProc( myParser );
 
-	 myProcessor.process();
-
-	 //ARTA::end();
+	 myProc.process();
  }
 
  catch( std::exception & e )

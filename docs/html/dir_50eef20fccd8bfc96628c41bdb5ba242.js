@@ -1,5 +1,9 @@
 var dir_50eef20fccd8bfc96628c41bdb5ba242 =
 [
+    [ "xml_cprocessor.cpp", "xml__cprocessor_8cpp.html", "xml__cprocessor_8cpp" ],
+    [ "xml_cprocessor.hh", "xml__cprocessor_8hh.html", [
+      [ "cProcessor", "classosapi_1_1xml_1_1c_processor.html", "classosapi_1_1xml_1_1c_processor" ]
+    ] ],
     [ "xml_data_handler.cpp", "xml__data__handler_8cpp.html", null ],
     [ "xml_data_handler.hh", "xml__data__handler_8hh.html", [
       [ "dataHandler", "classosapi_1_1xml_1_1data_handler.html", "classosapi_1_1xml_1_1data_handler" ]
@@ -17,7 +21,7 @@ var dir_50eef20fccd8bfc96628c41bdb5ba242 =
     [ "xml_processor.hh", "xml__processor_8hh.html", [
       [ "processor", "classosapi_1_1xml_1_1processor.html", "classosapi_1_1xml_1_1processor" ]
     ] ],
-    [ "xml_rprocessor.cpp", "xml__rprocessor_8cpp.html", null ],
+    [ "xml_rprocessor.cpp", "xml__rprocessor_8cpp.html", "xml__rprocessor_8cpp" ],
     [ "xml_rprocessor.hh", "xml__rprocessor_8hh.html", [
       [ "rProcessor", "classosapi_1_1xml_1_1r_processor.html", "classosapi_1_1xml_1_1r_processor" ]
     ] ]

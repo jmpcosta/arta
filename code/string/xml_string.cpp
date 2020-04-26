@@ -18,6 +18,7 @@
 
 // Import own declarations
 #include "defs/xml_defs.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_types.hh"
 #include "string/xml_string.hh"
 
@@ -33,7 +34,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( string )
+ARTA_CLASSNAME( string )
 
 // *****************************************************************************************
 //
@@ -45,7 +46,7 @@ string::string( void )
 {
  TRACE_POINT
 
- iMsg = empty_string;
+ iMsg = ARTA_STRING_EMPTY;
 }
 
 string::string( const std::string & message )
@@ -60,7 +61,7 @@ string::string( const char * p_message )
  TRACE_POINT
 
  if( p_message == nullptr )
-	 iMsg = empty_string;
+	 iMsg = ARTA_STRING_EMPTY;
  else
      iMsg = p_message;
 }
@@ -71,7 +72,7 @@ string::string( const XMLCh * p_message )
  TRACE_ENTER
 
  if( p_message == nullptr )
-	 iMsg = empty_string;
+	 iMsg = ARTA_STRING_EMPTY;
  else
    {
 	 XML_MEMORY_MGR * p_manager = XML_PLATFORM_UTILS::fgMemoryManager;
@@ -196,7 +197,7 @@ void string::operator=( const std::string & p_message )
 
 bool string::operator==( const char * p_message )
 {
- TRACE_POINT
+ TRACE( "char * comparison" )
 
  if( p_message == nullptr ) return false;
 
@@ -208,7 +209,7 @@ bool string::operator==( const char * p_message )
 
 bool string::operator==( const XMLCh * p_message )
 {
- TRACE_POINT
+ TRACE( "XMLCh comparison" )
 
  if( p_message == nullptr ) return false;
 
@@ -226,7 +227,7 @@ bool string::operator==( const XMLCh * p_message )
 
 bool string::operator==( const std::string & message )
 {
- TRACE_POINT
+ TRACE( "std::string comparison:",  (iMsg == message) )
 
  return (iMsg == message);
 }

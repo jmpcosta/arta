@@ -1,5 +1,6 @@
 var namespaceosapi_1_1xml =
 [
+    [ "cProcessor", "classosapi_1_1xml_1_1c_processor.html", "classosapi_1_1xml_1_1c_processor" ],
     [ "dataHandler", "classosapi_1_1xml_1_1data_handler.html", "classosapi_1_1xml_1_1data_handler" ],
     [ "error", "classosapi_1_1xml_1_1error.html", "classosapi_1_1xml_1_1error" ],
     [ "errorHandler", "classosapi_1_1xml_1_1error_handler.html", "classosapi_1_1xml_1_1error_handler" ],

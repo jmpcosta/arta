@@ -1,9 +1,10 @@
 <map id="code/maker/xml_makerWriter.cpp" name="code/maker/xml_makerWriter.cpp">
-<area shape="rect" id="node2" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="1811,237,1937,263"/>
-<area shape="rect" id="node4" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="1237,155,1367,181"/>
-<area shape="rect" id="node13" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="1571,80,1695,107"/>
-<area shape="rect" id="node16" href="$xml__error_handler_8hh.html" title="error/xml_errorHandler.hh" alt="" coords="1217,80,1387,107"/>
-<area shape="rect" id="node18" href="$xml__maker_writer_8hh.html" title="maker/xml_makerWriter.hh" alt="" coords="1730,80,1909,107"/>
-<area shape="rect" id="node19" href="$xml__maker_8hh.html" title="maker/xml_maker.hh" alt="" coords="1857,155,2001,181"/>
-<area shape="rect" id="node20" href="$xml__maker__type_8hh.html" title="maker/xml_maker_type.hh" alt="" coords="1962,237,2138,263"/>
+<area shape="rect" id="node2" href="$xml__trace__imp_8hh.html" title="defs/xml_trace_imp.hh" alt="" coords="1699,80,1854,107"/>
+<area shape="rect" id="node4" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="907,155,1036,181"/>
+<area shape="rect" id="node13" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="173,80,297,107"/>
+<area shape="rect" id="node17" href="$xml__error_handler_8hh.html" title="error/xml_errorHandler.hh" alt="" coords="948,80,1117,107"/>
+<area shape="rect" id="node19" href="$xml__maker_writer_8hh.html" title="maker/xml_makerWriter.hh" alt="" coords="322,80,501,107"/>
+<area shape="rect" id="node16" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="5,237,132,263"/>
+<area shape="rect" id="node20" href="$xml__maker_8hh.html" title="maker/xml_maker.hh" alt="" coords="339,155,483,181"/>
+<area shape="rect" id="node21" href="$xml__maker__type_8hh.html" title="maker/xml_maker_type.hh" alt="" coords="157,237,333,263"/>
 </map>

@@ -39,11 +39,13 @@ class parser
 public:
 		/// @brief class constructor
 		/// @param [in] filename - XML file name to parse
-		explicit			parser( const char * filename );
+		explicit		parser( const char * filename );
 
 		/// @brief Class destructor
-    						~parser();
+    					~parser();
 
+    	/// @brief Get a pointer to the DOM parser
+    	/// @return Parser pointer
     	void	*		getParser	( void ) { return p_parser; }
 
 private:
@@ -51,7 +53,7 @@ private:
     	void	*		p_parser;
     	void	*		p_errHandler;
 
-		TRACE_CLASSNAME_DECLARATION
+    	ARTA_CLASSNAME_DECLARATION
 };
 
 

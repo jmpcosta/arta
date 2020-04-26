@@ -15,7 +15,7 @@
 
 // Import Project declarations
 #include "defs/xml_defs.hh"
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_node_type.hh"
 #include "defs/xml_types.hh"
 
@@ -23,6 +23,7 @@
 #include "string/xml_string.hh"
 
 // Import module declarations
+#include "parser/xml_parser.hh"
 #include "parser/xml_processor.hh"
 
 
@@ -37,7 +38,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( processor )
+ARTA_CLASSNAME( processor )
 
 
 // *****************************************************************************************
@@ -281,6 +282,67 @@ void processor::processAttribute( void * p_node )
 }
 
 
+void * processor::getDocument( parser & p )
+{
+ XML_NODE_DOC	* p_doc;
+ XML_NODE		* p_node;
+
+ TRACE_ENTER
+
+ try {
+	   // First get the DOM parser
+	   XML_DOM_PARSER * p_parser = (XML_DOM_PARSER *) p.getParser();
+
+	   TRACE( "Parser pointer: ", p_parser )
+
+	   // Get the Document Node
+	   p_doc  = p_parser->getDocument();
+	   p_node = dynamic_cast<XML_NODE *>( p_doc );
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
+
+ catch( const XML_DOM_EXCEPTION & e )
+ { throw error( e ); }
+
+ catch( const XML_SAX_PARSE_EXCEPTION & e )
+ { throw error( e ); }
+
+ TRACE_EXIT
+
+ return (void *) p_node;
+}
+
+
+
+void * processor::getRootElement( parser & p )
+{
+ void * p_elem = nullptr;
+
+ try {
+  	  XML_DOM_PARSER * p_parser = (XML_DOM_PARSER *) p.getParser();
+
+	  if( p_parser == nullptr ) throw error( "No XML parser found !" );
+
+	  TRACE( "Parser pointer:", p_parser )
+
+	  p_elem = (void *) (p_parser->getDocument()->getDocumentElement());
+	 }
+
+  catch( const XML_EXCEPTION & e )
+	   { throw error( e ); }
+
+  catch( const XML_DOM_EXCEPTION & e )
+  	   { throw error( e ); }
+
+  if( p_elem == nullptr ) throw error( "No XML well format document found" );
+
+  TRACE( "Root Document node:", p_elem )
+
+  return p_elem;
+}
+
 
 const NOTE * processor::getNodeNote( void * p_node )
 {
@@ -370,33 +432,6 @@ bool processor::getElementName( void * p_node, std::string & name )
  return true;
 }
 
-
-// Get the value of an element
-bool processor::getElementValue( void * p_node, std::string & value )
-{
- TRACE_ENTER
-
- if( p_node == nullptr ) return false;
-
- try {
-	   XML_NODE * ptr = (XML_NODE *) p_node;
-
-	   string str( ptr->getNodeValue() );
-	   str.get( value );
-
-	   TRACE( "Element value =", value )
- 	 }
-
- catch( const XML_EXCEPTION & e )
- { throw error( e ); }
-
- TRACE_EXIT
-
- return true;
-}
-
-
-
 // Get the name of element/node attributes
 bool processor::getAttributeList( void * p_node, std::vector<std::string> & list )
 {
@@ -426,7 +461,7 @@ bool processor::getAttributeList( void * p_node, std::vector<std::string> & list
  catch( const XML_EXCEPTION & e )
  { throw error( e ); }
 
- TRACE_EXIT
+ TRACE("Exiting with true" )
 
  return true;
 }
@@ -451,12 +486,215 @@ bool processor::getAttributeValue( void * p_node, const std::string & name, std:
 	   for( XMLSize_t i = 0; i < nodeCount; i++ )
 	   	  {
 		    str = p_attr_nodes->item( i )->getNodeName();
-		    if( str == name )  value = str.get();
+
+		    TRACE( i, "- Attribute name:", str.get() )
+
+		    if( str == name )
+		      {
+		    	str = p_attr_nodes->item( i )->getNodeValue();
+		    	value = str.get();
+		    	TRACE( "Attribute value found(", value, ")" )
+		    	break;
+		      }
 	   	  }
  	 }
 
  catch( const XML_EXCEPTION & e )
  { throw error( e ); }
+
+ TRACE( "Exiting with value=", value )
+
+ return true;
+}
+
+
+void * processor::getAttributeAddress( void * p_father, std::string & atName )
+{
+ void	*	ret = nullptr;
+
+ TRACE_ENTER
+
+ if( ! isElement( p_father ) ) return nullptr;
+
+ try {
+	   XML_NODE_ELEM	* pNode			= (XML_NODE_ELEM *) p_father;
+	   XML_NODE_MAP		* p_attr_nodes	= pNode->getAttributes();
+
+	   if( p_attr_nodes != nullptr )
+	     {
+		   const  XMLSize_t nodeCount = p_attr_nodes->getLength();
+
+		   string		str;
+		   XML_NODE *	p_node;
+
+		   for( XMLSize_t i = 0; i < nodeCount; i++ )
+		   	  {
+			    p_node = p_attr_nodes->item( i );
+			    if( p_node == nullptr )	break;
+
+			    str = p_node->getNodeName();
+			    if( str == atName )				// Found matching attribute
+			      {
+			    	TRACE( "Found attribute:", atName )
+
+			    	ret = (void *) p_node;
+			    	break;
+			      }
+		   	  }
+	     }
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ { throw error( e ); }
+
+ TRACE("Exiting with:", ret )
+
+ return ret;
+}
+
+
+bool processor::getNodeValue( void * p_node, std::string & value )
+{
+ bool	rc = false;
+ TRACE_ENTER
+
+ if( p_node == nullptr ) std::invalid_argument( "No node provided" );
+
+ XML_NODE * p_cNode = (XML_NODE *) p_node;
+
+ switch( p_cNode->getNodeType() )
+       {
+   	     case nodeType::element: 	rc = getElementValue  	( p_node, value );	break;
+   	     case nodeType::attribute:	rc = getAttributeValue 	( p_node, value );	break;
+   	     case nodeType::PI:			rc = getPIValue	  		( p_node, value );	break;
+   	     case nodeType::text:		rc = getElementValue  	( p_node, value );	break;
+   	     case nodeType::comment:	rc = getCommentValue  	( p_node, value );	break;
+   	     default:																break;
+       }
+
+ TRACE_EXIT
+
+ return rc;
+}
+
+
+// Get the value of an element
+bool processor::getElementValue( void * p_node, std::string & value )
+{
+ TRACE_ENTER
+
+ if( p_node == nullptr ) std::invalid_argument( "No node provided" );
+
+ try {
+	   XML_NODE * p_current	= (XML_NODE *) p_node;
+	   XML_NODE * p_child	= p_current->getFirstChild();
+
+	   if( p_child == nullptr ) return false;
+
+	   if( p_child->getNodeType() != XML_NODE::TEXT_NODE ) return false;
+
+	   XML_NODE_TEXT *	p_textNode = dynamic_cast<XML_NODE_TEXT *>( p_child );
+
+	   string str( p_textNode->getWholeText() );
+	   str.get( value );
+
+	   TRACE( "Element value =", str.get(), ":", value )
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ 	  { throw error( e ); }
+ catch( const XML_DOM_EXCEPTION & e )
+ 	  { throw error( e ); }
+
+ TRACE_EXIT
+
+ return true;
+}
+
+
+
+bool processor::getAttributeValue( void * p_node, std::string & value )
+{
+ TRACE_ENTER
+
+ if( p_node == nullptr ) std::invalid_argument( "No node provided" );
+
+ try {
+	   XML_NODE * p_current	= (XML_NODE *) p_node;
+
+	   if( p_current->getNodeType() != XML_NODE::ATTRIBUTE_NODE ) return false;
+
+	   XML_NODE_ATTR * p_aNode = dynamic_cast<XML_NODE_ATTR *>( p_current );
+
+	   string str( p_aNode->getNodeValue() );
+	   str.get( value );
+
+	   TRACE( "Element value =", str.get(), ":", value )
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ 	  { throw error( e ); }
+ catch( const XML_DOM_EXCEPTION & e )
+ 	  { throw error( e ); }
+
+ TRACE_EXIT
+
+ return true;
+}
+
+
+bool processor::getCommentValue( void * p_node, std::string & value )
+{
+ TRACE_ENTER
+
+ if( p_node == nullptr ) std::invalid_argument( "No node provided" );
+
+ try {
+	   XML_NODE * p_current	= (XML_NODE *) p_node;
+
+	   if( p_current->getNodeType() != XML_NODE::COMMENT_NODE ) return false;
+
+	   XML_NODE_COMMENT * p_textNode = dynamic_cast<XML_NODE_COMMENT *>( p_current );
+
+	   string str( p_textNode->getNodeValue() );
+	   str.get( value );
+
+	   TRACE( "Element value =", str.get(), ":", value )
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ 	  { throw error( e ); }
+ catch( const XML_DOM_EXCEPTION & e )
+ 	  { throw error( e ); }
+
+ TRACE_EXIT
+
+ return true;
+}
+
+bool processor::getPIValue( void * p_node, std::string & value )
+{
+ TRACE_ENTER
+
+ if( p_node == nullptr ) std::invalid_argument( "No node provided" );
+
+ try {
+	   XML_NODE * p_current	= (XML_NODE *) p_node;
+
+	   if( p_current->getNodeType() != XML_NODE::PROCESSING_INSTRUCTION_NODE ) return false;
+
+	   XML_NODE_PI * p_aNode = dynamic_cast<XML_NODE_PI *>( p_current );
+
+	   string str( p_aNode->getData() );
+	   str.get( value );
+
+	   TRACE( "Element value =", str.get(), ":", value )
+ 	 }
+
+ catch( const XML_EXCEPTION & e )
+ 	  { throw error( e ); }
+ catch( const XML_DOM_EXCEPTION & e )
+ 	  { throw error( e ); }
 
  TRACE_EXIT
 

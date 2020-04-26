@@ -13,6 +13,7 @@ var hierarchy =
     [ "osapi::xml::note", "classosapi_1_1xml_1_1note.html", null ],
     [ "osapi::xml::parser", "classosapi_1_1xml_1_1parser.html", null ],
     [ "osapi::xml::processor", "classosapi_1_1xml_1_1processor.html", [
+      [ "osapi::xml::cProcessor", "classosapi_1_1xml_1_1c_processor.html", null ],
       [ "osapi::xml::hProcessor", "classosapi_1_1xml_1_1h_processor.html", null ],
       [ "osapi::xml::rProcessor", "classosapi_1_1xml_1_1r_processor.html", null ]
     ] ],

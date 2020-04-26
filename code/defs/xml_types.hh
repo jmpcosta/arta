@@ -64,7 +64,7 @@ using XML_DOM_IMPLEMENTATION_LS		= ::xercesc::DOMImplementationLS;
 using XML_DOM_REGISTRY				= ::xercesc::DOMImplementationRegistry;
 using XML_DOM_SERIALIZER			= ::xercesc::DOMLSSerializer;
 using XML_DOM_OUTPUT				= ::xercesc::DOMLSOutput;
-
+using XML_DOM_RESULT				= ::xercesc::DOMXPathResult;
 using XML_STRING					= ::xercesc::XMLString;
 
 // DOM Nodes

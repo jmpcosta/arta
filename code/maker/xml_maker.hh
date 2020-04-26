@@ -81,7 +81,11 @@ public:
 		/// @param [in] name  - Name of XML element
 		/// @param [in] data - Text of element
 		/// @returns			 - A pointer to the current node
-    	virtual void	*	instruction	( const char * name, const char * data							)	= 0;
+    	virtual void		instruction	( const char * name, const char * data							)	= 0;
+
+		/// @brief Create a node comment at the document level
+		/// @param [in] text  - XML comment
+    	virtual void		docComment	( const char * text												)	= 0;
 
 		/// @brief Write a XML document
     	virtual void		writeFile	( void															)	= 0;
@@ -154,6 +158,7 @@ public:
     	/// @param [in] value - True / False.
     	void				setBOM				( bool value )	{ output_bom						= value;	}
 
+
 protected:
 
 		/// @brief class constructor
@@ -189,7 +194,7 @@ protected:
 
 private:
 
-		TRACE_CLASSNAME_DECLARATION
+		ARTA_CLASSNAME_DECLARATION
 };
 
 

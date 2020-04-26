@@ -77,7 +77,11 @@ public:
 		/// @param [in] name  - Name of XML element
 		/// @param [in] data - Text of element
 		/// @returns			 - A pointer to the current node
-    	void	*	instruction	( const char * name, const char * data									)	override;
+    	void		instruction	( const char * name, const char * data									)	override;
+
+		/// @brief Create a node comment at the document level
+		/// @param [in] text  - XML comment
+    	void		docComment	( const char * text														)	override;
 
 		/// @brief Write a XML document
     	void		writeFile	( void																	)	override;
@@ -92,7 +96,7 @@ private:
     	void	*	iMemory;		/// Current Xerces Memory Manager instance
     	void	*	iCurrentNode;	/// Current Node to which this instance is pointing to
 
-		TRACE_CLASSNAME_DECLARATION
+    	ARTA_CLASSNAME_DECLARATION
 };
 
 

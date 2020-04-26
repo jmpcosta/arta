@@ -123,9 +123,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae027954e7f7d54770ba3199e2096e6db"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae027954e7f7d54770ba3199e2096e6db">comment</a> (const char *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa453c288ea1b53a4fa128d3b886951e3a">text</a>, void *where=nullptr)=0</td></tr>
 <tr class="memdesc:ae027954e7f7d54770ba3199e2096e6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node comment.  <a href="#ae027954e7f7d54770ba3199e2096e6db">More...</a><br /></td></tr>
 <tr class="separator:ae027954e7f7d54770ba3199e2096e6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae702f9190a688ff26da60a34d3a6ddd5"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#ae702f9190a688ff26da60a34d3a6ddd5">instruction</a> (const char *name, const char *data)=0</td></tr>
-<tr class="memdesc:ae702f9190a688ff26da60a34d3a6ddd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node instruction.  <a href="#ae702f9190a688ff26da60a34d3a6ddd5">More...</a><br /></td></tr>
-<tr class="separator:ae702f9190a688ff26da60a34d3a6ddd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593d138d63d61c686132079d922c1933"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#a593d138d63d61c686132079d922c1933">instruction</a> (const char *name, const char *data)=0</td></tr>
+<tr class="memdesc:a593d138d63d61c686132079d922c1933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node instruction.  <a href="#a593d138d63d61c686132079d922c1933">More...</a><br /></td></tr>
+<tr class="separator:a593d138d63d61c686132079d922c1933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50e8509aafcd241c91186d8e9f6e602"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#aa50e8509aafcd241c91186d8e9f6e602">docComment</a> (const char *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa453c288ea1b53a4fa128d3b886951e3a">text</a>)=0</td></tr>
+<tr class="memdesc:aa50e8509aafcd241c91186d8e9f6e602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node comment at the document level.  <a href="#aa50e8509aafcd241c91186d8e9f6e602">More...</a><br /></td></tr>
+<tr class="separator:aa50e8509aafcd241c91186d8e9f6e602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker.html#af663a0bfe7e71c6d7392c5a3bb4d81b3">writeFile</a> (void)=0</td></tr>
 <tr class="memdesc:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a XML document.  <a href="#af663a0bfe7e71c6d7392c5a3bb4d81b3">More...</a><br /></td></tr>
 <tr class="separator:af663a0bfe7e71c6d7392c5a3bb4d81b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -466,6 +469,42 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa50e8509aafcd241c91186d8e9f6e602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa50e8509aafcd241c91186d8e9f6e602">&#9670;&nbsp;</a></span>docComment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void osapi::xml::maker::docComment </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a node comment at the document level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>- XML comment </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#a36ea513b8d3574363230a4a5468dd388">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a239e7eb493baee6a4d88ec5c05c32fd5">osapi::xml::makerWriter</a>.</p>
+
+</div>
+</div>
 <a id="a3ef8bcc94169f56e4de7d4c81dfc33f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ef8bcc94169f56e4de7d4c81dfc33f5">&#9670;&nbsp;</a></span>document()</h2>
 
@@ -603,8 +642,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae702f9190a688ff26da60a34d3a6ddd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae702f9190a688ff26da60a34d3a6ddd5">&#9670;&nbsp;</a></span>instruction()</h2>
+<a id="a593d138d63d61c686132079d922c1933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593d138d63d61c686132079d922c1933">&#9670;&nbsp;</a></span>instruction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -613,7 +652,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void* osapi::xml::maker::instruction </td>
+          <td class="memname">virtual void osapi::xml::maker::instruction </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -647,7 +686,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
 
-<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#a56c291f861210f0a8d5a6a9f714fda55">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a658b481fd800a787d78f4a54837f3ec0">osapi::xml::makerWriter</a>.</p>
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#aeacc767276067232954ebbf5de86a1a2">osapi::xml::makerDOM</a>, and <a class="el" href="classosapi_1_1xml_1_1maker_writer.html#a29315a31fc9d8ae6a16dba885a17c9c8">osapi::xml::makerWriter</a>.</p>
 
 </div>
 </div>

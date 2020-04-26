@@ -83,7 +83,6 @@ $(document).ready(function(){initNavTree('classosapi_1_1xml_1_1r_processor.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classosapi_1_1xml_1_1r_processor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -112,24 +111,30 @@ Collaboration diagram for osapi::xml::rProcessor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afddc44edd6ee6b7e4377190fba23db20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#afddc44edd6ee6b7e4377190fba23db20">rProcessor</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;p, const char *expression)</td></tr>
-<tr class="memdesc:afddc44edd6ee6b7e4377190fba23db20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="#afddc44edd6ee6b7e4377190fba23db20">More...</a><br /></td></tr>
-<tr class="separator:afddc44edd6ee6b7e4377190fba23db20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c363c363366d869421c7d4ebb365fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#a90c363c363366d869421c7d4ebb365fa">rProcessor</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;instance)</td></tr>
+<tr class="memdesc:a90c363c363366d869421c7d4ebb365fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="#a90c363c363366d869421c7d4ebb365fa">More...</a><br /></td></tr>
+<tr class="separator:a90c363c363366d869421c7d4ebb365fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad77bf779205d5a6a6e4c84d1096e2031"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#ad77bf779205d5a6a6e4c84d1096e2031">~rProcessor</a> ()</td></tr>
 <tr class="memdesc:ad77bf779205d5a6a6e4c84d1096e2031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="#ad77bf779205d5a6a6e4c84d1096e2031">More...</a><br /></td></tr>
 <tr class="separator:ad77bf779205d5a6a6e4c84d1096e2031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fcc8e98482b098a0a01835f26c4035"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035">process</a> (void)</td></tr>
-<tr class="memdesc:a45fcc8e98482b098a0a01835f26c4035"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generic trigger method to process a XML tree.  <a href="#a45fcc8e98482b098a0a01835f26c4035">More...</a><br /></td></tr>
-<tr class="separator:a45fcc8e98482b098a0a01835f26c4035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9dd3f264924f1b3a6e1a521b88e386b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#ac9dd3f264924f1b3a6e1a521b88e386b">process</a> (void) override</td></tr>
+<tr class="memdesc:ac9dd3f264924f1b3a6e1a521b88e386b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trigger method to process to search a XML expression.  <a href="#ac9dd3f264924f1b3a6e1a521b88e386b">More...</a><br /></td></tr>
+<tr class="separator:ac9dd3f264924f1b3a6e1a521b88e386b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc89d3773b7a9da700819fee46f90466"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#abc89d3773b7a9da700819fee46f90466">selectInto</a> (const char *pattern, const void *start, std::vector&lt; void *&gt; &amp;into)</td></tr>
+<tr class="memdesc:abc89d3773b7a9da700819fee46f90466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a set of nodes that match the pattern from a node "start" and stored the results in a vector.  <a href="#abc89d3773b7a9da700819fee46f90466">More...</a><br /></td></tr>
+<tr class="separator:abc89d3773b7a9da700819fee46f90466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classosapi_1_1xml_1_1processor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classosapi_1_1xml_1_1processor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classosapi_1_1xml_1_1processor.html">osapi::xml::processor</a></td></tr>
 <tr class="memitem:a572a5b1e26e0e386de7ea77c03d51998 inherit pub_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a572a5b1e26e0e386de7ea77c03d51998">~processor</a> ()</td></tr>
 <tr class="memdesc:a572a5b1e26e0e386de7ea77c03d51998 inherit pub_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class destructor.  <a href="classosapi_1_1xml_1_1processor.html#a572a5b1e26e0e386de7ea77c03d51998">More...</a><br /></td></tr>
 <tr class="separator:a572a5b1e26e0e386de7ea77c03d51998 inherit pub_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae76b6e1cded545da8c8c9abf34cc2334"><td class="memItemLeft" align="right" valign="top">const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#ae76b6e1cded545da8c8c9abf34cc2334">getDocument</a> (void)</td></tr>
-<tr class="separator:ae76b6e1cded545da8c8c9abf34cc2334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ad2f049cb211703d427645fdc436f3d2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#ad2f049cb211703d427645fdc436f3d2d">iParser</a></td></tr>
+<tr class="separator:ad2f049cb211703d427645fdc436f3d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classosapi_1_1xml_1_1processor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classosapi_1_1xml_1_1processor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classosapi_1_1xml_1_1processor.html">osapi::xml::processor</a></td></tr>
 <tr class="memitem:a7c79260872fb36eb0c13a7ae99026fcd inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a7c79260872fb36eb0c13a7ae99026fcd">processNode</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>)</td></tr>
 <tr class="memdesc:a7c79260872fb36eb0c13a7ae99026fcd inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a XMl tree node.  <a href="classosapi_1_1xml_1_1processor.html#a7c79260872fb36eb0c13a7ae99026fcd">More...</a><br /></td></tr>
@@ -170,6 +175,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a81ad5f5f75cc42ee8c55afd7bd500914 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a81ad5f5f75cc42ee8c55afd7bd500914">specificText</a> (const std::string &amp;data)</td></tr>
 <tr class="memdesc:a81ad5f5f75cc42ee8c55afd7bd500914 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook method for text node processing.  <a href="classosapi_1_1xml_1_1processor.html#a81ad5f5f75cc42ee8c55afd7bd500914">More...</a><br /></td></tr>
 <tr class="separator:a81ad5f5f75cc42ee8c55afd7bd500914 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65fc67bcbcb0b21f669d2fa66c73415 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#ac65fc67bcbcb0b21f669d2fa66c73415">getDocument</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;instance)</td></tr>
+<tr class="memdesc:ac65fc67bcbcb0b21f669d2fa66c73415 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the document root node.  <a href="classosapi_1_1xml_1_1processor.html#ac65fc67bcbcb0b21f669d2fa66c73415">More...</a><br /></td></tr>
+<tr class="separator:ac65fc67bcbcb0b21f669d2fa66c73415 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae070f6e99dc05b47feed05da7b348146 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#ae070f6e99dc05b47feed05da7b348146">getRootElement</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;instance)</td></tr>
+<tr class="memdesc:ae070f6e99dc05b47feed05da7b348146 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the document root element.  <a href="classosapi_1_1xml_1_1processor.html#ae070f6e99dc05b47feed05da7b348146">More...</a><br /></td></tr>
+<tr class="separator:ae070f6e99dc05b47feed05da7b348146 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd3340b71f541e12247678e08cc4bba7 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="xml__note_8hh.html#ad96c105b26e3277ba67ea1b9065335b2">NOTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#acd3340b71f541e12247678e08cc4bba7">getNodeNote</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>)</td></tr>
 <tr class="memdesc:acd3340b71f541e12247678e08cc4bba7 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a XMl tree node.  <a href="classosapi_1_1xml_1_1processor.html#acd3340b71f541e12247678e08cc4bba7">More...</a><br /></td></tr>
 <tr class="separator:acd3340b71f541e12247678e08cc4bba7 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,26 +193,34 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a37a733abfc44d7ea5b2c4c84b25a8563 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a37a733abfc44d7ea5b2c4c84b25a8563">getElementName</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;name)</td></tr>
 <tr class="memdesc:a37a733abfc44d7ea5b2c4c84b25a8563 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name the element.  <a href="classosapi_1_1xml_1_1processor.html#a37a733abfc44d7ea5b2c4c84b25a8563">More...</a><br /></td></tr>
 <tr class="separator:a37a733abfc44d7ea5b2c4c84b25a8563 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">getElementValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
-<tr class="memdesc:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an element.  <a href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">More...</a><br /></td></tr>
-<tr class="separator:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a33131e5dcbb3adcc6ab6b59c36d732 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a8a33131e5dcbb3adcc6ab6b59c36d732">getAttributeList</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::vector&lt; std::string &gt; &amp;list)</td></tr>
 <tr class="memdesc:a8a33131e5dcbb3adcc6ab6b59c36d732 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of node attributes of a given node element.  <a href="classosapi_1_1xml_1_1processor.html#a8a33131e5dcbb3adcc6ab6b59c36d732">More...</a><br /></td></tr>
 <tr class="separator:a8a33131e5dcbb3adcc6ab6b59c36d732 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41f3f09910ccf4df9be8e08593250672 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a41f3f09910ccf4df9be8e08593250672">getAttributeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, const std::string &amp;name, std::string &amp;value)</td></tr>
 <tr class="memdesc:a41f3f09910ccf4df9be8e08593250672 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="classosapi_1_1xml_1_1processor.html#a41f3f09910ccf4df9be8e08593250672">More...</a><br /></td></tr>
 <tr class="separator:a41f3f09910ccf4df9be8e08593250672 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:ad2f049cb211703d427645fdc436f3d2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#ad2f049cb211703d427645fdc436f3d2d">iParser</a></td></tr>
-<tr class="separator:ad2f049cb211703d427645fdc436f3d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8140c74c54f3b29796b017b7373626a9"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1r_processor.html#a8140c74c54f3b29796b017b7373626a9">ip_exp</a></td></tr>
-<tr class="separator:a8140c74c54f3b29796b017b7373626a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e741cc1b33ab3f9ada437a0ccfd87f1 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a0e741cc1b33ab3f9ada437a0ccfd87f1">getAttributeAddress</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;name)</td></tr>
+<tr class="memdesc:a0e741cc1b33ab3f9ada437a0ccfd87f1 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of a given attribute.  <a href="classosapi_1_1xml_1_1processor.html#a0e741cc1b33ab3f9ada437a0ccfd87f1">More...</a><br /></td></tr>
+<tr class="separator:a0e741cc1b33ab3f9ada437a0ccfd87f1 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d2d040eb38c7ac7be2c749ab157cde inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#af6d2d040eb38c7ac7be2c749ab157cde">getNodeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:af6d2d040eb38c7ac7be2c749ab157cde inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a node.  <a href="classosapi_1_1xml_1_1processor.html#af6d2d040eb38c7ac7be2c749ab157cde">More...</a><br /></td></tr>
+<tr class="separator:af6d2d040eb38c7ac7be2c749ab157cde inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">getElementValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an element.  <a href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">More...</a><br /></td></tr>
+<tr class="separator:a045de6cdc245b6e81fab6f4eea0b9493 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677a6e02b232198c304cd893b55fb9f inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a1677a6e02b232198c304cd893b55fb9f">getAttributeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a1677a6e02b232198c304cd893b55fb9f inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="classosapi_1_1xml_1_1processor.html#a1677a6e02b232198c304cd893b55fb9f">More...</a><br /></td></tr>
+<tr class="separator:a1677a6e02b232198c304cd893b55fb9f inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bdb79740129c62f61c30ebfc95c6437 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a0bdb79740129c62f61c30ebfc95c6437">getCommentValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a0bdb79740129c62f61c30ebfc95c6437 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an comment.  <a href="classosapi_1_1xml_1_1processor.html#a0bdb79740129c62f61c30ebfc95c6437">More...</a><br /></td></tr>
+<tr class="separator:a0bdb79740129c62f61c30ebfc95c6437 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9575a02e2c4886b2e0432db345897793 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a9575a02e2c4886b2e0432db345897793">getPIValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a9575a02e2c4886b2e0432db345897793 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a Processing Instruction (data part of the PI)  <a href="classosapi_1_1xml_1_1processor.html#a9575a02e2c4886b2e0432db345897793">More...</a><br /></td></tr>
+<tr class="separator:a9575a02e2c4886b2e0432db345897793 inherit pro_methods_classosapi_1_1xml_1_1processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afddc44edd6ee6b7e4377190fba23db20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afddc44edd6ee6b7e4377190fba23db20">&#9670;&nbsp;</a></span>rProcessor()</h2>
+<a id="a90c363c363366d869421c7d4ebb365fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c363c363366d869421c7d4ebb365fa">&#9670;&nbsp;</a></span>rProcessor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,18 +232,8 @@ Protected Attributes</h2></td></tr>
           <td class="memname">osapi::xml::rProcessor::rProcessor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;&#160;</td>
-          <td class="paramname"><em>p</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>expression</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -235,6 +244,12 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Class destructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>- The parser instance </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -258,34 +273,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae76b6e1cded545da8c8c9abf34cc2334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae76b6e1cded545da8c8c9abf34cc2334">&#9670;&nbsp;</a></span>getDocument()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const void * osapi::xml::rProcessor::getDocument </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a45fcc8e98482b098a0a01835f26c4035"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45fcc8e98482b098a0a01835f26c4035">&#9670;&nbsp;</a></span>process()</h2>
+<a id="ac9dd3f264924f1b3a6e1a521b88e386b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9dd3f264924f1b3a6e1a521b88e386b">&#9670;&nbsp;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,20 +292,19 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>The generic trigger method to process a XML tree. </p>
+<p>Trigger method to process to search a XML expression. </p>
 
 <p>Implements <a class="el" href="classosapi_1_1xml_1_1processor.html#a1ac55cd7f0d4bf1f67d60fb6de8839e4">osapi::xml::processor</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8140c74c54f3b29796b017b7373626a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8140c74c54f3b29796b017b7373626a9">&#9670;&nbsp;</a></span>ip_exp</h2>
+<a id="abc89d3773b7a9da700819fee46f90466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc89d3773b7a9da700819fee46f90466">&#9670;&nbsp;</a></span>selectInto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,18 +313,49 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char* osapi::xml::rProcessor::ip_exp</td>
+          <td class="memname">void osapi::xml::rProcessor::selectInto </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pattern</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; void *&gt; &amp;&#160;</td>
+          <td class="paramname"><em>into</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>Select a set of nodes that match the pattern from a node "start" and stored the results in a vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>- The node selection pattern </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start</td><td>- Where to start looking </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">into</td><td>- The list of node pointers that match the pattern </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad2f049cb211703d427645fdc436f3d2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2f049cb211703d427645fdc436f3d2d">&#9670;&nbsp;</a></span>iParser</h2>
 

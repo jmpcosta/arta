@@ -14,7 +14,7 @@
 // *****************************************************************************************
 
 // Import project declarations
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_types.hh"
 #include "error/xml_error.hh"
 
@@ -35,7 +35,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( maker )
+ARTA_CLASSNAME( maker )
 
 // *****************************************************************************************
 //

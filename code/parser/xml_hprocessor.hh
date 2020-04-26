@@ -43,41 +43,44 @@ class hProcessor : processor
 {
 public:
 		/// @brief Class destructor
-							hProcessor( parser & p );
+							hProcessor	( parser & p );
 
 
 		/// @brief Class destructor
-							~hProcessor();
+							~hProcessor	();
 
 		/// @brief Trigger method to process a XML tree
-    	void 				process		(  void );
+    	void 				process		( void ) override;
 
 protected:
     	// Instance methods
 
     	/// @brief Process a XMl tree node
     	/// @param [in] node - A pointer to the XML node
-    	void 				processDescendants	( void * node									);
-    	void	*			getCurrentNode		( void ) const { return iCurrentNode; }
+    	void 				processDescendants	( void * node						);
+
+    	/// @brief Get the current Xerces Node
+    	/// @return A pointer to the current node address being processed
+    	void	*			getCurrentNode		( void 								) const { return iCurrentNode; }
 
     	/// @brief Process a XMl node element
     	/// @param [in] node - A pointer to the XML node
-    	void 				processElement		( void * node									);
+    	void 				processElement		( void * node						);
 
 
     	/// @brief Check if the node element has descendants
     	/// @param [in] node - A pointer to the XML node
     	/// @return True if node has children. False, otherwise.
-    	bool 				hasDescendants		( void * node									);
+    	bool 				hasDescendants		( void * node						);
 
     	/// @brief Get the Document node
     	/// @return A pointer to the ARTA NODE document node
-    	void 	*			getDocument			( void 											) { return iDoc; };
+    	void 	*			getDocument			( void 								) { return iDoc; };
 
     	/// @brief Get path to the node
     	/// @param [in] node - A pointer to the current XML node
     	/// @param [out] path - The full path to the current node
-		void				getNodePath			( void * node, std::string & path				);
+		void				getNodePath			( void * node, std::string & path	);
 
     	// Instance variables
 		/// @brief The XML parser instance
@@ -94,7 +97,7 @@ protected:
 
 private:
 
-		TRACE_CLASSNAME_DECLARATION
+    	ARTA_CLASSNAME_DECLARATION
 };
 
 

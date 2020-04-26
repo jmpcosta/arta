@@ -127,9 +127,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8535ecb954b6c71a8c1b45967bd0b43"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#aa8535ecb954b6c71a8c1b45967bd0b43">comment</a> (const char *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa453c288ea1b53a4fa128d3b886951e3a">text</a>, void *where=nullptr) override</td></tr>
 <tr class="memdesc:aa8535ecb954b6c71a8c1b45967bd0b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node comment.  <a href="#aa8535ecb954b6c71a8c1b45967bd0b43">More...</a><br /></td></tr>
 <tr class="separator:aa8535ecb954b6c71a8c1b45967bd0b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c291f861210f0a8d5a6a9f714fda55"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#a56c291f861210f0a8d5a6a9f714fda55">instruction</a> (const char *name, const char *data) override</td></tr>
-<tr class="memdesc:a56c291f861210f0a8d5a6a9f714fda55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node instruction.  <a href="#a56c291f861210f0a8d5a6a9f714fda55">More...</a><br /></td></tr>
-<tr class="separator:a56c291f861210f0a8d5a6a9f714fda55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacc767276067232954ebbf5de86a1a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#aeacc767276067232954ebbf5de86a1a2">instruction</a> (const char *name, const char *data) override</td></tr>
+<tr class="memdesc:aeacc767276067232954ebbf5de86a1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a document node instruction.  <a href="#aeacc767276067232954ebbf5de86a1a2">More...</a><br /></td></tr>
+<tr class="separator:aeacc767276067232954ebbf5de86a1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ea513b8d3574363230a4a5468dd388"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#a36ea513b8d3574363230a4a5468dd388">docComment</a> (const char *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa453c288ea1b53a4fa128d3b886951e3a">text</a>) override</td></tr>
+<tr class="memdesc:a36ea513b8d3574363230a4a5468dd388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a node comment at the document level.  <a href="#a36ea513b8d3574363230a4a5468dd388">More...</a><br /></td></tr>
+<tr class="separator:a36ea513b8d3574363230a4a5468dd388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abeac89dbf839a87d4d2c0ae0cd0b1439"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1maker_d_o_m.html#abeac89dbf839a87d4d2c0ae0cd0b1439">writeFile</a> (void) override</td></tr>
 <tr class="memdesc:abeac89dbf839a87d4d2c0ae0cd0b1439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a XML document.  <a href="#abeac89dbf839a87d4d2c0ae0cd0b1439">More...</a><br /></td></tr>
 <tr class="separator:abeac89dbf839a87d4d2c0ae0cd0b1439"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -393,6 +396,42 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a36ea513b8d3574363230a4a5468dd388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ea513b8d3574363230a4a5468dd388">&#9670;&nbsp;</a></span>docComment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi::xml::makerDOM::docComment </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a node comment at the document level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>- XML comment </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="classosapi_1_1xml_1_1maker.html#aa50e8509aafcd241c91186d8e9f6e602">osapi::xml::maker</a>.</p>
+
+</div>
+</div>
 <a id="adb53354e66fb02195b3f09f36d53cb7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb53354e66fb02195b3f09f36d53cb7b">&#9670;&nbsp;</a></span>document()</h2>
 
@@ -496,8 +535,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a56c291f861210f0a8d5a6a9f714fda55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56c291f861210f0a8d5a6a9f714fda55">&#9670;&nbsp;</a></span>instruction()</h2>
+<a id="aeacc767276067232954ebbf5de86a1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacc767276067232954ebbf5de86a1a2">&#9670;&nbsp;</a></span>instruction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,7 +545,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void * osapi::xml::makerDOM::instruction </td>
+          <td class="memname">void osapi::xml::makerDOM::instruction </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>name</em>, </td>
@@ -540,7 +579,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>- A pointer to the current node </dd></dl>
 
-<p>Implements <a class="el" href="classosapi_1_1xml_1_1maker.html#ae702f9190a688ff26da60a34d3a6ddd5">osapi::xml::maker</a>.</p>
+<p>Implements <a class="el" href="classosapi_1_1xml_1_1maker.html#a593d138d63d61c686132079d922c1933">osapi::xml::maker</a>.</p>
 
 </div>
 </div>

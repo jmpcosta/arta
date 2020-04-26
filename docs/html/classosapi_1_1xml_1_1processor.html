@@ -96,8 +96,9 @@ Inheritance diagram for osapi::xml::processor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classosapi_1_1xml_1_1processor__inherit__graph.png" border="0" usemap="#osapi_1_1xml_1_1processor_inherit__map" alt="Inheritance graph"/></div>
 <map name="osapi_1_1xml_1_1processor_inherit__map" id="osapi_1_1xml_1_1processor_inherit__map">
-<area shape="rect" id="node2" href="classosapi_1_1xml_1_1h_processor.html" title="osapi::xml::hProcessor" alt="" coords="5,80,161,107"/>
-<area shape="rect" id="node3" href="classosapi_1_1xml_1_1r_processor.html" title="osapi::xml::rProcessor" alt="" coords="185,80,339,107"/>
+<area shape="rect" id="node2" href="classosapi_1_1xml_1_1c_processor.html" title="osapi::xml::cProcessor" alt="" coords="5,80,161,107"/>
+<area shape="rect" id="node3" href="classosapi_1_1xml_1_1h_processor.html" title="osapi::xml::hProcessor" alt="" coords="185,80,341,107"/>
+<area shape="rect" id="node4" href="classosapi_1_1xml_1_1r_processor.html" title="osapi::xml::rProcessor" alt="" coords="365,80,519,107"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -151,6 +152,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a81ad5f5f75cc42ee8c55afd7bd500914"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a81ad5f5f75cc42ee8c55afd7bd500914">specificText</a> (const std::string &amp;data)</td></tr>
 <tr class="memdesc:a81ad5f5f75cc42ee8c55afd7bd500914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook method for text node processing.  <a href="#a81ad5f5f75cc42ee8c55afd7bd500914">More...</a><br /></td></tr>
 <tr class="separator:a81ad5f5f75cc42ee8c55afd7bd500914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac65fc67bcbcb0b21f669d2fa66c73415"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#ac65fc67bcbcb0b21f669d2fa66c73415">getDocument</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;instance)</td></tr>
+<tr class="memdesc:ac65fc67bcbcb0b21f669d2fa66c73415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the document root node.  <a href="#ac65fc67bcbcb0b21f669d2fa66c73415">More...</a><br /></td></tr>
+<tr class="separator:ac65fc67bcbcb0b21f669d2fa66c73415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae070f6e99dc05b47feed05da7b348146"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#ae070f6e99dc05b47feed05da7b348146">getRootElement</a> (<a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;instance)</td></tr>
+<tr class="memdesc:ae070f6e99dc05b47feed05da7b348146"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pointer to the document root element.  <a href="#ae070f6e99dc05b47feed05da7b348146">More...</a><br /></td></tr>
+<tr class="separator:ae070f6e99dc05b47feed05da7b348146"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd3340b71f541e12247678e08cc4bba7"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="xml__note_8hh.html#ad96c105b26e3277ba67ea1b9065335b2">NOTE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#acd3340b71f541e12247678e08cc4bba7">getNodeNote</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>)</td></tr>
 <tr class="memdesc:acd3340b71f541e12247678e08cc4bba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process a XMl tree node.  <a href="#acd3340b71f541e12247678e08cc4bba7">More...</a><br /></td></tr>
 <tr class="separator:acd3340b71f541e12247678e08cc4bba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,15 +170,30 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a37a733abfc44d7ea5b2c4c84b25a8563"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a37a733abfc44d7ea5b2c4c84b25a8563">getElementName</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;name)</td></tr>
 <tr class="memdesc:a37a733abfc44d7ea5b2c4c84b25a8563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name the element.  <a href="#a37a733abfc44d7ea5b2c4c84b25a8563">More...</a><br /></td></tr>
 <tr class="separator:a37a733abfc44d7ea5b2c4c84b25a8563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a045de6cdc245b6e81fab6f4eea0b9493"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">getElementValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
-<tr class="memdesc:a045de6cdc245b6e81fab6f4eea0b9493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an element.  <a href="#a045de6cdc245b6e81fab6f4eea0b9493">More...</a><br /></td></tr>
-<tr class="separator:a045de6cdc245b6e81fab6f4eea0b9493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a33131e5dcbb3adcc6ab6b59c36d732"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a8a33131e5dcbb3adcc6ab6b59c36d732">getAttributeList</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::vector&lt; std::string &gt; &amp;list)</td></tr>
 <tr class="memdesc:a8a33131e5dcbb3adcc6ab6b59c36d732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of node attributes of a given node element.  <a href="#a8a33131e5dcbb3adcc6ab6b59c36d732">More...</a><br /></td></tr>
 <tr class="separator:a8a33131e5dcbb3adcc6ab6b59c36d732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41f3f09910ccf4df9be8e08593250672"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a41f3f09910ccf4df9be8e08593250672">getAttributeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, const std::string &amp;name, std::string &amp;value)</td></tr>
 <tr class="memdesc:a41f3f09910ccf4df9be8e08593250672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="#a41f3f09910ccf4df9be8e08593250672">More...</a><br /></td></tr>
 <tr class="separator:a41f3f09910ccf4df9be8e08593250672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e741cc1b33ab3f9ada437a0ccfd87f1"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a0e741cc1b33ab3f9ada437a0ccfd87f1">getAttributeAddress</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;name)</td></tr>
+<tr class="memdesc:a0e741cc1b33ab3f9ada437a0ccfd87f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the address of a given attribute.  <a href="#a0e741cc1b33ab3f9ada437a0ccfd87f1">More...</a><br /></td></tr>
+<tr class="separator:a0e741cc1b33ab3f9ada437a0ccfd87f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d2d040eb38c7ac7be2c749ab157cde"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#af6d2d040eb38c7ac7be2c749ab157cde">getNodeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:af6d2d040eb38c7ac7be2c749ab157cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a node.  <a href="#af6d2d040eb38c7ac7be2c749ab157cde">More...</a><br /></td></tr>
+<tr class="separator:af6d2d040eb38c7ac7be2c749ab157cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a045de6cdc245b6e81fab6f4eea0b9493"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a045de6cdc245b6e81fab6f4eea0b9493">getElementValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a045de6cdc245b6e81fab6f4eea0b9493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an element.  <a href="#a045de6cdc245b6e81fab6f4eea0b9493">More...</a><br /></td></tr>
+<tr class="separator:a045de6cdc245b6e81fab6f4eea0b9493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1677a6e02b232198c304cd893b55fb9f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a1677a6e02b232198c304cd893b55fb9f">getAttributeValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a1677a6e02b232198c304cd893b55fb9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="#a1677a6e02b232198c304cd893b55fb9f">More...</a><br /></td></tr>
+<tr class="separator:a1677a6e02b232198c304cd893b55fb9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bdb79740129c62f61c30ebfc95c6437"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a0bdb79740129c62f61c30ebfc95c6437">getCommentValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a0bdb79740129c62f61c30ebfc95c6437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of an comment.  <a href="#a0bdb79740129c62f61c30ebfc95c6437">More...</a><br /></td></tr>
+<tr class="separator:a0bdb79740129c62f61c30ebfc95c6437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9575a02e2c4886b2e0432db345897793"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classosapi_1_1xml_1_1processor.html#a9575a02e2c4886b2e0432db345897793">getPIValue</a> (void *<a class="el" href="namespaceosapi_1_1xml.html#a18fa6ef7d252511748a62b982a68af7aa118dd8f9f00fd893c120f423b8e0396d">node</a>, std::string &amp;value)</td></tr>
+<tr class="memdesc:a9575a02e2c4886b2e0432db345897793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a Processing Instruction (data part of the PI)  <a href="#a9575a02e2c4886b2e0432db345897793">More...</a><br /></td></tr>
+<tr class="separator:a9575a02e2c4886b2e0432db345897793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a572a5b1e26e0e386de7ea77c03d51998"></a>
@@ -247,6 +269,52 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0e741cc1b33ab3f9ada437a0ccfd87f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e741cc1b33ab3f9ada437a0ccfd87f1">&#9670;&nbsp;</a></span>getAttributeAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * osapi::xml::processor::getAttributeAddress </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the address of a given attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>- The name of the attribute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- The node address of the attribute </dd></dl>
+
+</div>
+</div>
 <a id="a8a33131e5dcbb3adcc6ab6b59c36d732"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a33131e5dcbb3adcc6ab6b59c36d732">&#9670;&nbsp;</a></span>getAttributeList()</h2>
 
@@ -289,11 +357,12 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if attribute list retrieval was successful. False otherwise </dd></dl>
 
 </div>
 </div>
 <a id="a41f3f09910ccf4df9be8e08593250672"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41f3f09910ccf4df9be8e08593250672">&#9670;&nbsp;</a></span>getAttributeValue()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f3f09910ccf4df9be8e08593250672">&#9670;&nbsp;</a></span>getAttributeValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,6 +410,134 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if attribute value retrieval was successful. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1677a6e02b232198c304cd893b55fb9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1677a6e02b232198c304cd893b55fb9f">&#9670;&nbsp;</a></span>getAttributeValue() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::processor::getAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a given attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node element </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>- The value of the attribute </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if attribute value retrieval was successful. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a0bdb79740129c62f61c30ebfc95c6437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bdb79740129c62f61c30ebfc95c6437">&#9670;&nbsp;</a></span>getCommentValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::processor::getCommentValue </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of an comment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>- The value of the comment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if comment value retrieval was successful. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ac65fc67bcbcb0b21f669d2fa66c73415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac65fc67bcbcb0b21f669d2fa66c73415">&#9670;&nbsp;</a></span>getDocument()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * osapi::xml::processor::getDocument </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the pointer to the document root node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>- The parser instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the document root node </dd></dl>
 
 </div>
 </div>
@@ -386,6 +583,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if element name retrieval was successful. False otherwise </dd></dl>
 
 </div>
 </div>
@@ -431,6 +629,7 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if element value retrieval was successful. False otherwise </dd></dl>
 
 </div>
 </div>
@@ -469,6 +668,133 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af6d2d040eb38c7ac7be2c749ab157cde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d2d040eb38c7ac7be2c749ab157cde">&#9670;&nbsp;</a></span>getNodeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::processor::getNodeValue </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>- The value of the node </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if node value retrieval was successful. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a9575a02e2c4886b2e0432db345897793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9575a02e2c4886b2e0432db345897793">&#9670;&nbsp;</a></span>getPIValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool osapi::xml::processor::getPIValue </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a Processing Instruction (data part of the PI) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>- The value of the comment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>- True if Processing Instruction value retrieval was successful. False otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae070f6e99dc05b47feed05da7b348146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae070f6e99dc05b47feed05da7b348146">&#9670;&nbsp;</a></span>getRootElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * osapi::xml::processor::getRootElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classosapi_1_1xml_1_1parser.html">parser</a> &amp;&#160;</td>
+          <td class="paramname"><em>instance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the pointer to the document root element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">instance</td><td>- The parser that contains the document </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the root element </dd></dl>
+
+</div>
+</div>
 <a id="ab1a5087a151a6981d41af0de3db1029f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab1a5087a151a6981d41af0de3db1029f">&#9670;&nbsp;</a></span>isElement()</h2>
 
@@ -496,7 +822,7 @@ Protected Member Functions</h2></td></tr>
 <p>Process a XMl tree node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node</td><td>- A pointer to the XML node return - True if node is an element type. False otherwise </td></tr>
   </table>
   </dd>
 </dl>
@@ -529,7 +855,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>The generic trigger method to process a XML tree. </p>
 
-<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1h_processor.html#af844f45264dd541f6043e0fe22e53c20">osapi::xml::hProcessor</a>, and <a class="el" href="classosapi_1_1xml_1_1r_processor.html#a45fcc8e98482b098a0a01835f26c4035">osapi::xml::rProcessor</a>.</p>
+<p>Implemented in <a class="el" href="classosapi_1_1xml_1_1h_processor.html#a395f2abe4c5f4e3390da358d2eb5b64e">osapi::xml::hProcessor</a>, and <a class="el" href="classosapi_1_1xml_1_1r_processor.html#ac9dd3f264924f1b3a6e1a521b88e386b">osapi::xml::rProcessor</a>.</p>
 
 </div>
 </div>

@@ -7,6 +7,7 @@ var xml__types_8hh =
     [ "XML_DOM_OUTPUT", "xml__types_8hh.html#a2fc9ff3a81cf5110bf140c85299a0062", null ],
     [ "XML_DOM_PARSER", "xml__types_8hh.html#a5edb7cee872db0117ca39e31c9e0f0a7", null ],
     [ "XML_DOM_REGISTRY", "xml__types_8hh.html#a81c5d43382cfb1f3f7ff11a8be5968f6", null ],
+    [ "XML_DOM_RESULT", "xml__types_8hh.html#abc560319c6adc55781faee27b0566e46", null ],
     [ "XML_DOM_SERIALIZER", "xml__types_8hh.html#a501547a9a4e34f820e3d8d4da6aea710", null ],
     [ "XML_ERROR_HANDLER", "xml__types_8hh.html#ade14161b373e5fcb9bf97a4c79f9ecd9", null ],
     [ "XML_EXCEPTION", "xml__types_8hh.html#aad3748870ef3cef3edb63c37c4f91d9f", null ],

@@ -21,6 +21,7 @@
 #include "parser/xml_parser.hh"
 #include "parser/xml_hprocessor.hh"
 #include "parser/xml_rprocessor.hh"
+#include "parser/xml_cprocessor.hh"
 #include "maker/xml_maker.hh"
 
 #endif /* ARTA_HH_ */

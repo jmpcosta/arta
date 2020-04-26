@@ -72,7 +72,7 @@ public:
 private:
 		std::string		iMsg;
 
-		TRACE_CLASSNAME_DECLARATION
+		ARTA_CLASSNAME_DECLARATION
 };
 
 

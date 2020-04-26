@@ -29,7 +29,7 @@
 
 // *****************************************************************************************
 //
-// Section: proc API declaration/definition
+// Section: proc API declaration
 //
 // *****************************************************************************************
 
@@ -38,12 +38,7 @@ class proc : public RPROCESSOR
 public:
 	using 			RPROCESSOR::rProcessor;
 
-	void 			specificElement		( const std::string & name, const std::string & value	);
-	void 			specificInstruction	( const std::string & type, const std::string & data	);
-	void 			specificAttribute	( const std::string & name, const std::string & value	);
-	void 			specificComment		( const std::string & data								);
-	void 			specificText		( const std::string & data								);
-
+	void			process( void ) override;
 };
 
 

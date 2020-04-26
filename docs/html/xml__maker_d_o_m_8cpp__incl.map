@@ -1,10 +1,11 @@
 <map id="code/maker/xml_makerDOM.cpp" name="code/maker/xml_makerDOM.cpp">
-<area shape="rect" id="node2" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="206,237,333,263"/>
-<area shape="rect" id="node4" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="857,155,986,181"/>
-<area shape="rect" id="node13" href="$xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="380,80,516,107"/>
-<area shape="rect" id="node15" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="541,80,665,107"/>
-<area shape="rect" id="node17" href="$xml__error_handler_8hh.html" title="error/xml_errorHandler.hh" alt="" coords="837,80,1006,107"/>
-<area shape="rect" id="node19" href="$xml__maker_d_o_m_8hh.html" title="maker/xml_makerDOM.hh" alt="" coords="130,80,305,107"/>
-<area shape="rect" id="node20" href="$xml__maker_8hh.html" title="maker/xml_maker.hh" alt="" coords="88,155,232,181"/>
-<area shape="rect" id="node21" href="$xml__maker__type_8hh.html" title="maker/xml_maker_type.hh" alt="" coords="5,237,181,263"/>
+<area shape="rect" id="node2" href="$xml__trace__imp_8hh.html" title="defs/xml_trace_imp.hh" alt="" coords="5,80,160,107"/>
+<area shape="rect" id="node4" href="$xml__types_8hh.html" title="defs/xml_types.hh" alt="" coords="915,155,1045,181"/>
+<area shape="rect" id="node13" href="$xml__string_8hh.html" title="string/xml_string.hh" alt="" coords="439,80,575,107"/>
+<area shape="rect" id="node16" href="$xml__error_8hh.html" title="error/xml_error.hh" alt="" coords="599,80,723,107"/>
+<area shape="rect" id="node18" href="$xml__error_handler_8hh.html" title="error/xml_errorHandler.hh" alt="" coords="895,80,1065,107"/>
+<area shape="rect" id="node20" href="$xml__maker_d_o_m_8hh.html" title="maker/xml_makerDOM.hh" alt="" coords="239,80,414,107"/>
+<area shape="rect" id="node15" href="$xml__trace_8hh.html" title="defs/xml_trace.hh" alt="" coords="265,237,391,263"/>
+<area shape="rect" id="node21" href="$xml__maker_8hh.html" title="maker/xml_maker.hh" alt="" coords="147,155,291,181"/>
+<area shape="rect" id="node22" href="$xml__maker__type_8hh.html" title="maker/xml_maker_type.hh" alt="" coords="64,237,240,263"/>
 </map>

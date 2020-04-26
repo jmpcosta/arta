@@ -41,35 +41,30 @@ class rProcessor : public processor
 {
 public:
 		/// @brief Class destructor
-		explicit			rProcessor( parser & p, const char * expression );
+		/// @param [in] instance - The parser instance
+		explicit				rProcessor( parser & instance );
 
 		/// @brief Class destructor
-							~rProcessor();
+								~rProcessor();
 
-    	void 				process		(  void 							);
+		/// @brief Trigger method to process to search a XML expression
+    	void 					process			(  void ) override {}
+
+    	/// @brief Select a set of nodes that match the pattern from a node "start" and stored the results in a vector
+    	/// @param [in]  pattern	- The node selection pattern
+    	/// @param [in]  start		- Where to start looking
+    	/// @param [out] into		- The list of node pointers that match the pattern
+    	virtual void			selectInto		( const char * pattern, const void * start, std::vector<void *> & into	);
+
 
 protected:
-    	// Instance methods
-    	//NODE		*		getCurrentNode		( void ) const { return iCurrentNode; }
-    	const void	* 		getDocument( void );
 
     	// Instance variables
-    	//NODE		*		iCurrentNode;
-
-
-
-    	// Instance variables
-    	// Instance variables
-    	parser			&	iParser;
-
-    	//dataHandler			iHandler;
-    	const char	*		ip_exp;
-
-    	//NODE_LIST	*		ip_List;
+    	parser			&		iParser;		/// The document parser instance
 
 private:
 
-		TRACE_CLASSNAME_DECLARATION
+    	ARTA_CLASSNAME_DECLARATION
 };
 
 

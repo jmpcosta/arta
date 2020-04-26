@@ -24,6 +24,7 @@
 
 // Import module headers
 #include "parser/xml_note.hh"
+#include "parser/xml_parser.hh"
 
 
 // *****************************************************************************************
@@ -106,6 +107,16 @@ protected:
     	/// @param [in] data - The node text data
     	virtual void 			specificText		( const std::string & data										) {};
 
+    	/// @brief Get the pointer to the document root node
+    	/// @param [in] instance - The parser instance
+    	/// @returns The pointer to the document root node
+    	virtual void	*		getDocument			( parser & instance												);
+
+    	/// @brief   Get the pointer to the document root element
+    	/// @param [in] instance - The parser that contains the document
+    	/// @returns The pointer to the root element
+    	virtual void	*		getRootElement		( parser & instance												);
+
     	/// @brief Process a XMl tree node
     	/// @param [in] node - A pointer to the XML node
     	/// @return The address of the generic note
@@ -119,35 +130,68 @@ protected:
     	// Is node of a given type
     	/// @brief Process a XMl tree node
     	/// @param [in] node - A pointer to the XML node
+    	/// return - True if node is an element type. False otherwise
     	virtual bool 			isElement			( void * node													);
 
     	/// @brief Get the name the element
-    	/// @param [in] node - A pointer to the XML node
+    	/// @param [in]  node - A pointer to the XML node
     	/// @param [out] name - The name of the element
+    	/// @return - True if element name retrieval was successful. False otherwise
     	virtual bool 			getElementName		( void * node, std::string & name								);
 
-    	/// @brief Get the value of an element
-    	/// @param [in] node - A pointer to the XML node
-    	/// @param [out] value - The value of the element
-    	virtual bool 			getElementValue		( void * node, std::string & value								);
 
-    	//
     	/// @brief Get the name of node attributes of a given node element
-    	/// @param [in] node - A pointer to the XML node element
+    	/// @param [in]  node - A pointer to the XML node element
     	/// @param [out] list - The vector containing the name of the attributes
+    	/// @return - True if attribute list retrieval was successful. False otherwise
     	virtual bool 			getAttributeList	( void * node, std::vector<std::string>  & list					);
 
     	/// @brief Get the value of a given attribute
-    	/// @param [in] node - A pointer to the XML node element
-    	/// @param [in] name - The name of the attribute
+    	/// @param [in]  node  - A pointer to the XML node element
+    	/// @param [in]  name  - The name of the attribute
     	/// @param [out] value - The value of the attribute
+    	/// @return - True if attribute value retrieval was successful. False otherwise
     	virtual bool 			getAttributeValue	( void * node, const std::string & name, std::string & value	);
 
-    	// Instance variables
+    	/// @brief Get the address of a given attribute
+    	/// @param [in] node - A pointer to the XML node element
+    	/// @param [in] name - The name of the attribute
+    	/// @returns -  The node address of the attribute
+    	virtual void	*		getAttributeAddress( void * node, std::string & name								);
+
+    	/// @brief Get the value of a node
+    	/// @param [in]  node  - A pointer to the XML node
+    	/// @param [out] value - The value of the node
+    	/// @return - True if node value retrieval was successful. False otherwise
+    	virtual bool 			getNodeValue		( void * node, std::string & value								);
+
+    	/// @brief Get the value of an element
+    	/// @param [in]  node  - A pointer to the XML node
+    	/// @param [out] value - The value of the element
+    	/// @return - True if element value retrieval was successful. False otherwise
+    	virtual bool 			getElementValue		( void * node, std::string & value								);
+
+    	/// @brief Get the value of a given attribute
+    	/// @param [in]  node  - A pointer to the XML node element
+    	/// @param [out] value - The value of the attribute
+    	/// @return - True if attribute value retrieval was successful. False otherwise
+    	virtual bool 			getAttributeValue	( void * node, std::string & value								);
+
+    	/// @brief Get the value of an comment
+    	/// @param [in]  node  - A pointer to the XML node
+    	/// @param [out] value - The value of the comment
+    	/// @return - True if comment value retrieval was successful. False otherwise
+    	virtual bool 			getCommentValue		( void * node, std::string & value								);
+
+    	/// @brief Get the value of a Processing Instruction (data part of the PI)
+    	/// @param [in]  node  - A pointer to the XML node
+    	/// @param [out] value - The value of the comment
+    	/// @return - True if Processing Instruction value retrieval was successful. False otherwise
+    	virtual bool 			getPIValue		( void * node, std::string & value									);
 
 private:
 
-		TRACE_CLASSNAME_DECLARATION
+    	ARTA_CLASSNAME_DECLARATION
 };
 
 

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['xml_5fcprocessor_2ecpp',['xml_cprocessor.cpp',['../xml__cprocessor_8cpp.html',1,'']]],
+  ['xml_5fcprocessor_2ehh',['xml_cprocessor.hh',['../xml__cprocessor_8hh.html',1,'']]],
   ['xml_5fdata_5fhandler_2ecpp',['xml_data_handler.cpp',['../xml__data__handler_8cpp.html',1,'']]],
   ['xml_5fdata_5fhandler_2ehh',['xml_data_handler.hh',['../xml__data__handler_8hh.html',1,'']]],
   ['xml_5fdefs_2ehh',['xml_defs.hh',['../xml__defs_8hh.html',1,'']]],
@@ -27,5 +29,6 @@ var searchData=
   ['xml_5fstring_2ecpp',['xml_string.cpp',['../xml__string_8cpp.html',1,'']]],
   ['xml_5fstring_2ehh',['xml_string.hh',['../xml__string_8hh.html',1,'']]],
   ['xml_5ftrace_2ehh',['xml_trace.hh',['../xml__trace_8hh.html',1,'']]],
+  ['xml_5ftrace_5fimp_2ehh',['xml_trace_imp.hh',['../xml__trace__imp_8hh.html',1,'']]],
   ['xml_5ftypes_2ehh',['xml_types.hh',['../xml__types_8hh.html',1,'']]]
 ];

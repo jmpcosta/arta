@@ -14,7 +14,7 @@
 // *****************************************************************************************
 
 // Import project declarations
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_types.hh"
 #include "string/xml_string.hh"
 #include "error/xml_error.hh"
@@ -35,7 +35,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( makerDOM )
+ARTA_CLASSNAME( makerDOM )
 
 // *****************************************************************************************
 //
@@ -64,15 +64,15 @@ makerDOM::~makerDOM()
  TRACE_POINT
 
  // Get a Xerces DOM Document pointer from the raw pointer
- XML_NODE_DOC * p_doc = (XML_NODE_DOC *) iDoc;
+ XML_NODE_DOC			* p_doc		= (XML_NODE_DOC *)				iDoc;
 
  try {
 	   // Release document
-	   if( iDoc != nullptr ) p_doc->release();
+	   if( iDoc 	!= nullptr ) p_doc->release();
  	 }
 
  catch( const XML_EXCEPTION & e )
-      { /* Do nothing */ }
+      { TRACE( "Xerces XML Exception" ) }
 
 }
 
@@ -95,6 +95,9 @@ void * makerDOM::document( const char * p_filename, const char * p_RootNode )
 	   iDoc			= (void *) p_doc;
 	   iCurrentNode	= (void *) p_doc->getDocumentElement();
 
+	   TRACE( "Document  address:", iDoc )
+	   TRACE( "Root Node address:", iCurrentNode )
+
 	   XML_STRING::release( &p_root, p_manager );
  	 }
 
@@ -115,47 +118,39 @@ void * makerDOM::document( const char * p_filename, const char * p_RootNode )
 
 void * makerDOM::element( const char * p_name, const char * p_value, void * p_where )
 {
+ XML_NODE *	p_node;
+
  TRACE_ENTER
 
  if( p_name  == nullptr ) throw std::invalid_argument	( "No element name provided"		);
  if( iDoc    == nullptr	) throw std::logic_error		( "Document is not yet created !"	);
 
- XML_NODE *	p_node;
-
  if( p_where != nullptr )	p_node = static_cast<XML_NODE *>( p_where		);
  else						p_node = static_cast<XML_NODE *>( iCurrentNode	);
 
  try {
-	 /*
-	   if( p_node->getNodeType() != XML_NODE::ELEMENT_NODE )
-		   throw error( "Node is not an element" );
-*/
+	   if( p_node->getNodeType() != XML_NODE::ELEMENT_NODE )  throw error( "Node is not an element" );
+
 	   // Convert element tag name to Xerces internal representation
 	   XML_MEMORY_MGR	* p_manager 	= (XML_MEMORY_MGR *) iMemory;
-	   XMLCh 			* p_elemValue	= XML_STRING::transcode( p_name, p_manager );
-
-	   // Convert pointers to their respective representation
+	   XML_NODE_DOC		* p_doc			= (XML_NODE_DOC *) 	 iDoc;
 	   XML_NODE_ELEM	* p_parent		= dynamic_cast<XML_NODE_ELEM *>( p_node );
-	   XML_NODE_DOC		* p_doc			= (XML_NODE_DOC *) iDoc;
+	   XMLCh 			* p_elemValue	= XML_STRING::transcode( p_name, p_manager );
 
 	   // Create an element
 	   XML_NODE_ELEM * p_elem = p_doc->createElement( p_elemValue );
 
 	   // Attach the newly created element to the current/father element
-	   if( iDoc == iCurrentNode )
-	   {
-		   p_node->appendChild( p_elem );
-		   iCurrentNode = (void * ) p_elem;
-	   }
-	   else
 	   iCurrentNode	= (void *) p_parent->appendChild( p_elem );
 
 	   // If this element contains any text, add it under the current node
 	   if( p_value != nullptr )
 	     {
 		   XMLCh * p_textValue = XML_STRING::transcode( p_value, p_manager );
+
 		   XML_NODE_TEXT * p_textNode = p_doc->createTextNode( p_textValue );
 		   ((XML_NODE_ELEM *) iCurrentNode)->appendChild( p_textNode );
+
 		   XML_STRING::release( &p_textValue,  p_manager );
 	     }
 
@@ -176,18 +171,19 @@ void * makerDOM::element( const char * p_name, const char * p_value, void * p_wh
 
 void * makerDOM::attribute( const char * p_name, const char * p_value, void * p_where )
 {
+ XML_NODE *	p_node;
+
  TRACE_ENTER
 
  if( p_name  == nullptr ) throw std::invalid_argument	( "No element name provided"		);
  if( p_value == nullptr ) throw std::invalid_argument	( "No element text provided"		);
  if( iDoc    == nullptr	) throw std::logic_error		( "Document is not yet created !"	);
 
- XML_NODE *	p_node;
-
  if( p_where != nullptr )	p_node = static_cast<XML_NODE *>( p_where		);
  else						p_node = static_cast<XML_NODE *>( iCurrentNode	);
 
  try {
+	  // Attributes are only valid for Node Elements
 	  if( p_node->getNodeType() != XML_NODE::ELEMENT_NODE ) throw error( "Node is not an element" );
 
 	  // Convert element tag name to Xerces internal representation
@@ -219,32 +215,43 @@ void * makerDOM::attribute( const char * p_name, const char * p_value, void * p_
 
 void * makerDOM::comment( const char * p_comment, void * p_where )
 {
+ XML_NODE *	p_node;
+
  TRACE_ENTER
 
  if( p_comment  == nullptr	) throw std::invalid_argument	( "No element name provided"		);
  if( iDoc       == nullptr	) throw std::logic_error		( "Document is not yet created !"	);
 
- XML_NODE *	p_node;
+ TRACE( "Comment: ", p_comment )
 
  if( p_where != nullptr )	p_node = static_cast<XML_NODE *>( p_where		);
  else						p_node = static_cast<XML_NODE *>( iCurrentNode	);
 
  try {
-	  if( p_node->getNodeType() != XML_NODE::ELEMENT_NODE ) throw error( "Node is not an element" );
+	  TRACE( "Node type:", (int) p_node->getNodeType() )
+
+	  // Comments are only valid for Node Document or Node Elements
+	  if( p_node->getNodeType() != XML_NODE::ELEMENT_NODE && p_node->getNodeType() != XML_NODE::DOCUMENT_NODE )
+		  throw error( "Node is not an element or a document" );
 
 	  // Convert element tag name to Xerces internal representation
 	  XML_MEMORY_MGR	* p_manager	= (XML_MEMORY_MGR *)	iMemory;
 	  XML_NODE_DOC		* p_doc		= (XML_NODE_DOC *)		iDoc;
 	  XMLCh 			* p_cText	= XML_STRING::transcode( p_comment,  p_manager );
 
-	  // Convert pointers to their respective representation
-	  XML_NODE_ELEM	* p_parent		= dynamic_cast<XML_NODE_ELEM *>( p_node );
+	  TRACE( "Document address:", 	iDoc   	)
+	  TRACE( "Target   address:", 	p_where	)
+	  TRACE( "Node     address:", 	p_node 	)
 
 	  // Create the document comment
 	  XML_NODE_COMMENT * p_commentNode = p_doc->createComment( p_cText );
 
+	  TRACE( "Comment created" )
+
 	  // Attach the newly created element to the current/father element
-	  p_parent->appendChild( p_commentNode );
+	  p_node->appendChild( p_commentNode );
+
+	  TRACE( "Comment node added" )
 
 	  XML_STRING::release( &p_cText,  p_manager );
      }
@@ -262,8 +269,8 @@ void * makerDOM::comment( const char * p_comment, void * p_where )
 }
 
 
-
-void * makerDOM::instruction( const char * p_name, const char * p_data )
+// Instructions make sense at the document level
+void makerDOM::instruction( const char * p_name, const char * p_data )
 {
  TRACE_ENTER
 
@@ -271,25 +278,21 @@ void * makerDOM::instruction( const char * p_name, const char * p_data )
  if( p_data  == nullptr ) throw std::invalid_argument	( "No instruction data provided"	);
  if( iDoc    == nullptr	) throw std::logic_error		( "Document is not yet created !"	);
 
- XML_NODE *	p_node = static_cast<XML_NODE *>( iDoc	);
-
- if( p_node->getNodeType() != XML_NODE::DOCUMENT_NODE ) throw error( "Node is not a Document !" );
-
  try {
-	  // Convert element tag name to Xerces internal representation
-	  XML_MEMORY_MGR	* p_manager	= (XML_MEMORY_MGR *) iMemory;
+	  // Convert to Xerces internal representation
+	  XML_MEMORY_MGR	* p_manager	= (XML_MEMORY_MGR *)		iMemory;
+	  XML_NODE_DOC		* p_doc		= (XML_NODE_DOC *)			iDoc;
+	  XML_NODE			* p_root	= static_cast<XML_NODE *>(	p_doc->getDocumentElement() );
+
+	  // Convert also strings
 	  XMLCh 			* p_piName	= XML_STRING::transcode( p_name, p_manager );
 	  XMLCh 			* p_piData	= XML_STRING::transcode( p_data, p_manager );
 
-	  // Convert pointers to their respective representation
-	  //XML_NODE_ELEM		* p_parent	= dynamic_cast<XML_NODE_ELEM *>( p_node );
-	  XML_NODE_DOC		* p_doc		= (XML_NODE_DOC *) iDoc;
-
 	  // Create the document attribute
-	  XML_NODE_PI * p_piNode = p_doc->createProcessingInstruction( p_piName, p_piData );
+	  XML_NODE 			* p_piNode	= static_cast<XML_NODE *>( p_doc->createProcessingInstruction( p_piName, p_piData ) );
 
-	  // Attach the newly created element to the current/father element
-	  p_node->appendChild( p_piNode );
+	  // Attach the newly created Processing Instruction to the document node
+	  p_doc->insertBefore( p_piNode, p_root );
 
 	  XML_STRING::release( &p_piName, p_manager );
 	  XML_STRING::release( &p_piData, p_manager );
@@ -303,9 +306,44 @@ void * makerDOM::instruction( const char * p_name, const char * p_data )
  { throw error( e ); }
 
  TRACE_EXIT
-
- return iCurrentNode;
 }
+
+
+void makerDOM::docComment( const char * p_comment )
+{
+ TRACE_ENTER
+
+ if( p_comment  == nullptr	) throw std::invalid_argument	( "No element name provided"		);
+ if( iDoc       == nullptr	) throw std::logic_error		( "Document is not yet created !"	);
+
+ TRACE( "Comment: ", p_comment )
+
+ try {
+	  // Convert element tag name to Xerces internal representation
+	  XML_MEMORY_MGR	* p_manager	= (XML_MEMORY_MGR *)	iMemory;
+	  XML_NODE_DOC		* p_doc		= (XML_NODE_DOC *)		iDoc;
+	  XML_NODE			* p_root	= static_cast<XML_NODE *>(	p_doc->getDocumentElement() );
+	  XMLCh 			* p_cText	= XML_STRING::transcode( p_comment,  p_manager );
+
+	  // Create the document comment
+	  XML_NODE * p_commentNode		= static_cast<XML_NODE *>( p_doc->createComment( p_cText ) );
+
+	  // Attach the newly created element to the current/father element
+	  p_doc->insertBefore( p_commentNode, p_root );
+
+	  XML_STRING::release( &p_cText,  p_manager );
+     }
+
+	 // Wrap Xerces exceptions with our own
+ catch( const XML_EXCEPTION & e )
+	  { throw error( e ); }
+
+ catch( const XML_DOM_EXCEPTION & e )
+	  { throw error( e ); }
+
+ TRACE_EXIT
+}
+
 
 
 void makerDOM::configure( void * p_configuration )

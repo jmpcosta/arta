@@ -1,6 +1,7 @@
 var searchData=
 [
   ['schemavalidation',['schemaValidation',['../classosapi_1_1xml_1_1maker.html#a0e5ae2677c593dfbc1c238b13b9f7d52',1,'osapi::xml::maker']]],
+  ['selectinto',['selectInto',['../classosapi_1_1xml_1_1r_processor.html#abc89d3773b7a9da700819fee46f90466',1,'osapi::xml::rProcessor']]],
   ['setbom',['setBOM',['../classosapi_1_1xml_1_1maker.html#a687408454a00574ca04b658d13ac1811',1,'osapi::xml::maker']]],
   ['setcanonicalform',['setCanonicalForm',['../classosapi_1_1xml_1_1maker.html#a833c1fd202a21faf2bf540e547d1e43d',1,'osapi::xml::maker']]],
   ['setns',['setNS',['../classosapi_1_1xml_1_1maker.html#a81faf0723ba0d541d9f614043cb43aab',1,'osapi::xml::maker']]],

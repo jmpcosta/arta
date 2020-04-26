@@ -17,45 +17,47 @@
 // Include standard C++ headers
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <vector>
+
+// Import ARTA library
+#include "arta.hh"
+#include "arta_alias.hh"
 
 // Include own project headers
 #include "arta_rproc_proc.hh"
 
+
 // *****************************************************************************************
 //
-// Section: proc API declaration/definition
+// Section: proc API definition
 //
 // *****************************************************************************************
 
 
-void proc::specificElement( const std::string & name, const std::string & value	)
+void proc::process( void )
 {
-  std::cout << "Element name <" << name << "> with value <" << value << ">" << std::endl;
+ std::vector<void *>	vec;
+
+ selectInto( "/countries/country/cities/city", (const void *) getRootElement(), vec );
+
+ //std::cout << "Number of elements in vector:" << vec.size() << std::endl;
+
+ std::string value;
+ for( auto & i : vec )
+ 	{
+	  if( ! getAttributeValue( i, "name", value ) ) continue;
+
+	  if( value == "Lisbon" )
+	    {
+		  std::string description;
+
+		  if( getElementValue( i, description ) )
+		    {
+			  std::cout << "Description of Lisbon city: " << description << std::endl;
+			  return;
+		    }
+	    }
+ 	}
+
 }
 
-void proc::specificInstruction( const std::string & type, const std::string & data	)
-{
-  std::cout << "Processing instruction name <" << type << "> with data <" << data << ">" << std::endl;
-}
-
-void proc::specificAttribute( const std::string & name, const std::string & value	)
-{
-  std::cout << "Attribute name <" << name << "> with value <" << value << ">" << std::endl;
-}
-
-
-void proc::specificComment( const std::string & data )
-{
-  std::cout << "Comment <" << data << ">"  << std::endl;
-}
-
-
-void proc::specificText( const std::string & data )
-{
-  std::string myData = data;
-
-  myData.erase( std::remove( myData.begin(), myData.end(), '\n' ), myData.end() );
-
-  std::cout << "Text data <" << myData << ">" << std::endl;
-}

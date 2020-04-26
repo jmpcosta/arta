@@ -1,6 +1,7 @@
 var searchData=
 [
   ['schemavalidation',['schemaValidation',['../classosapi_1_1xml_1_1maker.html#a0e5ae2677c593dfbc1c238b13b9f7d52',1,'osapi::xml::maker']]],
+  ['selectinto',['selectInto',['../classosapi_1_1xml_1_1r_processor.html#abc89d3773b7a9da700819fee46f90466',1,'osapi::xml::rProcessor']]],
   ['setbom',['setBOM',['../classosapi_1_1xml_1_1maker.html#a687408454a00574ca04b658d13ac1811',1,'osapi::xml::maker']]],
   ['setcanonicalform',['setCanonicalForm',['../classosapi_1_1xml_1_1maker.html#a833c1fd202a21faf2bf540e547d1e43d',1,'osapi::xml::maker']]],
   ['setns',['setNS',['../classosapi_1_1xml_1_1maker.html#a81faf0723ba0d541d9f614043cb43aab',1,'osapi::xml::maker']]],
@@ -14,5 +15,5 @@ var searchData=
   ['specificnode',['specificNode',['../classosapi_1_1xml_1_1processor.html#acbf45d58f72831b8774711821f905435',1,'osapi::xml::processor']]],
   ['specifictext',['specificText',['../classosapi_1_1xml_1_1processor.html#a81ad5f5f75cc42ee8c55afd7bd500914',1,'osapi::xml::processor']]],
   ['splitcdsections',['splitCDSections',['../classosapi_1_1xml_1_1maker.html#a5c87a733d98f9ca16cce4aa48e5bdf50',1,'osapi::xml::maker']]],
-  ['string',['string',['../classosapi_1_1xml_1_1string.html',1,'osapi::xml::string'],['../classosapi_1_1xml_1_1string.html#a88bcbf94e8f0c37b0a5c0680d878ec13',1,'osapi::xml::string::string(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#af2439664ad8417266ac1f9a0ff3ce7f1',1,'osapi::xml::string::string(const std::string &amp;message)'],['../classosapi_1_1xml_1_1string.html#a7224e5e233516dfa2012eca672195f69',1,'osapi::xml::string::string(const char *message)'],['../classosapi_1_1xml_1_1string.html#a691aa9691a9c28f92899b755a73a9a6d',1,'osapi::xml::string::string(void)']]]
+  ['string',['string',['../classosapi_1_1xml_1_1string.html',1,'osapi::xml::string'],['../classosapi_1_1xml_1_1string.html#a88bcbf94e8f0c37b0a5c0680d878ec13',1,'osapi::xml::string::string(const XMLCh *message)'],['../classosapi_1_1xml_1_1string.html#af2439664ad8417266ac1f9a0ff3ce7f1',1,'osapi::xml::string::string(const std::string &amp;message)'],['../classosapi_1_1xml_1_1string.html#a7224e5e233516dfa2012eca672195f69',1,'osapi::xml::string::string(const char *message)'],['../classosapi_1_1xml_1_1string.html#a691aa9691a9c28f92899b755a73a9a6d',1,'osapi::xml::string::string(void)'],['../xml__rprocessor_8cpp.html#a34de9e8082db1fa4f1c83d62a30b873f',1,'STRING():&#160;xml_rprocessor.cpp']]]
 ];

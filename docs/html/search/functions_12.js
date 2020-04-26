@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_7ecprocessor',['~cProcessor',['../classosapi_1_1xml_1_1c_processor.html#a41c3ba31d76bf5f29fac9adacdd42507',1,'osapi::xml::cProcessor']]],
   ['_7eerror',['~error',['../classosapi_1_1xml_1_1error.html#ad3273a53c421cab176564f6679762b62',1,'osapi::xml::error']]],
   ['_7eerrorhandler',['~errorHandler',['../classosapi_1_1xml_1_1error_handler.html#afb420e79544f7c4d590fa8b8d546e4b1',1,'osapi::xml::errorHandler']]],
   ['_7ehprocessor',['~hProcessor',['../classosapi_1_1xml_1_1h_processor.html#a72cc3d22702c7a3fed8db701dc66bb69',1,'osapi::xml::hProcessor']]],

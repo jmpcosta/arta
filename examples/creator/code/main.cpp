@@ -27,27 +27,33 @@ int main( int argc, char * argv[] )
 	 std::unique_ptr<MAKER>	builder( MAKER::create() );
 
 	 // Create a memory document using MAKER
-	 builder.get()->document( ARTA_TEST_FILE, "doc" );
+	 void * p_rootElem;
+	 p_rootElem = builder.get()->document	( TEST_FILE, 	"doc"								);
+
+	 // Add a Processing instruction under the document node
+	 builder.get()->instruction				( "library",	"data"								);
+
+	 // Add a comment to the document itself
+	 builder.get()->docComment				( DOC_COMMENT										);
 
 	 //builder.get()->element( "doc", nullptr );
 	 // Add elements to a memory document
-	 void * books = builder.get()->element( "books", ""						);
-	 void * fbook = builder.get()->element( "book", "First Book"			);
-	 void * sbook = builder.get()->element( "book", "Second Book", books	);
+	 void * books = builder.get()->element	( "books", 		""									);
+	 void * fbook = builder.get()->element	( "book", 		"First Book"						);
+	 void * sbook = builder.get()->element	( "book", 		"Second Book", 			books		);
 
-	 // Add attributes to the second book
-	 builder.get()->attribute( "name",   "Moby-Dick" 						);
-	 builder.get()->attribute( "author", "Herman Melville" 					);
+	 // Add attributes to the second & current book
+	 builder.get()->attribute				( "name",   	"Moby-Dick" 						);
+	 builder.get()->attribute				( "author", 	"Herman Melville" 					);
 
 	 // Add attributes to the first book
-	 builder.get()->attribute( "name",   "Don Quixote",			fbook		);
-	 builder.get()->attribute( "author", "Miguel De Cervantes",	fbook		);
+	 builder.get()->attribute				( "name",   	"Don Quixote",			fbook		);
+	 builder.get()->attribute				( "author", 	"Miguel De Cervantes",	fbook		);
 
 	 // Add a comment to the second book
-	 builder.get()->comment( MOBY_DICK_COMMENT, sbook 						);
+	 builder.get()->comment					( MOBY_DICK_COMMENT,					sbook		);
 
-	 // Add a Processing instruction under the root node
-	 //builder.get()->instruction( "library", "data"		 		);
+
 
 	 // Set output properties
 	 builder.get()->setPrettyPrint	( true );

@@ -18,7 +18,7 @@
 
 // Import Project headers
 #include "defs/xml_defs.hh"
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_types.hh"
 #include "string/xml_string.hh"
 
@@ -36,7 +36,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( errorHandler )
+ARTA_CLASSNAME( errorHandler )
 
 // *****************************************************************************************
 //

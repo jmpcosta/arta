@@ -18,7 +18,7 @@
 
 // Import Module headers
 #include "defs/xml_defs.hh"
-#include "defs/xml_trace.hh"
+#include "defs/xml_trace_imp.hh"
 #include "defs/xml_node_type.hh"
 #include "defs/xml_types.hh"
 #include "error/xml_error.hh"
@@ -40,7 +40,7 @@ namespace osapi
 namespace xml
 {
 
-TRACE_CLASSNAME( hProcessor )
+ARTA_CLASSNAME( hProcessor )
 
 // *****************************************************************************************
 //
@@ -92,9 +92,6 @@ void hProcessor::process( void )
 	   XML_NODE_DOC * p_doc = p_parser->getDocument();
 	   iDoc = (void *) p_doc;
 
-	   //processDocument( iDoc );
-
-	   //XML_NODE_ELEM * p_rootElem = p_doc->getDocumentElement();
 	   XML_NODE * p_node = dynamic_cast<XML_NODE *>( p_doc );
 
 	   if( hasDescendants    ( (void *) p_node ) )
