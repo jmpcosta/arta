@@ -41,7 +41,7 @@ endif
 all: arta_cproc
 
 dependents:
-	-cd /home/joao/workspace/arta/Release && $(MAKE) all
+	-cd /home/joao/workspace/arta/Release && $(MAKE) clean all
 
 # Tool invocations
 arta_cproc: $(OBJS) $(USER_OBJS) /home/joao/workspace/arta/Release/libarta.so
